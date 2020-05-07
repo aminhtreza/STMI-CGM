@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C22464748500D954A3 /* AppDelegate.swift */; };
+		88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C42464748500D954A3 /* SceneDelegate.swift */; };
+		88FE34C72464748500D954A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C62464748500D954A3 /* ContentView.swift */; };
+		88FE34C92464748800D954A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34C82464748800D954A3 /* Assets.xcassets */; };
+		88FE34CC2464748800D954A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34CB2464748800D954A3 /* Preview Assets.xcassets */; };
+		88FE34CF2464748800D954A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34CD2464748800D954A3 /* LaunchScreen.storyboard */; };
+		88FE34D42464748800D954A3 /* STMI-CGM WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 88FE34D32464748800D954A3 /* STMI-CGM WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		88FE34DA2464748800D954A3 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34D82464748800D954A3 /* Interface.storyboard */; };
+		88FE34DC2464748900D954A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34DB2464748900D954A3 /* Assets.xcassets */; };
+		88FE34E32464748900D954A3 /* STMI-CGM WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 88FE34E22464748900D954A3 /* STMI-CGM WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		88FE34E82464748900D954A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34E72464748900D954A3 /* ContentView.swift */; };
+		88FE34EA2464748900D954A3 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34E92464748900D954A3 /* HostingController.swift */; };
+		88FE34EC2464748900D954A3 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */; };
+		88FE34EE2464748900D954A3 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34ED2464748900D954A3 /* NotificationController.swift */; };
+		88FE34F02464748900D954A3 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34EF2464748900D954A3 /* NotificationView.swift */; };
+		88FE34F22464748A00D954A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34F12464748A00D954A3 /* Assets.xcassets */; };
+		88FE34F52464748A00D954A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34F42464748A00D954A3 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88FE34D52464748800D954A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88FE34B72464748500D954A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88FE34D22464748800D954A3;
+			remoteInfo = "STMI-CGM WatchKit App";
+		};
+		88FE34E42464748900D954A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88FE34B72464748500D954A3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88FE34E12464748900D954A3;
+			remoteInfo = "STMI-CGM WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		88FE34FD2464748A00D954A3 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				88FE34E32464748900D954A3 /* STMI-CGM WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FE35012464748A00D954A3 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				88FE34D42464748800D954A3 /* STMI-CGM WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		88FE34C62464748500D954A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		88FE34C82464748800D954A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88FE34CB2464748800D954A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88FE34CE2464748800D954A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88FE34D02464748800D954A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FE34D32464748800D954A3 /* STMI-CGM WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FE34D92464748800D954A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		88FE34DB2464748900D954A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88FE34DD2464748900D954A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FE34E22464748900D954A3 /* STMI-CGM WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "STMI-CGM WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88FE34E72464748900D954A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		88FE34E92464748900D954A3 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		88FE34ED2464748900D954A3 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		88FE34EF2464748900D954A3 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		88FE34F12464748A00D954A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88FE34F42464748A00D954A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88FE34F62464748A00D954A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FE34F72464748A00D954A3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88FE34BC2464748500D954A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FE34DF2464748900D954A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88FE34B62464748500D954A3 = {
+			isa = PBXGroup;
+			children = (
+				88FE34C12464748500D954A3 /* STMI-CGM */,
+				88FE34D72464748800D954A3 /* STMI-CGM WatchKit App */,
+				88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */,
+				88FE34C02464748500D954A3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		88FE34C02464748500D954A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88FE34BF2464748500D954A3 /* STMI-CGM.app */,
+				88FE34D32464748800D954A3 /* STMI-CGM WatchKit App.app */,
+				88FE34E22464748900D954A3 /* STMI-CGM WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88FE34C12464748500D954A3 /* STMI-CGM */ = {
+			isa = PBXGroup;
+			children = (
+				88FE34C22464748500D954A3 /* AppDelegate.swift */,
+				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
+				88FE34C62464748500D954A3 /* ContentView.swift */,
+				88FE34C82464748800D954A3 /* Assets.xcassets */,
+				88FE34CD2464748800D954A3 /* LaunchScreen.storyboard */,
+				88FE34D02464748800D954A3 /* Info.plist */,
+				88FE34CA2464748800D954A3 /* Preview Content */,
+			);
+			path = "STMI-CGM";
+			sourceTree = "<group>";
+		};
+		88FE34CA2464748800D954A3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				88FE34CB2464748800D954A3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88FE34D72464748800D954A3 /* STMI-CGM WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				88FE34D82464748800D954A3 /* Interface.storyboard */,
+				88FE34DB2464748900D954A3 /* Assets.xcassets */,
+				88FE34DD2464748900D954A3 /* Info.plist */,
+			);
+			path = "STMI-CGM WatchKit App";
+			sourceTree = "<group>";
+		};
+		88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				88FE34E72464748900D954A3 /* ContentView.swift */,
+				88FE34E92464748900D954A3 /* HostingController.swift */,
+				88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */,
+				88FE34ED2464748900D954A3 /* NotificationController.swift */,
+				88FE34EF2464748900D954A3 /* NotificationView.swift */,
+				88FE34F12464748A00D954A3 /* Assets.xcassets */,
+				88FE34F62464748A00D954A3 /* Info.plist */,
+				88FE34F72464748A00D954A3 /* PushNotificationPayload.apns */,
+				88FE34F32464748A00D954A3 /* Preview Content */,
+			);
+			path = "STMI-CGM WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		88FE34F32464748A00D954A3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				88FE34F42464748A00D954A3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88FE34BE2464748500D954A3 /* STMI-CGM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88FE35022464748A00D954A3 /* Build configuration list for PBXNativeTarget "STMI-CGM" */;
+			buildPhases = (
+				88FE34BB2464748500D954A3 /* Sources */,
+				88FE34BC2464748500D954A3 /* Frameworks */,
+				88FE34BD2464748500D954A3 /* Resources */,
+				88FE35012464748A00D954A3 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88FE34D62464748800D954A3 /* PBXTargetDependency */,
+			);
+			name = "STMI-CGM";
+			productName = "STMI-CGM";
+			productReference = 88FE34BF2464748500D954A3 /* STMI-CGM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88FE34D22464748800D954A3 /* STMI-CGM WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88FE34FE2464748A00D954A3 /* Build configuration list for PBXNativeTarget "STMI-CGM WatchKit App" */;
+			buildPhases = (
+				88FE34D12464748800D954A3 /* Resources */,
+				88FE34FD2464748A00D954A3 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88FE34E52464748900D954A3 /* PBXTargetDependency */,
+			);
+			name = "STMI-CGM WatchKit App";
+			productName = "STMI-CGM WatchKit App";
+			productReference = 88FE34D32464748800D954A3 /* STMI-CGM WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		88FE34E12464748900D954A3 /* STMI-CGM WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88FE34FA2464748A00D954A3 /* Build configuration list for PBXNativeTarget "STMI-CGM WatchKit Extension" */;
+			buildPhases = (
+				88FE34DE2464748900D954A3 /* Sources */,
+				88FE34DF2464748900D954A3 /* Frameworks */,
+				88FE34E02464748900D954A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "STMI-CGM WatchKit Extension";
+			productName = "STMI-CGM WatchKit Extension";
+			productReference = 88FE34E22464748900D954A3 /* STMI-CGM WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88FE34B72464748500D954A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Amin Hamiditabar";
+				TargetAttributes = {
+					88FE34BE2464748500D954A3 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					88FE34D22464748800D954A3 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					88FE34E12464748900D954A3 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 88FE34BA2464748500D954A3 /* Build configuration list for PBXProject "STMI-CGM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88FE34B62464748500D954A3;
+			productRefGroup = 88FE34C02464748500D954A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88FE34BE2464748500D954A3 /* STMI-CGM */,
+				88FE34D22464748800D954A3 /* STMI-CGM WatchKit App */,
+				88FE34E12464748900D954A3 /* STMI-CGM WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88FE34BD2464748500D954A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FE34CF2464748800D954A3 /* LaunchScreen.storyboard in Resources */,
+				88FE34CC2464748800D954A3 /* Preview Assets.xcassets in Resources */,
+				88FE34C92464748800D954A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FE34D12464748800D954A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FE34DC2464748900D954A3 /* Assets.xcassets in Resources */,
+				88FE34DA2464748800D954A3 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FE34E02464748900D954A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FE34F52464748A00D954A3 /* Preview Assets.xcassets in Resources */,
+				88FE34F22464748A00D954A3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88FE34BB2464748500D954A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */,
+				88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */,
+				88FE34C72464748500D954A3 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88FE34DE2464748900D954A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88FE34EA2464748900D954A3 /* HostingController.swift in Sources */,
+				88FE34E82464748900D954A3 /* ContentView.swift in Sources */,
+				88FE34EE2464748900D954A3 /* NotificationController.swift in Sources */,
+				88FE34EC2464748900D954A3 /* ExtensionDelegate.swift in Sources */,
+				88FE34F02464748900D954A3 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88FE34D62464748800D954A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88FE34D22464748800D954A3 /* STMI-CGM WatchKit App */;
+			targetProxy = 88FE34D52464748800D954A3 /* PBXContainerItemProxy */;
+		};
+		88FE34E52464748900D954A3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88FE34E12464748900D954A3 /* STMI-CGM WatchKit Extension */;
+			targetProxy = 88FE34E42464748900D954A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88FE34CD2464748800D954A3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88FE34CE2464748800D954A3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		88FE34D82464748800D954A3 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88FE34D92464748800D954A3 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88FE34F82464748A00D954A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88FE34F92464748A00D954A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88FE34FB2464748A00D954A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = V34SA3KVD3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "STMI-CGM WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		88FE34FC2464748A00D954A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = V34SA3KVD3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "STMI-CGM WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		88FE34FF2464748A00D954A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V34SA3KVD3;
+				IBSC_MODULE = STMI_CGM_WatchKit_Extension;
+				INFOPLIST_FILE = "STMI-CGM WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		88FE35002464748A00D954A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V34SA3KVD3;
+				IBSC_MODULE = STMI_CGM_WatchKit_Extension;
+				INFOPLIST_FILE = "STMI-CGM WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
+		88FE35032464748A00D954A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
+				DEVELOPMENT_TEAM = V34SA3KVD3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "STMI-CGM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88FE35042464748A00D954A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
+				DEVELOPMENT_TEAM = V34SA3KVD3;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "STMI-CGM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88FE34BA2464748500D954A3 /* Build configuration list for PBXProject "STMI-CGM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88FE34F82464748A00D954A3 /* Debug */,
+				88FE34F92464748A00D954A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88FE34FA2464748A00D954A3 /* Build configuration list for PBXNativeTarget "STMI-CGM WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88FE34FB2464748A00D954A3 /* Debug */,
+				88FE34FC2464748A00D954A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88FE34FE2464748A00D954A3 /* Build configuration list for PBXNativeTarget "STMI-CGM WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88FE34FF2464748A00D954A3 /* Debug */,
+				88FE35002464748A00D954A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88FE35022464748A00D954A3 /* Build configuration list for PBXNativeTarget "STMI-CGM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88FE35032464748A00D954A3 /* Debug */,
+				88FE35042464748A00D954A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88FE34B72464748500D954A3 /* Project object */;
+}
