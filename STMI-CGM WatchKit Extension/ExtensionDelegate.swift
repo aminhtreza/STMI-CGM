@@ -1,9 +1,9 @@
 //
 //  ExtensionDelegate.swift
-//  STMI-CGM WatchKit Extension
+//  WacthSTMI Extension
 //
-//  Created by iMac on 5/7/20.
-//  Copyright © 2020 Amin Hamiditabar. All rights reserved.
+//  Created by Ryan Ramirez on 3/22/20.
+//  Copyright © 2020 Ryan Ramirez. All rights reserved.
 //
 
 import WatchKit

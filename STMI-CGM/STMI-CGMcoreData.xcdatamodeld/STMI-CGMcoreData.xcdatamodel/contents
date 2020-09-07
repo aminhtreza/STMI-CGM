@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17189" systemVersion="19G2021" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activity" representedClassName=".Activity" syncable="YES">
+        <attribute name="activityType" optional="YES" attributeType="String"/>
+        <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="activityDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ActivityDetail" inverseName="activity" inverseEntity="ActivityDetail"/>
+    </entity>
+    <entity name="ActivityDetail" representedClassName=".ActivityDetail" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="from" optional="YES" attributeType="String"/>
+        <attribute name="to" optional="YES" attributeType="String"/>
+        <relationship name="activity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="activityDetail" inverseEntity="Activity"/>
+    </entity>
+    <entity name="Meal" representedClassName=".Meal" syncable="YES">
+        <attribute name="calories" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="carbs" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="comments" optional="YES" attributeType="String"/>
+        <attribute name="fat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="inputDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="mealName" optional="YES" attributeType="String"/>
+        <attribute name="protein" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="picture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Picture" inverseName="meal" inverseEntity="Picture"/>
+    </entity>
+    <entity name="Picture" representedClassName=".Picture" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="meal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meal" inverseName="picture" inverseEntity="Meal"/>
+    </entity>
+    <entity name="Sensors" representedClassName=".Sensors" syncable="YES">
+        <attribute name="altitude" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="heartRate" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="String"/>
+        <attribute name="pitch" optional="YES" attributeType="String"/>
+        <attribute name="roll" optional="YES" attributeType="String"/>
+        <attribute name="yaw" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Activity" positionX="-211.27734375" positionY="115.703125" width="128" height="103"/>
+        <element name="ActivityDetail" positionX="6.37109375" positionY="115.7890625" width="128" height="103"/>
+        <element name="Meal" positionX="-183.9921875" positionY="-98.79296875" width="128" height="163"/>
+        <element name="Picture" positionX="-19.98828125" positionY="-8.9296875" width="128" height="73"/>
+        <element name="Sensors" positionX="199.5546875" positionY="-58.296875" width="128" height="163"/>
+    </elements>
+</model>

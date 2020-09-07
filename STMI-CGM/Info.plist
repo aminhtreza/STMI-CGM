@@ -56,5 +56,40 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PROCUT_NAME) camera use</string>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Allow us to access your Health Data</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Allow us to access your Health Data</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Allow us to access your Health Data</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>IndieFlower-Regular.ttf</string>
+		<string>Anton-Regular.ttf</string>
+		<string>DancingScript-VariableFont_wght.ttf</string>
+		<string>YanoneKaffeesatz-VariableFont_wght.ttf</string>
+		<string>Teko-Medium.ttf</string>
+		<string>BalooDa2-ExtraBold.ttf</string>
+		<string>BalooDa2-Medium.ttf</string>
+		<string>BalooDa2-Bold.ttf</string>
+		<string>BalooDa2-Regular.ttf</string>
+		<string>BalooDa2-SemiBold.ttf</string>
+		<string>LiuJianMaoCao-Regular.ttf</string>
+		<string>WorkSans-VariableFont_wght.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>

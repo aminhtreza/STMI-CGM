@@ -10,7 +10,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        TabView{
+            MainUI()
+                .tabItem {
+                    Text("Entries")
+                    Image(systemName: "book.fill")
+                    
+            }
+            WatchConnectivityPreview()
+                .tabItem {
+                    Text("Sensors")
+                    Image(systemName: "rays")
+            }
+        }
     }
 }
 

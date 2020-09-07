@@ -7,6 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812A0FC24648153004EDCFE /* HealthKit.framework */; };
+		8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812A0FE24649D0F004EDCFE /* MainUI.swift */; };
+		881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881918E5246E1439002CB92E /* AddNewEntry.swift */; };
+		88891FC1246E1D1700ACA3A8 /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FB9246E1D1700ACA3A8 /* IndieFlower-Regular.ttf */; };
+		88891FC2246E1D1700ACA3A8 /* Teko-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBA246E1D1700ACA3A8 /* Teko-Bold.ttf */; };
+		88891FC3246E1D1700ACA3A8 /* Teko-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBB246E1D1700ACA3A8 /* Teko-Medium.ttf */; };
+		88891FC4246E1D1700ACA3A8 /* Anton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBC246E1D1700ACA3A8 /* Anton-Regular.ttf */; };
+		88891FC5246E1D1700ACA3A8 /* YanoneKaffeesatz-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBD246E1D1700ACA3A8 /* YanoneKaffeesatz-VariableFont_wght.ttf */; };
+		88891FC6246E1D1700ACA3A8 /* Teko-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBE246E1D1700ACA3A8 /* Teko-SemiBold.ttf */; };
+		88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */; };
+		88891FC8246E1D1700ACA3A8 /* Teko-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */; };
+		88891FCD246F33A600ACA3A8 /* AddStoredActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FCC246F33A600ACA3A8 /* AddStoredActivity.swift */; };
+		88891FFA2470596500ACA3A8 /* STMI-CGMcoreData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */; };
+		888920052470688A00ACA3A8 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */; };
+		888920062470688A00ACA3A8 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */; };
+		888920072470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFD2470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift */; };
+		888920082470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFE2470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift */; };
+		888920092470688A00ACA3A8 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFF2470688A00ACA3A8 /* Activity+CoreDataClass.swift */; };
+		8889200A2470688A00ACA3A8 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920002470688A00ACA3A8 /* Activity+CoreDataProperties.swift */; };
+		8889200B2470688A00ACA3A8 /* Sensors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920012470688A00ACA3A8 /* Sensors+CoreDataClass.swift */; };
+		8889200C2470688A00ACA3A8 /* Sensors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */; };
+		8889200D2470688A00ACA3A8 /* Picture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */; };
+		8889200E2470688A00ACA3A8 /* Picture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */; };
 		88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C22464748500D954A3 /* AppDelegate.swift */; };
 		88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C42464748500D954A3 /* SceneDelegate.swift */; };
 		88FE34C72464748500D954A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C62464748500D954A3 /* ContentView.swift */; };
@@ -24,6 +47,24 @@
 		88FE34F02464748900D954A3 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34EF2464748900D954A3 /* NotificationView.swift */; };
 		88FE34F22464748A00D954A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34F12464748A00D954A3 /* Assets.xcassets */; };
 		88FE34F52464748A00D954A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88FE34F42464748A00D954A3 /* Preview Assets.xcassets */; };
+		88FE3509246475B400D954A3 /* iPhoneMotionIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3508246475B400D954A3 /* iPhoneMotionIFC.swift */; };
+		88FE350B246475D700D954A3 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE350A246475D700D954A3 /* MotionManager.swift */; };
+		88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE350C2464760400D954A3 /* ActivityMainIFC.swift */; };
+		88FE350F2464761F00D954A3 /* activityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE350E2464761F00D954A3 /* activityManager.swift */; };
+		88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35122464768400D954A3 /* AddNewMeal.swift */; };
+		88FE35152464769800D954A3 /* AddStoredMeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35142464769800D954A3 /* AddStoredMeals.swift */; };
+		88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3516246476B600D954A3 /* ImagePicker.swift */; };
+		88FE3519246476CE00D954A3 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3518246476CE00D954A3 /* MealList.swift */; };
+		88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35202464782800D954A3 /* PhonetoWatch.swift */; };
+		88FE35232464783A00D954A3 /* WatchConnectivityPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */; };
+		88FE35262464789B00D954A3 /* authorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35252464789B00D954A3 /* authorizationManager.swift */; };
+		88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3527246478B200D954A3 /* heartRateManager.swift */; };
+		88FE352A246478C900D954A3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3529246478C900D954A3 /* InterfaceController.swift */; };
+		88FE352D2464791000D954A3 /* mainWatchIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352C2464791000D954A3 /* mainWatchIFC.swift */; };
+		88FE35302464793E00D954A3 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352F2464793E00D954A3 /* MotionManager.swift */; };
+		88FE3532246479A700D954A3 /* MotionIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3531246479A700D954A3 /* MotionIFC.swift */; };
+		88FE3535246479F100D954A3 /* WatchtoPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3534246479F100D954A3 /* WatchtoPhone.swift */; };
+		88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE353624647A7D00D954A3 /* AddNewActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +110,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "STMI-CGM WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		8812A0FC24648153004EDCFE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		8812A0FE24649D0F004EDCFE /* MainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUI.swift; sourceTree = "<group>"; };
+		881918E5246E1439002CB92E /* AddNewEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntry.swift; sourceTree = "<group>"; };
+		88891FB9246E1D1700ACA3A8 /* IndieFlower-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IndieFlower-Regular.ttf"; sourceTree = "<group>"; };
+		88891FBA246E1D1700ACA3A8 /* Teko-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Bold.ttf"; sourceTree = "<group>"; };
+		88891FBB246E1D1700ACA3A8 /* Teko-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Medium.ttf"; sourceTree = "<group>"; };
+		88891FBC246E1D1700ACA3A8 /* Anton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Anton-Regular.ttf"; sourceTree = "<group>"; };
+		88891FBD246E1D1700ACA3A8 /* YanoneKaffeesatz-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		88891FBE246E1D1700ACA3A8 /* Teko-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-SemiBold.ttf"; sourceTree = "<group>"; };
+		88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Regular.ttf"; sourceTree = "<group>"; };
+		88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Light.ttf"; sourceTree = "<group>"; };
+		88891FC9246E1D7F00ACA3A8 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		88891FCC246F33A600ACA3A8 /* AddStoredActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredActivity.swift; sourceTree = "<group>"; };
+		88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		88891FFD2470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		88891FFE2470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		88891FFF2470688A00ACA3A8 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		888920002470688A00ACA3A8 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		888920012470688A00ACA3A8 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +156,25 @@
 		88FE34F42464748A00D954A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		88FE34F62464748A00D954A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88FE34F72464748A00D954A3 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		88FE3508246475B400D954A3 /* iPhoneMotionIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPhoneMotionIFC.swift; sourceTree = "<group>"; };
+		88FE350A246475D700D954A3 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		88FE350C2464760400D954A3 /* ActivityMainIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainIFC.swift; sourceTree = "<group>"; };
+		88FE350E2464761F00D954A3 /* activityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityManager.swift; sourceTree = "<group>"; };
+		88FE35122464768400D954A3 /* AddNewMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeal.swift; sourceTree = "<group>"; };
+		88FE35142464769800D954A3 /* AddStoredMeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredMeals.swift; sourceTree = "<group>"; };
+		88FE3516246476B600D954A3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		88FE3518246476CE00D954A3 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
+		88FE35202464782800D954A3 /* PhonetoWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonetoWatch.swift; sourceTree = "<group>"; };
+		88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityPreview.swift; sourceTree = "<group>"; };
+		88FE35252464789B00D954A3 /* authorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authorizationManager.swift; sourceTree = "<group>"; };
+		88FE3527246478B200D954A3 /* heartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartRateManager.swift; sourceTree = "<group>"; };
+		88FE3529246478C900D954A3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		88FE352C2464791000D954A3 /* mainWatchIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainWatchIFC.swift; sourceTree = "<group>"; };
+		88FE352F2464793E00D954A3 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		88FE3531246479A700D954A3 /* MotionIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionIFC.swift; sourceTree = "<group>"; };
+		88FE3534246479F100D954A3 /* WatchtoPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchtoPhone.swift; sourceTree = "<group>"; };
+		88FE353624647A7D00D954A3 /* AddNewActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivity.swift; sourceTree = "<group>"; };
+		88FE353924647AF600D954A3 /* STMI-CGMcoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "STMI-CGMcoreData.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +189,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8812A0FB24648153004EDCFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8812A0FC24648153004EDCFE /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		881918E1246DFBA3002CB92E /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				88891FB8246E1D1700ACA3A8 /* Fonts */,
+				881918E4246DFC0A002CB92E /* Pictures */,
+				8812A0FE24649D0F004EDCFE /* MainUI.swift */,
+				881918E5246E1439002CB92E /* AddNewEntry.swift */,
+			);
+			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		881918E4246DFC0A002CB92E /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pictures;
+			sourceTree = "<group>";
+		};
+		88891FB8246E1D1700ACA3A8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				88891FC9246E1D7F00ACA3A8 /* DancingScript-VariableFont_wght.ttf */,
+				88891FB9246E1D1700ACA3A8 /* IndieFlower-Regular.ttf */,
+				88891FBA246E1D1700ACA3A8 /* Teko-Bold.ttf */,
+				88891FBB246E1D1700ACA3A8 /* Teko-Medium.ttf */,
+				88891FBC246E1D1700ACA3A8 /* Anton-Regular.ttf */,
+				88891FBD246E1D1700ACA3A8 /* YanoneKaffeesatz-VariableFont_wght.ttf */,
+				88891FBE246E1D1700ACA3A8 /* Teko-SemiBold.ttf */,
+				88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */,
+				88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		88FE34B62464748500D954A3 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +245,7 @@
 				88FE34D72464748800D954A3 /* STMI-CGM WatchKit App */,
 				88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */,
 				88FE34C02464748500D954A3 /* Products */,
+				8812A0FB24648153004EDCFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,12 +262,19 @@
 		88FE34C12464748500D954A3 /* STMI-CGM */ = {
 			isa = PBXGroup;
 			children = (
+				881918E1246DFBA3002CB92E /* UserInterface */,
+				88FE353B24647BD700D954A3 /* CoreData */,
+				88FE351F2464781700D954A3 /* WatchConnectivity */,
+				88FE3507246474B800D954A3 /* Sensors */,
+				88FE3506246474B500D954A3 /* Meals */,
+				88FE3505246474AA00D954A3 /* Activity */,
 				88FE34C22464748500D954A3 /* AppDelegate.swift */,
 				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
 				88FE34C62464748500D954A3 /* ContentView.swift */,
 				88FE34C82464748800D954A3 /* Assets.xcassets */,
 				88FE34CD2464748800D954A3 /* LaunchScreen.storyboard */,
 				88FE34D02464748800D954A3 /* Info.plist */,
+				88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */,
 				88FE34CA2464748800D954A3 /* Preview Content */,
 			);
 			path = "STMI-CGM";
@@ -166,6 +301,11 @@
 		88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */,
+				88FE3533246479DE00D954A3 /* WatchConnectivity */,
+				88FE352E2464792500D954A3 /* Motion&Location */,
+				88FE352B2464790600D954A3 /* MainWatchIFC */,
+				88FE35242464788700D954A3 /* HeartRate */,
 				88FE34E72464748900D954A3 /* ContentView.swift */,
 				88FE34E92464748900D954A3 /* HostingController.swift */,
 				88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */,
@@ -185,6 +325,98 @@
 				88FE34F42464748A00D954A3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		88FE3505246474AA00D954A3 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				88FE350C2464760400D954A3 /* ActivityMainIFC.swift */,
+				88FE353624647A7D00D954A3 /* AddNewActivity.swift */,
+				88891FCC246F33A600ACA3A8 /* AddStoredActivity.swift */,
+				88FE350E2464761F00D954A3 /* activityManager.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		88FE3506246474B500D954A3 /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				88FE3518246476CE00D954A3 /* MealList.swift */,
+				88FE35122464768400D954A3 /* AddNewMeal.swift */,
+				88FE35142464769800D954A3 /* AddStoredMeals.swift */,
+				88FE3516246476B600D954A3 /* ImagePicker.swift */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
+		88FE3507246474B800D954A3 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				88FE3508246475B400D954A3 /* iPhoneMotionIFC.swift */,
+				88FE350A246475D700D954A3 /* MotionManager.swift */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		88FE351F2464781700D954A3 /* WatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				88FE35202464782800D954A3 /* PhonetoWatch.swift */,
+				88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */,
+			);
+			path = WatchConnectivity;
+			sourceTree = "<group>";
+		};
+		88FE35242464788700D954A3 /* HeartRate */ = {
+			isa = PBXGroup;
+			children = (
+				88FE35252464789B00D954A3 /* authorizationManager.swift */,
+				88FE3527246478B200D954A3 /* heartRateManager.swift */,
+				88FE3529246478C900D954A3 /* InterfaceController.swift */,
+			);
+			path = HeartRate;
+			sourceTree = "<group>";
+		};
+		88FE352B2464790600D954A3 /* MainWatchIFC */ = {
+			isa = PBXGroup;
+			children = (
+				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
+			);
+			path = MainWatchIFC;
+			sourceTree = "<group>";
+		};
+		88FE352E2464792500D954A3 /* Motion&Location */ = {
+			isa = PBXGroup;
+			children = (
+				88FE352F2464793E00D954A3 /* MotionManager.swift */,
+				88FE3531246479A700D954A3 /* MotionIFC.swift */,
+			);
+			path = "Motion&Location";
+			sourceTree = "<group>";
+		};
+		88FE3533246479DE00D954A3 /* WatchConnectivity */ = {
+			isa = PBXGroup;
+			children = (
+				88FE3534246479F100D954A3 /* WatchtoPhone.swift */,
+			);
+			path = WatchConnectivity;
+			sourceTree = "<group>";
+		};
+		88FE353B24647BD700D954A3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */,
+				88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */,
+				88891FFD2470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift */,
+				88891FFE2470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift */,
+				88891FFF2470688A00ACA3A8 /* Activity+CoreDataClass.swift */,
+				888920002470688A00ACA3A8 /* Activity+CoreDataProperties.swift */,
+				888920012470688A00ACA3A8 /* Sensors+CoreDataClass.swift */,
+				888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */,
+				888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */,
+				888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +521,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */,
 				88FE34CF2464748800D954A3 /* LaunchScreen.storyboard in Resources */,
 				88FE34CC2464748800D954A3 /* Preview Assets.xcassets in Resources */,
+				88891FC6246E1D1700ACA3A8 /* Teko-SemiBold.ttf in Resources */,
+				88891FC3246E1D1700ACA3A8 /* Teko-Medium.ttf in Resources */,
+				88891FC8246E1D1700ACA3A8 /* Teko-Light.ttf in Resources */,
+				88891FC5246E1D1700ACA3A8 /* YanoneKaffeesatz-VariableFont_wght.ttf in Resources */,
+				88891FC2246E1D1700ACA3A8 /* Teko-Bold.ttf in Resources */,
+				88891FC4246E1D1700ACA3A8 /* Anton-Regular.ttf in Resources */,
+				88891FC1246E1D1700ACA3A8 /* IndieFlower-Regular.ttf in Resources */,
 				88FE34C92464748800D954A3 /* Assets.xcassets in Resources */,
+				88891FFA2470596500ACA3A8 /* STMI-CGMcoreData.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,9 +561,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8889200D2470688A00ACA3A8 /* Picture+CoreDataClass.swift in Sources */,
+				88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */,
+				888920082470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift in Sources */,
 				88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */,
+				881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */,
+				88FE35152464769800D954A3 /* AddStoredMeals.swift in Sources */,
+				88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */,
+				88FE35232464783A00D954A3 /* WatchConnectivityPreview.swift in Sources */,
 				88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */,
+				8889200C2470688A00ACA3A8 /* Sensors+CoreDataProperties.swift in Sources */,
 				88FE34C72464748500D954A3 /* ContentView.swift in Sources */,
+				88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */,
+				888920062470688A00ACA3A8 /* Meal+CoreDataProperties.swift in Sources */,
+				88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */,
+				88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */,
+				8889200E2470688A00ACA3A8 /* Picture+CoreDataProperties.swift in Sources */,
+				8889200A2470688A00ACA3A8 /* Activity+CoreDataProperties.swift in Sources */,
+				88891FCD246F33A600ACA3A8 /* AddStoredActivity.swift in Sources */,
+				888920092470688A00ACA3A8 /* Activity+CoreDataClass.swift in Sources */,
+				888920072470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift in Sources */,
+				888920052470688A00ACA3A8 /* Meal+CoreDataClass.swift in Sources */,
+				88FE3519246476CE00D954A3 /* MealList.swift in Sources */,
+				88FE350F2464761F00D954A3 /* activityManager.swift in Sources */,
+				88FE3509246475B400D954A3 /* iPhoneMotionIFC.swift in Sources */,
+				88FE350B246475D700D954A3 /* MotionManager.swift in Sources */,
+				8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */,
+				8889200B2470688A00ACA3A8 /* Sensors+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,9 +596,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				88FE34EA2464748900D954A3 /* HostingController.swift in Sources */,
+				88FE35302464793E00D954A3 /* MotionManager.swift in Sources */,
+				88FE352A246478C900D954A3 /* InterfaceController.swift in Sources */,
 				88FE34E82464748900D954A3 /* ContentView.swift in Sources */,
 				88FE34EE2464748900D954A3 /* NotificationController.swift in Sources */,
+				88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */,
+				88FE3532246479A700D954A3 /* MotionIFC.swift in Sources */,
+				88FE35262464789B00D954A3 /* authorizationManager.swift in Sources */,
 				88FE34EC2464748900D954A3 /* ExtensionDelegate.swift in Sources */,
+				88FE3535246479F100D954A3 /* WatchtoPhone.swift in Sources */,
+				88FE352D2464791000D954A3 /* mainWatchIFC.swift in Sources */,
 				88FE34F02464748900D954A3 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +763,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "STMI-CGM WatchKit Extension/STMI-CGM WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = V34SA3KVD3;
@@ -515,6 +788,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "STMI-CGM WatchKit Extension/STMI-CGM WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM WatchKit Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = V34SA3KVD3;
@@ -653,6 +927,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88FE353924647AF600D954A3 /* STMI-CGMcoreData.xcdatamodel */,
+			);
+			currentVersion = 88FE353924647AF600D954A3 /* STMI-CGMcoreData.xcdatamodel */;
+			path = "STMI-CGMcoreData.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 88FE34B72464748500D954A3 /* Project object */;
 }

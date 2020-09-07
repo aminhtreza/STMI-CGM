@@ -30,9 +30,31 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSHealthClinicalHealthRecordsShareUsageDescription</key>
+	<string>Allow us to access your Health Data</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Allow us to access your Health Data</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Allow us to access your Health Data</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>NSLocationAlwaysUsageDescription - 2</key>
+	<string>Allow us to access your Location Data</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Allow us to access your Location Data</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+	<key>WKBackgroundModes</key>
+	<array/>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 	<key>WKRunsIndependentlyOfCompanionApp</key>
-	<true/>
+	<false/>
 </dict>
 </plist>
