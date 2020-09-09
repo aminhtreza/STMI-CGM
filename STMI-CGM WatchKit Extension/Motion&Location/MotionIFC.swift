@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// disregard this one
 struct MotionIFC: View {
     @ObservedObject var motionManager = MotionManager()
     

@@ -18,7 +18,6 @@
 		88891FC6246E1D1700ACA3A8 /* Teko-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBE246E1D1700ACA3A8 /* Teko-SemiBold.ttf */; };
 		88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */; };
 		88891FC8246E1D1700ACA3A8 /* Teko-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */; };
-		88891FCD246F33A600ACA3A8 /* AddStoredActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FCC246F33A600ACA3A8 /* AddStoredActivity.swift */; };
 		88891FFA2470596500ACA3A8 /* STMI-CGMcoreData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */; };
 		888920052470688A00ACA3A8 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */; };
 		888920062470688A00ACA3A8 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */; };
@@ -123,7 +122,6 @@
 		88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Regular.ttf"; sourceTree = "<group>"; };
 		88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Light.ttf"; sourceTree = "<group>"; };
 		88891FC9246E1D7F00ACA3A8 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		88891FCC246F33A600ACA3A8 /* AddStoredActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredActivity.swift; sourceTree = "<group>"; };
 		88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		88891FFD2470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
@@ -332,7 +330,6 @@
 			children = (
 				88FE350C2464760400D954A3 /* ActivityMainIFC.swift */,
 				88FE353624647A7D00D954A3 /* AddNewActivity.swift */,
-				88891FCC246F33A600ACA3A8 /* AddStoredActivity.swift */,
 				88FE350E2464761F00D954A3 /* activityManager.swift */,
 			);
 			path = Activity;
@@ -578,7 +575,6 @@
 				88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */,
 				8889200E2470688A00ACA3A8 /* Picture+CoreDataProperties.swift in Sources */,
 				8889200A2470688A00ACA3A8 /* Activity+CoreDataProperties.swift in Sources */,
-				88891FCD246F33A600ACA3A8 /* AddStoredActivity.swift in Sources */,
 				888920092470688A00ACA3A8 /* Activity+CoreDataClass.swift in Sources */,
 				888920072470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift in Sources */,
 				888920052470688A00ACA3A8 /* Meal+CoreDataClass.swift in Sources */,

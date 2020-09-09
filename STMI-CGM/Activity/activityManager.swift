@@ -11,11 +11,7 @@ var activityManager = ActivityManager()
 
 class ActivityManager: NSObject {
     
-    
     var startTime = Date()
     var endTime = Date()
     var activityType = "No activity"
-    
-    
-    
 }

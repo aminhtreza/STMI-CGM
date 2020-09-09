@@ -41,11 +41,13 @@ struct WatchConnectivityPreview: View {
                             VStack {
                                 Text("HR: \(sensor.heartRate)")
                                 
+                                /*
                                 if #available(iOS 14.0, *) {
                                     Text(sensor.date, style: .time)
                                 } else {
                                     Text("\(sensor.date)")
                                 }
+                                */
                             }
                             VStack {
                                 Text("Roll: \(sensor.roll!)")

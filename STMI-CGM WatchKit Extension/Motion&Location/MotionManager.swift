@@ -77,7 +77,6 @@ class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         // locations are put into an array, so we grab the first piece of data
         // let lastLocation = locations.last!
         if let location = locations.last {
-    
             // process measurment, save it as a dictionary, and send it to the phone
             self.latitude = "\(round(location.coordinate.latitude * 1000) / 1000)"
             self.longitude = "\(round(location.coordinate.longitude * 1000) / 1000)"

@@ -11,13 +11,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView{
-            MainUI()
+            MainUI() // Navigates to meals and activities
                 .tabItem {
                     Text("Entries")
                     Image(systemName: "book.fill")
                     
             }
-            WatchConnectivityPreview()
+            WatchConnectivityPreview() // displayes motion sensor data
                 .tabItem {
                     Text("Sensors")
                     Image(systemName: "rays")

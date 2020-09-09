@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+
 struct mainWatchIFC: View {
     @ObservedObject var HeartRateManager = heartRateManager() // ObservedObjects are used to let Swift know that this variable will be changing in another class and has SwiftUI update your View simultanously
     @ObservedObject var motionManager = MotionManager()
@@ -26,7 +27,7 @@ struct mainWatchIFC: View {
                 Text("Altitude: \(motionManager.altitude)").frame(width: geo.size.width, alignment: .leading)
             }
             .onAppear {
-                AuthorizationManager.AuthorizeHK()
+                AuthorizationManager.AuthorizeHK() // access to healthkit
                 watchToPhone.activateSession()
                 motionManager.startQueuedMotionUpdates()
                 motionManager.setupLocation()
