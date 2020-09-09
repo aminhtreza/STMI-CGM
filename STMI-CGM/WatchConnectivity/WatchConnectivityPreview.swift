@@ -40,24 +40,23 @@ struct WatchConnectivityPreview: View {
                         HStack{
                             VStack {
                                 Text("HR: \(sensor.heartRate)")
-                                
                                 /*
                                 if #available(iOS 14.0, *) {
                                     Text(sensor.date, style: .time)
                                 } else {
                                     Text("\(sensor.date)")
                                 }
-                                */
+ */
                             }
                             VStack {
-                                Text("Roll: \(sensor.roll!)")
-                                Text("Pitch: \(sensor.pitch!)")
-                                Text("Yaw: \(sensor.yaw!)")
+                                Text("Roll: \(sensor.roll ?? "")")
+                                Text("Pitch: \(sensor.pitch ?? "")")
+                                Text("Yaw: \(sensor.yaw ?? "")")
                             }
                             VStack {
-                                Text("Lat: \(sensor.latitude!)")
-                                Text("Alt: \(sensor.altitude!)")
-                                Text("Long: \(sensor.longitude!)")
+                                Text("Lat: \(sensor.latitude ?? "")")
+                                Text("Alt: \(sensor.altitude ?? "")")
+                                Text("Long: \(sensor.longitude ?? "")")
                             }
                             
                         }
@@ -82,17 +81,11 @@ struct WatchConnectivityPreview: View {
         
     }
     func saveToMoc() {
-         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
-            let sensors = Sensors(context: self.moc)
-            if self.phonetoWatch.HeartRate == 0 ||
-                self.phonetoWatch.watchRoll == "" ||
-                self.phonetoWatch.watchPitch == "" ||
-                self.phonetoWatch.watchYaw == "" ||
-                self.phonetoWatch.watchLatitude == "" ||
-                self.phonetoWatch.watchLongitude == "" ||
-                self.phonetoWatch.watchAltitude == "" {
-                return
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
+            if self.phonetoWatch.HeartRate == 0 || self.phonetoWatch.watchRoll == "" {
+                
             } else {
+                let sensors = Sensors(context: self.moc)
                 sensors.heartRate = Int16(self.phonetoWatch.HeartRate)
                 sensors.roll = self.phonetoWatch.watchRoll
                 sensors.pitch = self.phonetoWatch.watchPitch
@@ -101,9 +94,9 @@ struct WatchConnectivityPreview: View {
                 sensors.altitude = self.phonetoWatch.watchLongitude
                 sensors.longitude = self.phonetoWatch.watchAltitude
                 sensors.date = Date()
+                do {try self.moc.save()}
+                catch {print(error)}
             }
-            do {try self.moc.save()}
-            catch {print(error)}
         }
     }
     

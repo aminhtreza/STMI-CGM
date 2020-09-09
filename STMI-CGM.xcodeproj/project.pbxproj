@@ -29,6 +29,7 @@
 		8889200C2470688A00ACA3A8 /* Sensors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */; };
 		8889200D2470688A00ACA3A8 /* Picture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */; };
 		8889200E2470688A00ACA3A8 /* Picture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */; };
+		88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B64C3A2508741B00661F3F /* AddStoredActivity.swift */; };
 		88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C22464748500D954A3 /* AppDelegate.swift */; };
 		88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C42464748500D954A3 /* SceneDelegate.swift */; };
 		88FE34C72464748500D954A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C62464748500D954A3 /* ContentView.swift */; };
@@ -132,6 +133,7 @@
 		888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		88B64C3A2508741B00661F3F /* AddStoredActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredActivity.swift; sourceTree = "<group>"; };
 		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -330,6 +332,7 @@
 			children = (
 				88FE350C2464760400D954A3 /* ActivityMainIFC.swift */,
 				88FE353624647A7D00D954A3 /* AddNewActivity.swift */,
+				88B64C3A2508741B00661F3F /* AddStoredActivity.swift */,
 				88FE350E2464761F00D954A3 /* activityManager.swift */,
 			);
 			path = Activity;
@@ -566,6 +569,7 @@
 				88FE35152464769800D954A3 /* AddStoredMeals.swift in Sources */,
 				88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */,
 				88FE35232464783A00D954A3 /* WatchConnectivityPreview.swift in Sources */,
+				88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */,
 				88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */,
 				8889200C2470688A00ACA3A8 /* Sensors+CoreDataProperties.swift in Sources */,
 				88FE34C72464748500D954A3 /* ContentView.swift in Sources */,
