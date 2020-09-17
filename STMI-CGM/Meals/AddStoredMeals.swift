@@ -96,75 +96,83 @@ struct AddStoredMeal: View {
     @State var sourceType: UIImagePickerController.SourceType = .camera
     @State var image: Image?
     @State var inputImage: UIImage?
-
+    @State var cameraPic = false
+    
     var body: some View {
-        VStack {
-            VStack{
-                if image != nil {
-                    GeometryReader {geo in
-                        self.image?
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 200, height: 200)
-                            .border(Color.white,width: 1)
-                            .cornerRadius(20)
-                            .shadow(radius: 2)
-                            .clipped()
+        GeometryReader { geo in
+            VStack {
+                VStack{
+                    if self.image != nil {
+                         self.image?
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: geo.size.width * (3/4), height: geo.size.width * (3/4), alignment: .center)
+                            .cornerRadius(30)
+                            .clipShape(Rectangle())
+                            .shadow(radius: 10)
+                            .padding().padding(.top, 20)
+                            .onTapGesture {
+                                self.showActionSheet = true
+                            }
+                        
+                    } else {
+                        CameraButton(showActionSheet: self.$showActionSheet)
+                                .frame(width: 100, height: 100, alignment: .center
+                        )
                     }
-                } else {
-                        CameraButton(showActionSheet: $showActionSheet)
-                            .frame(width: 100, height: 100, alignment: .center
-                    )
                 }
-            }
-            .onTapGesture {
-                self.showActionSheet = true
-            }
-            .frame(width: 250, height: 250, alignment: .center)
+                .onTapGesture {
+                    self.showActionSheet = true
+                }
+                .frame(width: 250, height: 250, alignment: .center)
 
-            
-            Section{
-                List {
-                    Text("Name: \(self.mealName!)")
-                    Text("Calories: \(Int(calories))")
-                    Text("Carbs: \(Int(carbs))")
-                    Text("Protein: \(Int(protein))")
-                    Text("Fat: \(Int(fat))")
+                
+                Section{
+                    List {
+                        Text("Name: \(self.mealName!)")
+                        Text("Calories: \(Int(self.calories))")
+                        Text("Carbs: \(Int(self.carbs))")
+                        Text("Protein: \(Int(self.protein))")
+                        Text("Fat: \(Int(self.fat))")
+                    }
+                    .frame(height: 210)
+                    .padding()
                 }
-                .frame(height: 210)
-                .padding()
-            }
-            Button(action: {
-                if self.image != nil {
-                    self.saveToMoc()
-                } else {
-                    self.showAlert.toggle()
+                Button(action: {
+                    if self.image != nil {
+                        self.saveToMoc()
+                    } else {
+                        self.showAlert.toggle()
+                    }
+                }){
+                    Text("Add meal")
                 }
-            }){
-                Text("Add meal")
-            }
 
-                // Whenever you click on the camera this will open
-            .actionSheet(isPresented: $showActionSheet, content: { () -> ActionSheet in
-                ActionSheet(title: Text("Select Image"), buttons: [
-                    ActionSheet.Button.default(Text("Camera"), action: {
-                        self.showImagePicker.toggle()
-                        self.sourceType = .camera
-                    }),
-                    ActionSheet.Button.default(Text("Photo Gallery"), action: {
-                        self.showImagePicker.toggle()
-                        self.sourceType = .photoLibrary
-                    })
-                ])
-            })
-                // After choosing from camera or gallery this will open
-            .sheet(isPresented: $showImagePicker, onDismiss: loadImage) {
-                ImagePicker(image: self.$inputImage, sourceType: self.sourceType)
-            }
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Please upload image"), message: Text("We need an image to store this meal. If you don't have an image please find one on Google that best represents what you ate."), dismissButton: .default(Text("Got it!")))
+                    // Whenever you click on the camera this will open
+                    .actionSheet(isPresented: self.$showActionSheet, content: { () -> ActionSheet in
+                    ActionSheet(title: Text("Select Image"), buttons: [
+                        ActionSheet.Button.default(Text("Camera"), action: {
+                            self.showImagePicker.toggle()
+                            self.sourceType = .camera
+                            self.cameraPic = true
+                        }),
+                        ActionSheet.Button.default(Text("Photo Gallery"), action: {
+                            self.showImagePicker.toggle()
+                            self.sourceType = .photoLibrary
+                            self.cameraPic = false
+                        })
+                    ])
+                })
+                    // After choosing from camera or gallery this will open
+                    .sheet(isPresented: self.$showImagePicker, onDismiss: self.loadImage) {
+                    ImagePicker(image: self.$inputImage, camera: self.$cameraPic)
+                }
+                .alert(isPresented: self.$showAlert) {
+                    Alert(title: Text("Please upload image"), message: Text("We need an image to store this meal. If you don't have an image please find one on Google that best represents what you ate."), dismissButton: .default(Text("Got it!")))
+                }
             }
         }
+        
     }
     
     func loadImage() {

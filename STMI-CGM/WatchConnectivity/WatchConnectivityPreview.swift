@@ -4,7 +4,7 @@
 //
 //  Created by iMac on 3/9/20.
 //  Copyright © 2020 Amin Hamiditabar. All rights reserved.
-
+/*
 import SwiftUI
 struct WatchConnectivityPreview: View {
     @ObservedObject var phonetoWatch = PhonetoWatch()
@@ -20,6 +20,7 @@ struct WatchConnectivityPreview: View {
             Spacer()
             
             VStack {
+                Text(phonetoWatch.watchReachable() ? "Connected":"Not connected")
                 Text("Heart rate: \(phonetoWatch.HeartRate)")
                 Text("Latitude: \(phonetoWatch.watchLatitude)")
                 Text("Longitude: \(phonetoWatch.watchLongitude)")
@@ -29,7 +30,7 @@ struct WatchConnectivityPreview: View {
                 Text("Yaw: \(phonetoWatch.watchYaw)")
                 Text("Data count: \(sensors.count)")
                 Button("Clear data") {
-                    clearSensors()
+                    self.clearSensors()
                 }
             }.padding()
             
@@ -40,13 +41,13 @@ struct WatchConnectivityPreview: View {
                         HStack{
                             VStack {
                                 Text("HR: \(sensor.heartRate)")
-                                /*
+                                
                                 if #available(iOS 14.0, *) {
                                     Text(sensor.date, style: .time)
                                 } else {
                                     Text("\(sensor.date)")
                                 }
- */
+
                             }
                             VStack {
                                 Text("Roll: \(sensor.roll ?? "")")
@@ -64,13 +65,33 @@ struct WatchConnectivityPreview: View {
                 }
             }
         }
-        .onAppear(perform: phonetoWatch.activateSession)
-        .onAppear(perform: updateUI)
-        .onAppear(perform: saveToMoc)
+        .onAppear {
+            self.phonetoWatch.activateSession()
+            self.updateUI2()
+            //self.saveToMoc()
+        }
     }
+    
+    
+}
+
+extension WatchConnectivityPreview {
+    func updateUI2() {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
+            print("Hello")
+        }
+    }
+    
     func updateUI() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
             self.phonetoWatch.updateUI()
+            print(self.phonetoWatch.background())
+            if !self.phonetoWatch.background() {
+                saveToMoc()
+                print("Saving to moc")
+            } else {
+
+            }
         }
     }
     func deleteSensorData(at offsets: IndexSet) {
@@ -113,3 +134,4 @@ struct WatchConnectivityPreview_Previews: PreviewProvider {
         WatchConnectivityPreview()
     }
 }
+*/

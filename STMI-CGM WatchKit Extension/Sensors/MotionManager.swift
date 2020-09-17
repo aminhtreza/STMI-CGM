@@ -11,11 +11,6 @@ import CoreLocation
 import CoreMotion
 import WatchConnectivity
 
-var watchToPhone = WatchtoPhone()
-
-
-// Hey Ryan
-// Hey Amin
 class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     var motionManager = CMMotionManager()
@@ -46,25 +41,20 @@ class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         self.motionManager.showsDeviceMovementDisplay = true
         // if watch 5 or later: (using: .xMagneticNorthZVertical, ...
         self.motionManager.startDeviceMotionUpdates(using: .xArbitraryZVertical, to: OperationQueue.current!, withHandler: { (data, error) in
-            
              if let validData = data {
                 // Get the attitude relative to the magnetic north reference frame.
-                
                 let roll = validData.attitude.roll
                 let pitch = validData.attitude.pitch
                 let yaw = validData.attitude.yaw
-                //print("We got here")
-                //print("roll :\(roll), pitch: \(pitch), yaw: \(yaw)")
                 
                 self.Roll = String(Double(roll).rounded(toPlaces: 2))
                 self.Pitch = String(Double(pitch).rounded(toPlaces: 2))
                 self.Yaw = String(Double(yaw).rounded(toPlaces: 2))
-
+                
                 sensorData["roll"] = self.Roll
                 sensorData["yaw"] = self.Yaw
                 sensorData["pitch"] = self.Pitch
              }
-                     
           })
        }
        else {
@@ -77,16 +67,14 @@ class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         // locations are put into an array, so we grab the first piece of data
         // let lastLocation = locations.last!
         if let location = locations.last {
-            // process measurment, save it as a dictionary, and send it to the phone
+            // retrieve location data
             self.latitude = "\(round(location.coordinate.latitude * 1000) / 1000)"
             self.longitude = "\(round(location.coordinate.longitude * 1000) / 1000)"
             self.altitude = "\(round(location.altitude * 1000) / 1000)"
-            
-            // print("location changed: \(round(location.coordinate.latitude * 1000) / 1000), \(round(location.coordinate.longitude * 1000) / 1000), \(round(location.altitude * 1000) / 1000),Date: \(self.date)")
+            // store in sensorDate to send to phone
             sensorData["altitude"] = self.altitude
             sensorData["longitude"] = self.longitude
             sensorData["latitude"] = self.latitude
-
         }
     }
 }

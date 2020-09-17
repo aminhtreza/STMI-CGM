@@ -8,101 +8,90 @@
 
 import SwiftUI
 
-struct ImagePicker: UIViewControllerRepresentable {
-    @Environment(\.presentationMode) var presentationMode
+enum ActiveSheet {
+    case first, second
+}
+
+final class ImagePickerCoordinator: NSObject {
     @Binding var image: UIImage?
-    var sourceType: UIImagePickerController.SourceType
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(self)
-    }
-    
-    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-        let picker = UIImagePickerController()
-        picker.sourceType = sourceType
-        //picker.allowsEditing = true
-        picker.delegate = context.coordinator
-        return picker
-    }
-    
-    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
-        
-    }
-    
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        let parent: ImagePicker
+    @Binding var takePhoto: Bool
 
-        init(_ parent: ImagePicker) {
-            self.parent = parent
-        }
-        
-        
-        func resizeImage(image: UIImage) -> UIImage {
-            let scale = 300 / image.size.width
-            let newHeight = image.size.height * scale
-            UIGraphicsBeginImageContext(CGSize(width: 300, height: newHeight))
-            image.draw(in: CGRect(x: 0, y: 0, width: 300, height: newHeight))
-            let newImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-
-            return newImage!
-        }
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            if let uiImage = info[.originalImage] as? UIImage {parent.image = uiImage}
-            parent.presentationMode.wrappedValue.dismiss()
-        }
+    init(image: Binding<UIImage?>, takePhoto: Binding<Bool>) {
+        _image = image
+        _takePhoto = takePhoto
     }
 }
 
-
-
-/*
 struct ImagePicker: UIViewControllerRepresentable {
-    
-    @Binding var isVisible:Bool
-    @Binding var image:Image?
-    var sourceType:Int
-    
-    func makeCoordinator() -> Coordinator {
-        Coordinator(isVisible: $isVisible, image: $image)
+    @Binding var image: UIImage?
+    @Binding var camera: Bool
+
+    func makeCoordinator() -> ImagePickerCoordinator {
+        ImagePickerCoordinator(image: $image, takePhoto: $camera)
     }
-    
+
     func makeUIViewController(context: Context) -> UIImagePickerController {
-        let vc = UIImagePickerController()
-        vc.allowsEditing = true
-        vc.sourceType = sourceType == 1 ? .photoLibrary : .camera
-        
-        vc.delegate = context.coordinator
-        
-        return vc
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = context.coordinator
+        return pickerController
     }
-    
+
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: Context) {
-        
+        switch self.camera {
+        case true:
+            uiViewController.sourceType = .camera
+            uiViewController.showsCameraControls = true
+        case false:
+            uiViewController.sourceType = .photoLibrary
+        }
+        uiViewController.allowsEditing = false
     }
+}
+
+extension ImagePickerCoordinator: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageOriginal = info[.originalImage] as? UIImage {
+            image = resizeImage(image: imageOriginal)
+        }
+        if let imageEdited = info[.editedImage] as? UIImage {
+            image = imageEdited
+        }
+
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func resizeImage(image: UIImage) -> UIImage {
+        let width = image.size.width
+        let height = image.size.height
+        UIGraphicsBeginImageContext(CGSize(width: width, height: height))
+        image.draw(in: CGRect(x: 0, y: 0, width: width, height: height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return newImage!
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+
+struct CameraButton: View{
+    @Binding var showActionSheet: Bool //binding variables come from other places and are shared within the structs
     
-    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-        
-        @Binding var isVisible:Bool
-        @Binding var image:Image?
-        
-        init(isVisible: Binding<Bool>, image: Binding<Image?>) {
-            _isVisible = isVisible
-            _image = image
-        }
-        
-        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            let uiimage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-            image = Image(uiImage: uiimage)
-            isVisible = false
-        }
-        
-        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-            isVisible = false
+    var body: some View {
+        Button(action: {
+            self.showActionSheet.toggle()
+            print("camera button tapped")
+        }){
+            Image(systemName: "camera.circle.fill")
+            .resizable()
+            .imageScale(.large)
+            
         }
     }
 }
 
 
 
-*/
+ 

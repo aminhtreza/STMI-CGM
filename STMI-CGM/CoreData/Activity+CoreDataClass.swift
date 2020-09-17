@@ -1,8 +1,8 @@
 //
-//  Sensors+CoreDataClass.swift
+//  Activity+CoreDataClass.swift
 //  STMI-CGM
 //
-//  Created by iMac on 5/16/20.
+//  Created by iMac on 9/16/20.
 //  Copyright © 2020 Amin Hamiditabar. All rights reserved.
 //
 //
@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 
-public class Sensors: NSManagedObject {
+public class Activity: NSManagedObject {
 
 }

@@ -2,7 +2,7 @@
 //  Meal+CoreDataProperties.swift
 //  STMI-CGM
 //
-//  Created by iMac on 5/16/20.
+//  Created by iMac on 9/16/20.
 //  Copyright © 2020 Amin Hamiditabar. All rights reserved.
 //
 //
@@ -19,11 +19,15 @@ extension Meal {
 
     @NSManaged public var calories: Double
     @NSManaged public var carbs: Double
+    @NSManaged public var comments: String?
     @NSManaged public var fat: Double
     @NSManaged public var inputDate: Date?
     @NSManaged public var mealName: String?
     @NSManaged public var protein: Double
-    @NSManaged public var comments: String?
     @NSManaged public var picture: Picture?
+
+}
+
+extension Meal : Identifiable {
 
 }

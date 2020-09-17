@@ -19,17 +19,17 @@
 		88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */; };
 		88891FC8246E1D1700ACA3A8 /* Teko-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */; };
 		88891FFA2470596500ACA3A8 /* STMI-CGMcoreData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */; };
-		888920052470688A00ACA3A8 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */; };
-		888920062470688A00ACA3A8 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */; };
-		888920072470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFD2470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift */; };
-		888920082470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFE2470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift */; };
-		888920092470688A00ACA3A8 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88891FFF2470688A00ACA3A8 /* Activity+CoreDataClass.swift */; };
-		8889200A2470688A00ACA3A8 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920002470688A00ACA3A8 /* Activity+CoreDataProperties.swift */; };
-		8889200B2470688A00ACA3A8 /* Sensors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920012470688A00ACA3A8 /* Sensors+CoreDataClass.swift */; };
-		8889200C2470688A00ACA3A8 /* Sensors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */; };
-		8889200D2470688A00ACA3A8 /* Picture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */; };
-		8889200E2470688A00ACA3A8 /* Picture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */; };
 		88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B64C3A2508741B00661F3F /* AddStoredActivity.swift */; };
+		88DB6E6E2511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E642511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift */; };
+		88DB6E6F2511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E652511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift */; };
+		88DB6E702511DAD7004CB3D4 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E662511DAD7004CB3D4 /* Meal+CoreDataClass.swift */; };
+		88DB6E712511DAD7004CB3D4 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E672511DAD7004CB3D4 /* Meal+CoreDataProperties.swift */; };
+		88DB6E722511DAD7004CB3D4 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E682511DAD7004CB3D4 /* Activity+CoreDataClass.swift */; };
+		88DB6E732511DAD7004CB3D4 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E692511DAD7004CB3D4 /* Activity+CoreDataProperties.swift */; };
+		88DB6E742511DAD7004CB3D4 /* Picture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6A2511DAD7004CB3D4 /* Picture+CoreDataClass.swift */; };
+		88DB6E752511DAD7004CB3D4 /* Picture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6B2511DAD7004CB3D4 /* Picture+CoreDataProperties.swift */; };
+		88DB6E762511DAD7004CB3D4 /* Sensors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6C2511DAD7004CB3D4 /* Sensors+CoreDataClass.swift */; };
+		88DB6E772511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6D2511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift */; };
 		88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C22464748500D954A3 /* AppDelegate.swift */; };
 		88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C42464748500D954A3 /* SceneDelegate.swift */; };
 		88FE34C72464748500D954A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C62464748500D954A3 /* ContentView.swift */; };
@@ -59,10 +59,8 @@
 		88FE35232464783A00D954A3 /* WatchConnectivityPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */; };
 		88FE35262464789B00D954A3 /* authorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35252464789B00D954A3 /* authorizationManager.swift */; };
 		88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3527246478B200D954A3 /* heartRateManager.swift */; };
-		88FE352A246478C900D954A3 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3529246478C900D954A3 /* InterfaceController.swift */; };
 		88FE352D2464791000D954A3 /* mainWatchIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352C2464791000D954A3 /* mainWatchIFC.swift */; };
 		88FE35302464793E00D954A3 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352F2464793E00D954A3 /* MotionManager.swift */; };
-		88FE3532246479A700D954A3 /* MotionIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3531246479A700D954A3 /* MotionIFC.swift */; };
 		88FE3535246479F100D954A3 /* WatchtoPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3534246479F100D954A3 /* WatchtoPhone.swift */; };
 		88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE353624647A7D00D954A3 /* AddNewActivity.swift */; };
 /* End PBXBuildFile section */
@@ -123,17 +121,17 @@
 		88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Regular.ttf"; sourceTree = "<group>"; };
 		88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Light.ttf"; sourceTree = "<group>"; };
 		88891FC9246E1D7F00ACA3A8 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		88891FFD2470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		88891FFE2470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		88891FFF2470688A00ACA3A8 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		888920002470688A00ACA3A8 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		888920012470688A00ACA3A8 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		88B64C3A2508741B00661F3F /* AddStoredActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredActivity.swift; sourceTree = "<group>"; };
+		88DB6E642511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88DB6E652511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88DB6E662511DAD7004CB3D4 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88DB6E672511DAD7004CB3D4 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88DB6E682511DAD7004CB3D4 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88DB6E692511DAD7004CB3D4 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88DB6E6A2511DAD7004CB3D4 /* Picture+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88DB6E6B2511DAD7004CB3D4 /* Picture+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88DB6E6C2511DAD7004CB3D4 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88DB6E6D2511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,10 +166,8 @@
 		88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityPreview.swift; sourceTree = "<group>"; };
 		88FE35252464789B00D954A3 /* authorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authorizationManager.swift; sourceTree = "<group>"; };
 		88FE3527246478B200D954A3 /* heartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartRateManager.swift; sourceTree = "<group>"; };
-		88FE3529246478C900D954A3 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		88FE352C2464791000D954A3 /* mainWatchIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainWatchIFC.swift; sourceTree = "<group>"; };
 		88FE352F2464793E00D954A3 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
-		88FE3531246479A700D954A3 /* MotionIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionIFC.swift; sourceTree = "<group>"; };
 		88FE3534246479F100D954A3 /* WatchtoPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchtoPhone.swift; sourceTree = "<group>"; };
 		88FE353624647A7D00D954A3 /* AddNewActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivity.swift; sourceTree = "<group>"; };
 		88FE353924647AF600D954A3 /* STMI-CGMcoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "STMI-CGMcoreData.xcdatamodel"; sourceTree = "<group>"; };
@@ -209,7 +205,6 @@
 			children = (
 				88891FB8246E1D1700ACA3A8 /* Fonts */,
 				881918E4246DFC0A002CB92E /* Pictures */,
-				8812A0FE24649D0F004EDCFE /* MainUI.swift */,
 				881918E5246E1439002CB92E /* AddNewEntry.swift */,
 			);
 			path = UserInterface;
@@ -268,6 +263,7 @@
 				88FE3507246474B800D954A3 /* Sensors */,
 				88FE3506246474B500D954A3 /* Meals */,
 				88FE3505246474AA00D954A3 /* Activity */,
+				8812A0FE24649D0F004EDCFE /* MainUI.swift */,
 				88FE34C22464748500D954A3 /* AppDelegate.swift */,
 				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
 				88FE34C62464748500D954A3 /* ContentView.swift */,
@@ -301,11 +297,9 @@
 		88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */,
-				88FE3533246479DE00D954A3 /* WatchConnectivity */,
-				88FE352E2464792500D954A3 /* Motion&Location */,
-				88FE352B2464790600D954A3 /* MainWatchIFC */,
-				88FE35242464788700D954A3 /* HeartRate */,
+				88FE35242464788700D954A3 /* Sensors */,
+				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
+				88FE3534246479F100D954A3 /* WatchtoPhone.swift */,
 				88FE34E72464748900D954A3 /* ContentView.swift */,
 				88FE34E92464748900D954A3 /* HostingController.swift */,
 				88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */,
@@ -314,6 +308,7 @@
 				88FE34F12464748A00D954A3 /* Assets.xcassets */,
 				88FE34F62464748A00D954A3 /* Info.plist */,
 				88FE34F72464748A00D954A3 /* PushNotificationPayload.apns */,
+				8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */,
 				88FE34F32464748A00D954A3 /* Preview Content */,
 			);
 			path = "STMI-CGM WatchKit Extension";
@@ -367,54 +362,29 @@
 			path = WatchConnectivity;
 			sourceTree = "<group>";
 		};
-		88FE35242464788700D954A3 /* HeartRate */ = {
+		88FE35242464788700D954A3 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
 				88FE35252464789B00D954A3 /* authorizationManager.swift */,
 				88FE3527246478B200D954A3 /* heartRateManager.swift */,
-				88FE3529246478C900D954A3 /* InterfaceController.swift */,
-			);
-			path = HeartRate;
-			sourceTree = "<group>";
-		};
-		88FE352B2464790600D954A3 /* MainWatchIFC */ = {
-			isa = PBXGroup;
-			children = (
-				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
-			);
-			path = MainWatchIFC;
-			sourceTree = "<group>";
-		};
-		88FE352E2464792500D954A3 /* Motion&Location */ = {
-			isa = PBXGroup;
-			children = (
 				88FE352F2464793E00D954A3 /* MotionManager.swift */,
-				88FE3531246479A700D954A3 /* MotionIFC.swift */,
 			);
-			path = "Motion&Location";
-			sourceTree = "<group>";
-		};
-		88FE3533246479DE00D954A3 /* WatchConnectivity */ = {
-			isa = PBXGroup;
-			children = (
-				88FE3534246479F100D954A3 /* WatchtoPhone.swift */,
-			);
-			path = WatchConnectivity;
+			path = Sensors;
 			sourceTree = "<group>";
 		};
 		88FE353B24647BD700D954A3 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				88891FFB2470688A00ACA3A8 /* Meal+CoreDataClass.swift */,
-				88891FFC2470688A00ACA3A8 /* Meal+CoreDataProperties.swift */,
-				88891FFD2470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift */,
-				88891FFE2470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift */,
-				88891FFF2470688A00ACA3A8 /* Activity+CoreDataClass.swift */,
-				888920002470688A00ACA3A8 /* Activity+CoreDataProperties.swift */,
-				888920012470688A00ACA3A8 /* Sensors+CoreDataClass.swift */,
-				888920022470688A00ACA3A8 /* Sensors+CoreDataProperties.swift */,
-				888920032470688A00ACA3A8 /* Picture+CoreDataClass.swift */,
-				888920042470688A00ACA3A8 /* Picture+CoreDataProperties.swift */,
+				88DB6E642511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift */,
+				88DB6E652511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift */,
+				88DB6E662511DAD7004CB3D4 /* Meal+CoreDataClass.swift */,
+				88DB6E672511DAD7004CB3D4 /* Meal+CoreDataProperties.swift */,
+				88DB6E682511DAD7004CB3D4 /* Activity+CoreDataClass.swift */,
+				88DB6E692511DAD7004CB3D4 /* Activity+CoreDataProperties.swift */,
+				88DB6E6A2511DAD7004CB3D4 /* Picture+CoreDataClass.swift */,
+				88DB6E6B2511DAD7004CB3D4 /* Picture+CoreDataProperties.swift */,
+				88DB6E6C2511DAD7004CB3D4 /* Sensors+CoreDataClass.swift */,
+				88DB6E6D2511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -561,33 +531,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8889200D2470688A00ACA3A8 /* Picture+CoreDataClass.swift in Sources */,
 				88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */,
-				888920082470688A00ACA3A8 /* ActivityDetail+CoreDataProperties.swift in Sources */,
 				88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */,
 				881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */,
 				88FE35152464769800D954A3 /* AddStoredMeals.swift in Sources */,
 				88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */,
+				88DB6E762511DAD7004CB3D4 /* Sensors+CoreDataClass.swift in Sources */,
 				88FE35232464783A00D954A3 /* WatchConnectivityPreview.swift in Sources */,
 				88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */,
 				88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */,
-				8889200C2470688A00ACA3A8 /* Sensors+CoreDataProperties.swift in Sources */,
+				88DB6E712511DAD7004CB3D4 /* Meal+CoreDataProperties.swift in Sources */,
 				88FE34C72464748500D954A3 /* ContentView.swift in Sources */,
+				88DB6E752511DAD7004CB3D4 /* Picture+CoreDataProperties.swift in Sources */,
 				88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */,
-				888920062470688A00ACA3A8 /* Meal+CoreDataProperties.swift in Sources */,
 				88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */,
 				88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */,
-				8889200E2470688A00ACA3A8 /* Picture+CoreDataProperties.swift in Sources */,
-				8889200A2470688A00ACA3A8 /* Activity+CoreDataProperties.swift in Sources */,
-				888920092470688A00ACA3A8 /* Activity+CoreDataClass.swift in Sources */,
-				888920072470688A00ACA3A8 /* ActivityDetail+CoreDataClass.swift in Sources */,
-				888920052470688A00ACA3A8 /* Meal+CoreDataClass.swift in Sources */,
+				88DB6E732511DAD7004CB3D4 /* Activity+CoreDataProperties.swift in Sources */,
+				88DB6E742511DAD7004CB3D4 /* Picture+CoreDataClass.swift in Sources */,
 				88FE3519246476CE00D954A3 /* MealList.swift in Sources */,
+				88DB6E722511DAD7004CB3D4 /* Activity+CoreDataClass.swift in Sources */,
+				88DB6E772511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift in Sources */,
 				88FE350F2464761F00D954A3 /* activityManager.swift in Sources */,
+				88DB6E702511DAD7004CB3D4 /* Meal+CoreDataClass.swift in Sources */,
+				88DB6E6F2511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift in Sources */,
 				88FE3509246475B400D954A3 /* iPhoneMotionIFC.swift in Sources */,
 				88FE350B246475D700D954A3 /* MotionManager.swift in Sources */,
 				8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */,
-				8889200B2470688A00ACA3A8 /* Sensors+CoreDataClass.swift in Sources */,
+				88DB6E6E2511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,11 +567,9 @@
 			files = (
 				88FE34EA2464748900D954A3 /* HostingController.swift in Sources */,
 				88FE35302464793E00D954A3 /* MotionManager.swift in Sources */,
-				88FE352A246478C900D954A3 /* InterfaceController.swift in Sources */,
 				88FE34E82464748900D954A3 /* ContentView.swift in Sources */,
 				88FE34EE2464748900D954A3 /* NotificationController.swift in Sources */,
 				88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */,
-				88FE3532246479A700D954A3 /* MotionIFC.swift in Sources */,
 				88FE35262464789B00D954A3 /* authorizationManager.swift in Sources */,
 				88FE34EC2464748900D954A3 /* ExtensionDelegate.swift in Sources */,
 				88FE3535246479F100D954A3 /* WatchtoPhone.swift in Sources */,

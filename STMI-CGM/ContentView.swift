@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        MainUI()
+        /*
         TabView{
             MainUI() // Navigates to meals and activities
                 .tabItem {
@@ -23,6 +25,7 @@ struct ContentView: View {
                     Image(systemName: "rays")
             }
         }
+        */
     }
 }
 
