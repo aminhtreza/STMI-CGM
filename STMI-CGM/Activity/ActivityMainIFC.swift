@@ -9,9 +9,8 @@
 import SwiftUI
 
 struct ActivityMainIFC: View {
-    // have to redefine the MOC so it can be used by the code
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Activity.entity(), sortDescriptors: []) var activities: FetchedResults<Activity>
+    //@FetchRequest(entity: Activity.entity(), sortDescriptors: []) var activities: FetchedResults<Activity>
     @State private var showSheet = false
     @State private var activeSheet: ActiveSheet = .first
     
@@ -25,6 +24,7 @@ struct ActivityMainIFC: View {
         VStack {
             NavigationView {
                 List{
+                    /*
                     Button(action: {
                         self.showSheet = true
                         self.activeSheet = .first
@@ -40,7 +40,9 @@ struct ActivityMainIFC: View {
                             }
                         }
                     }.padding()
+                    */
                     Section(header: Text("History")) {
+                        /*
                         ForEach(activities, id: \.self) {activity in
                            VStack {
                                 HStack{
@@ -62,6 +64,7 @@ struct ActivityMainIFC: View {
                                 //Text("\(self.dateFormatter.string(from: activity.inputDate!))")
                             }
                         }.onDelete(perform: deleteMeal)
+                        */
                     }
                 }.navigationBarTitle(Text("My activities"),displayMode: .inline)
             }.onAppear(perform: dateformatter)
@@ -76,13 +79,17 @@ struct ActivityMainIFC: View {
             }
         }
     }
+    
     func deleteMeal(at offsets: IndexSet) {
+        /*
         for i in offsets {
             let activity = activities[i]
             moc.delete(activity)
         }
         try! self.moc.save()
+         */
     }
+     
     func closeSheet() {
         self.showSheet = false
     }

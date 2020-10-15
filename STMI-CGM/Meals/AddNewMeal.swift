@@ -16,7 +16,7 @@ struct AddNewMeal: View {
     @State var fat: String = ""
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     @Environment(\.presentationMode) var presentation // to make this view dismiss itself
     
     @State var showActionSheet = false
@@ -118,6 +118,7 @@ struct AddNewMeal: View {
     }
     
     func saveToMoc() {
+        /*
         let meal = Meal(context: self.moc)
         meal.mealName = self.mealName
         meal.calories = Double(self.calories) ?? 0
@@ -133,6 +134,7 @@ struct AddNewMeal: View {
         catch {print(error)}
     
         self.presentation.wrappedValue.dismiss()
+        */
     }
 }
 

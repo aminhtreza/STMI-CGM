@@ -21,7 +21,7 @@ class WatchtoPhone: NSObject, WCSessionDelegate {
             let session = WCSession.default
             session.delegate = self
             session.activate()
-            print("Watch session activated")
+            print("Watch session activated \(session.activationState)")
         } else {
             print("WC session not supported)")
         }
@@ -47,6 +47,7 @@ class WatchtoPhone: NSObject, WCSessionDelegate {
             if lastMessage + 0.2 > currentTime {
                 return
             }
+        print("sendPhoneMessage")
         if (WCSession.default.isReachable) {
             WCSession.default.sendMessage(message as [String : Any], replyHandler: nil)
         }
@@ -60,19 +61,19 @@ class WatchtoPhone: NSObject, WCSessionDelegate {
         if lastUserInfo + 0.2 > currentTime {
             return
         }
+        print("sendUserInfo")
         WCSession.default.transferUserInfo(userInfo)
         lastUserInfo = CFAbsoluteTimeGetCurrent()
     }
     
     // function will be called using a timer to send at a reoccuring interval
     func sendSensorDataToPhone() {
-        sensorData["date"] = String(Date().timeIntervalSince1970)
-        if (WCSession.default.isReachable) {
-            WCSession.default.sendMessage(sensorData, replyHandler: nil)
-            //WCSession.default.transferUserInfo(sensorData)
-        }
-        //sendPhoneMessage(message: sensorData)
-        //sendUserInfo(userInfo: sensorData)
+        sensorData["date"] = Double(Date().timeIntervalSince1970)
+        print("\(Date(timeIntervalSince1970: Double(Date().timeIntervalSince1970)))")
+        //self.sendUserInfo(userInfo: sensorData)
+        self.sendPhoneMessage(message: sensorData)
+        //WCSession.default.sendMessage(sensorData as [String : Any], replyHandler: nil)
+        print("Sending Sensor data to phone")
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -83,6 +84,3 @@ class WatchtoPhone: NSObject, WCSessionDelegate {
 
 //Dictionary to send everything to iPhone
 //var sensorData = ["HR":String, "roll":"--", "pitch":"--", "yaw":"--", "latitude":"--", "longitude":"--", "altitude":"--"]
-
-
-

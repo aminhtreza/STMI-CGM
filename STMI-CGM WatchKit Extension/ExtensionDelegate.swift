@@ -9,8 +9,26 @@
 import WatchKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
+    var HeartRateManager = heartRateManager()
+    var motionManager = MotionManager()
 
     func applicationDidFinishLaunching() {
+        print("We here")
+        AuthorizationManager.AuthorizeHK() // Ask for Healthkit permission
+        watchToPhone.activateSession() // Activate WCSession from our global variable
+        self.motionManager.startQueuedMotionUpdates()
+        self.motionManager.setupLocation()
+        self.HeartRateManager.startWorkout()
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (Timer) in
+            watchToPhone.sendSensorDataToPhone()
+        })
+        sensorData["altitude"] = 0.0
+        sensorData["longitude"] = 0.0
+        sensorData["latitude"] = 0.0
+        sensorData["roll"] = 0.0
+        sensorData["pitch"] = 0.0
+        sensorData["yaw"] = 0.0
+        sensorData["HR"] = 0.0
         // Perform any final initialization of your application.
     }
 

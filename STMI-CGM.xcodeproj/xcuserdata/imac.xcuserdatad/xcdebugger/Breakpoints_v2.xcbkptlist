@@ -20,5 +20,189 @@
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "STMI-CGM WatchKit Extension/Sensors/MotionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "MotionManager"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 6006283ab9a1099"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of STMI_CGM_WatchKit_Extension.MotionManager.latitude : Swift.Int"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 512c64658ceee4b5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.latitude.getter : Swift.Int"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "98">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 5bce64e031605101"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.latitude.setter : Swift.Int"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 6da8a7cd1ecc7d08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.latitude.modify : Swift.Int"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 1e94529ac60def5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.latitude.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 5b8a21d58cac9ad8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.$latitude.getter : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 4b505af86dd60a44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.$latitude.setter : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "222">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 9d2e2d451b8e748f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.$latitude.modify : Combine.Published&lt;Swift.Int&gt;.Publisher"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - 45d26b974094be1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.$latitude.modify : Combine.Published&lt;Swift.Int&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  uuid = "4E1A57BE-58FB-49BF-AC60-3672068335DA - d29b4fe81a0ca5f2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "STMI_CGM_WatchKit_Extension.MotionManager.init() -&gt; STMI_CGM_WatchKit_Extension.MotionManager"
+                  moduleName = "STMI-CGM WatchKit Extension"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/imac/Desktop/School/Fall%202020/STMI/STMI-CGM/STMI-CGM%20WatchKit%20Extension/Sensors/MotionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "686">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "51CB97B6-BAE5-4597-8658-2ECAC6974BBD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "STMI-CGM/UserInterface/AddNewEntry.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

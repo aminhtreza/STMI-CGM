@@ -2,7 +2,7 @@
 //  Sensors+CoreDataProperties.swift
 //  STMI-CGM
 //
-//  Created by iMac on 9/16/20.
+//  Created by iMac on 10/15/20.
 //  Copyright © 2020 Amin Hamiditabar. All rights reserved.
 //
 //
@@ -17,14 +17,14 @@ extension Sensors {
         return NSFetchRequest<Sensors>(entityName: "Sensors")
     }
 
-    @NSManaged public var altitude: String?
-    @NSManaged public var date: Date
-    @NSManaged public var heartRate: Int16
-    @NSManaged public var latitude: String?
-    @NSManaged public var longitude: String?
-    @NSManaged public var pitch: String?
-    @NSManaged public var roll: String?
-    @NSManaged public var yaw: String?
+    @NSManaged public var roll: Double
+    @NSManaged public var pitch: Double
+    @NSManaged public var yaw: Double
+    @NSManaged public var altitude: Double
+    @NSManaged public var latitude: Double
+    @NSManaged public var longitude: Double
+    @NSManaged public var heartRate: Double
+    @NSManaged public var date: Double
 
 }
 

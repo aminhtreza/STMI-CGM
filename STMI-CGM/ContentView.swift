@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
-
+var phoneToWatch = PhonetoWatch()
 struct ContentView: View {
     var body: some View {
         MainUI()
+            .onAppear{
+                phoneToWatch.activateSession()
+            }
         /*
         TabView{
             MainUI() // Navigates to meals and activities

@@ -9,79 +9,56 @@
 import Foundation
 import WatchConnectivity
 import SwiftUI
-// ryan is here again
-
 var session: WCSession!
+
+var HRArray: [Double] = []
+var latArray: [Double] = []
+var longArray: [Double] = []
+var altArray: [Double] = []
+var rollArray: [Double] = []
+var pitchArray: [Double] = []
+var yawArray: [Double] = []
+var dateArray: [Double] = []
 
 class PhonetoWatch: NSObject, WCSessionDelegate, ObservableObject {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Sensors.entity(), sortDescriptors: []) var sensors: FetchedResults<Sensors>
     
-    @Published var watchLatitude = ""
-    @Published var watchLongitude = ""
-    @Published var watchAltitude = ""
-    @Published var HeartRate = -99
-    @Published var watchRoll = ""
-    @Published var watchPitch = ""
-    @Published var watchYaw = ""
+    @Published var watchLatitude: Double = 0.0
+    @Published var watchLongitude: Double = 0.0
+    @Published var watchAltitude: Double = 0.0
+    @Published var HeartRate: Double = 0.0
+    @Published var watchRoll: Double = 0.0
+    @Published var watchPitch: Double = 0.0
+    @Published var watchYaw: Double = 0.0
     
-    var HRArray: [String] = []
-    var latArray: [String] = []
-    var longArray: [String] = []
-    var altArray: [String] = []
-    var rollArray: [String] = []
-    var pitchArray: [String] = []
-    var yawArray: [String] = []
-    var dateArray: [Date] = []
-    
-    // Assign to local variable (can't update published variables with a delegate
-    var wLatitude = ""
-    var wLongitude = ""
-    var wAltitude = ""
-    var wRoll = ""
-    var wPitch = ""
-    var wYaw = ""
-    var wHR = ""
-    var wDate = ""
+    // Assign to local variable (can't update published variables with a delegate)
+    var wLatitude: Double = 0.0
+    var wLongitude: Double = 0.0
+    var wAltitude: Double = 0.0
+    var wRoll: Double = 0.0
+    var wPitch: Double = 0.0
+    var wYaw: Double = 0.0
+    var wHR: Double = 0.0
+    var wDate: Double = 0.0
     
     internal func session(_ session: WCSession, didReceiveMessage message: [String : Any]) {
-        wLatitude = message["latitude"]! as? String ?? "--"
-        wLongitude = message["longitude"]! as? String ?? "--"
-        wAltitude = message["altitude"]! as? String ?? "--"
-        wRoll = message["roll"]! as! String
-        wPitch = message["pitch"]! as! String
-        wYaw = message["yaw"]! as! String
-        wHR = message["HR"]! as! String
-        wDate = message["date"]! as! String
+        self.wLatitude = message["latitude"]! as! Double
+        self.wLongitude = message["longitude"]! as! Double
+        self.wAltitude = message["altitude"]! as! Double
+        self.wRoll = message["roll"]! as! Double
+        self.wPitch = message["pitch"]! as! Double
+        self.wYaw = message["yaw"]! as! Double
+        self.wHR = message["HR"]! as! Double
+        self.wDate = message["date"]! as! Double
         print("Message received: HR:\(wHR), Lat:\(wLatitude), Roll:\(wRoll)")
-        print(wDate)
+        //print(TimeInterval(wDate))
+        //print(Date(timeIntervalSince1970: wDate))
         
-        HRArray.append(wHR)
-        latArray.append(wLatitude)
-        altArray.append(wAltitude)
-        longArray.append(wLongitude)
-        rollArray.append(wRoll)
-        pitchArray.append(wPitch)
-        yawArray.append(wYaw)
-        dateArray.append(Date(timeIntervalSince1970: TimeInterval(wDate)!))
-        //dateArray.append(wDate)
+        self.appendArrays()
     }
     
-    
-    internal func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any]) {
-        wLatitude = userInfo["latitude"]! as? String ?? "--"
-        wLongitude = userInfo["longitude"]! as? String ?? "--"
-        wAltitude = userInfo["altitude"]! as? String ?? "--"
-        wRoll = userInfo["roll"]! as! String
-        wPitch = userInfo["pitch"]! as! String
-        wYaw = userInfo["yaw"]! as! String
-        wHR = userInfo["HR"]! as! String
-        wDate = userInfo["date"] as! String
-        print("UserInfo received: HR:\(wHR), Lat:\(wLatitude), Roll:\(wRoll)")
-        print(wDate)
-        //print("\(Date(timeIntervalSince1970: TimeInterval(wDate)!))")
-        //saveToMoc()
-        
+    func appendArrays() {
         HRArray.append(wHR)
         latArray.append(wLatitude)
         altArray.append(wAltitude)
@@ -89,7 +66,38 @@ class PhonetoWatch: NSObject, WCSessionDelegate, ObservableObject {
         rollArray.append(wRoll)
         pitchArray.append(wPitch)
         yawArray.append(wYaw)
-        dateArray.append(Date(timeIntervalSince1970: TimeInterval(wDate)!))
+        dateArray.append(wDate) //Date(timeIntervalSince1970: TimeInterval(wDate)!)
+        print(HRArray.count)
+    }
+    
+    /*
+    internal func session(_ session: WCSession, didReceiveUserInfo userInfo: [String: Any]) {
+        self.wLatitude = userInfo["latitude"]! as! Double
+        self.wLongitude = userInfo["longitude"]! as! Double
+        self.wAltitude = userInfo["altitude"]! as! Double
+        self.wRoll = userInfo["roll"]! as! Double
+        self.wPitch = userInfo["pitch"]! as! Double
+        self.wYaw = userInfo["yaw"]! as! Double
+        self.wHR = userInfo["HR"]! as! Double
+        self.wDate = userInfo["date"]! as! Double
+        print("UserInfo received: HR:\(wHR), Lat:\(wLatitude), Roll:\(wRoll)")
+        print(TimeInterval(wDate))
+        print(Date(timeIntervalSince1970: wDate))
+        
+        self.HRArray.append(wHR)
+        self.latArray.append(wLatitude)
+        self.altArray.append(wAltitude)
+        self.longArray.append(wLongitude)
+        self.rollArray.append(wRoll)
+        self.pitchArray.append(wPitch)
+        self.yawArray.append(wYaw)
+        self.dateArray.append(wDate) //Date(timeIntervalSince1970: TimeInterval(wDate)!)
+        print(HRArray.count)
+    }
+    */
+    
+    func saveToMoc() {
+        
     }
     
     func clearArrays() {
@@ -104,30 +112,14 @@ class PhonetoWatch: NSObject, WCSessionDelegate, ObservableObject {
     }
     
     func updateUI() {
-        watchLatitude = wLatitude //Double(wLatitude)!.roundTo(places: 1)
-        watchLongitude = wLongitude
-        watchAltitude = wAltitude
-        watchYaw = wYaw
-        watchRoll = wRoll
-        watchPitch = wPitch
-        HeartRate = Int(wHR) ?? 0
+        self.watchLatitude = wLatitude //Double(wLatitude)!.roundTo(places: 1)
+        self.watchLongitude = wLongitude
+        self.watchAltitude = wAltitude
+        self.watchYaw = wYaw
+        self.watchRoll = wRoll
+        self.watchPitch = wPitch
+        self.HeartRate = wHR
     }
-
-    /*
-    func saveToMoc() {
-        let sensors = Sensors(context: self.moc)
-        sensors.heartRate = Int16(wHR)!
-        sensors.roll = wRoll
-        sensors.pitch = wPitch
-        sensors.yaw = wYaw
-        sensors.latitude = wLatitude
-        sensors.altitude = wAltitude
-        sensors.longitude = wLongitude
-        sensors.date = wDate
-        do {try self.moc.save()}
-        catch {print(error)}
-    }
-    */
     
     func background() -> Bool {
         let state = UIApplication.shared.applicationState

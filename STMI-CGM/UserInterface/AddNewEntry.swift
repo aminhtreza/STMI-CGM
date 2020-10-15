@@ -11,7 +11,7 @@ import SwiftUI
 struct AddNewEntry: View {
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     enum ActiveSheet {
        case first, second
     }

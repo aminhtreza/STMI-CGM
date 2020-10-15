@@ -23,7 +23,7 @@ struct mainWatchIFC: View {
                     Text(watchToPhone.watchReachable() ? "Connected":"Not connected")
                 }
                 Text("HeartRate: \(self.HeartRateManager.updatedHRValue)bpm").frame(width: geo.size.width, alignment: .leading)
-                Text("Roll: \(self.motionManager.Roll)").frame(width: geo.size.width, alignment: .leading)
+                Text("Roll: \(self.motionManager.Roll.rounded(toPlaces: 2))").frame(width: geo.size.width, alignment: .leading)
                 Text("Yaw: \(self.motionManager.Yaw)").frame(width: geo.size.width, alignment: .leading)
                 Text("Pitch: \(self.motionManager.Pitch)").frame(width: geo.size.width, alignment: .leading)
                 Text("Latitude: \(self.motionManager.latitude)").frame(width: geo.size.width, alignment: .leading)
@@ -31,12 +31,12 @@ struct mainWatchIFC: View {
                 Text("Altitude: \(self.motionManager.altitude)").frame(width: geo.size.width, alignment: .leading)
             }
             .onAppear {
-                AuthorizationManager.AuthorizeHK() // Ask for Healthkit permission
+                //AuthorizationManager.AuthorizeHK() // Ask for Healthkit permission
                 watchToPhone.activateSession() // Activate WCSession from our global variable
                 self.motionManager.startQueuedMotionUpdates()
                 self.motionManager.setupLocation()
                 self.HeartRateManager.startWorkout()
-                self.sendPhoneUpdates()
+                //self.sendPhoneUpdates()
             }
         }
     }

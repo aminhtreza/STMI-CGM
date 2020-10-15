@@ -9,9 +9,8 @@
 import SwiftUI
 
 struct MealList: View {
-    // have to redefine the MOC so it can be used by the code
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     @State private var showSheet = false
     @State private var activeSheet: ActiveSheet = .first
     
@@ -25,6 +24,7 @@ struct MealList: View {
         VStack {
             NavigationView {
                 List{
+                    /*
                     Button(action: {
                         self.showSheet = true
                         self.activeSheet = .first
@@ -55,7 +55,9 @@ struct MealList: View {
                             }
                         }
                     }.padding()
+                    */
                     Section(header: Text("History")) {
+                        /*
                         ForEach(meals, id: \.self) {meal in
                            HStack {
                                 Text("\(meal.mealName!)")
@@ -69,6 +71,7 @@ struct MealList: View {
                                 }                                
                             }
                         }.onDelete(perform: deleteMeal)
+                        */
                     }
                 }
                 .navigationBarTitle(Text("My meals"),displayMode: .inline)
@@ -84,13 +87,17 @@ struct MealList: View {
             }
         }
     }
+    
     func deleteMeal(at offsets: IndexSet) {
+        /*
         for i in offsets {
             let meal = meals[i]
             moc.delete(meal)
         }
         try! self.moc.save()
+         */
     }
+    
     func closeSheet() {
         self.showSheet = false
     }

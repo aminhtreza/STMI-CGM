@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AddStoredMeals: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     
     @State var addingMeal = false
     
@@ -26,6 +26,7 @@ struct AddStoredMeals: View {
         VStack {
             NavigationView {
                 List{
+                    /*
                     ForEach(meals, id: \.self) {meal in
                         HStack {
                             Image(uiImage: UIImage(data: Data((meal.picture?.imageData)!))!)
@@ -55,6 +56,7 @@ struct AddStoredMeals: View {
                             }
                         }
                     }
+                    */
                 }.navigationBarTitle(Text("Existing meals"),displayMode: .inline)
             }
         }.onAppear(perform: dateformatter)
@@ -67,6 +69,7 @@ struct AddStoredMeals: View {
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .medium
     }
+    /*
     func deleteMeal(at offsets: IndexSet) {
         for i in offsets {
             let meal = meals[i]
@@ -74,6 +77,7 @@ struct AddStoredMeals: View {
         }
         try! self.moc.save()
     }
+    */
 }
 
 
@@ -86,7 +90,7 @@ struct AddStoredMeal: View {
     @State var mealName: String?
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     
     @Environment(\.presentationMode) var presentation // to make this view dismiss itself
     
@@ -181,6 +185,7 @@ struct AddStoredMeal: View {
     }
     
     func saveToMoc() {
+        /*
         let meal = Meal(context: self.moc)
         meal.mealName = self.mealName
         meal.calories = Double(self.calories)
@@ -196,7 +201,9 @@ struct AddStoredMeal: View {
         catch {print(error)}
     
         self.presentation.wrappedValue.dismiss()
+         */
     }
+    
 }
 
 

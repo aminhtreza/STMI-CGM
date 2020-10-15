@@ -11,12 +11,13 @@ import HealthKit
 
 class heartRateManager: NSObject, ObservableObject, HKLiveWorkoutBuilderDelegate, HKWorkoutSessionDelegate {
     
+    var HR: Double = 0.0
     var session: HKWorkoutSession!
     var builder: HKLiveWorkoutBuilder!
     let healthStore = HKHealthStore()
     
     // https://www.appsdissected.com/swiftui-updates-main-thread-debug-crash/
-    @Published var updatedHRValue: String = "--"
+    @Published var updatedHRValue: Double = 0.0
     
     func startWorkout() {
         initWorkout() // Initialize our workout
@@ -65,11 +66,11 @@ class heartRateManager: NSObject, ObservableObject, HKLiveWorkoutBuilderDelegate
                 }
             }
         }
-        self.HR = "--"
+        self.HR = 0
         print("workout ended")
     }
     
-    var HR: String = "--"
+    
     func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf collectedTypes: Set<HKSampleType>) {
         for type in collectedTypes {
             guard let quantityType = type as? HKQuantityType else {
@@ -80,7 +81,7 @@ class heartRateManager: NSObject, ObservableObject, HKLiveWorkoutBuilderDelegate
                 let statistics = workoutBuilder.statistics(for: quantityType)
                 let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
                 let value = statistics!.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
-                HR = String(Int(Double(round(1 * value!) / 1)))
+                HR = Double(round(1 * value!) / 1)
             default:
                 return
             }

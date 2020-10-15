@@ -17,16 +17,16 @@ class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     let date = NSTimeIntervalSince1970
         
-    @Published var Roll: String = "--"
-    @Published var Yaw: String = "--"
-    @Published var Pitch: String = "--"
+    @Published var Roll: Double = 0.0
+    @Published var Yaw: Double = 0.0
+    @Published var Pitch: Double = 0.0
     
-    @Published var latitude: String = "--"
-    @Published var longitude: String = "--"
-    @Published var altitude: String = "--"
+    @Published var latitude: Double = 0.0
+    @Published var longitude: Double = 0.0
+    @Published var altitude: Double = 0.0
     
     func setupLocation() {
-        print("cool")
+        print("setupLocation()")
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -37,7 +37,7 @@ class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     func startQueuedMotionUpdates() {
        if motionManager.isDeviceMotionAvailable {
-        self.motionManager.deviceMotionUpdateInterval = 1.0 / 60.0
+        self.motionManager.deviceMotionUpdateInterval = 1.0 
         self.motionManager.showsDeviceMovementDisplay = true
         // if watch 5 or later: (using: .xMagneticNorthZVertical, ...
         self.motionManager.startDeviceMotionUpdates(using: .xArbitraryZVertical, to: OperationQueue.current!, withHandler: { (data, error) in
@@ -47,9 +47,10 @@ class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
                 let pitch = validData.attitude.pitch
                 let yaw = validData.attitude.yaw
                 
-                self.Roll = String(Double(roll).rounded(toPlaces: 2))
-                self.Pitch = String(Double(pitch).rounded(toPlaces: 2))
-                self.Yaw = String(Double(yaw).rounded(toPlaces: 2))
+                self.Roll = Double(roll).rounded(toPlaces: 2)
+                self.Pitch = Double(pitch).rounded(toPlaces: 2)
+                self.Yaw = Double(yaw).rounded(toPlaces: 2)
+                print(self.Roll)
                 
                 sensorData["roll"] = self.Roll
                 sensorData["yaw"] = self.Yaw
@@ -68,9 +69,10 @@ class MotionManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         // let lastLocation = locations.last!
         if let location = locations.last {
             // retrieve location data
-            self.latitude = "\(round(location.coordinate.latitude * 1000) / 1000)"
-            self.longitude = "\(round(location.coordinate.longitude * 1000) / 1000)"
-            self.altitude = "\(round(location.altitude * 1000) / 1000)"
+            self.latitude = Double(round(location.coordinate.latitude * 1000) / 1000).rounded(toPlaces: 3)
+            self.longitude = Double(round(location.coordinate.longitude * 1000) / 1000).rounded(toPlaces: 3)
+            self.altitude = Double(round(location.altitude * 1000) / 1000).rounded(toPlaces: 3)
+            print(self.altitude) // accurate to 111 m
             // store in sensorDate to send to phone
             sensorData["altitude"] = self.altitude
             sensorData["longitude"] = self.longitude

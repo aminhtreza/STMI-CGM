@@ -109,6 +109,7 @@ struct AddNewActivity: View {
     @State var finishTime = Date()
     
     func saveToMoc() {
+        /*
         let activity = Activity(context: self.moc)
         activity.activityDetail = ActivityDetail(context: self.moc)
         switch self.typeSelection {
@@ -133,6 +134,7 @@ struct AddNewActivity: View {
         catch {print(error)}
     
         self.presentation.wrappedValue.dismiss()
+        */
     }
 }
 

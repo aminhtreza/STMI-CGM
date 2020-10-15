@@ -14,7 +14,6 @@ class authorizationManager {
     let healthStore = HKHealthStore()
     
     func AuthorizeHK() {
-        print("Made it here")
         if HKHealthStore.isHealthDataAvailable() {
             //let heartRateQuantityType = HKObjectType.quantityType(forIdentifier: .heartRate)!
             let typesToShare: Set = [HKQuantityType.workoutType()]
@@ -25,7 +24,7 @@ class authorizationManager {
                 }
             }
             authorized = true
-            print("Authorized")
+            print("HealthKit authorized")
         } else {
             fatalError("Healthkit is not available for device")
         }

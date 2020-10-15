@@ -18,18 +18,10 @@
 		88891FC6246E1D1700ACA3A8 /* Teko-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBE246E1D1700ACA3A8 /* Teko-SemiBold.ttf */; };
 		88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */; };
 		88891FC8246E1D1700ACA3A8 /* Teko-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */; };
-		88891FFA2470596500ACA3A8 /* STMI-CGMcoreData.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */; };
 		88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B64C3A2508741B00661F3F /* AddStoredActivity.swift */; };
-		88DB6E6E2511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E642511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift */; };
-		88DB6E6F2511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E652511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift */; };
-		88DB6E702511DAD7004CB3D4 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E662511DAD7004CB3D4 /* Meal+CoreDataClass.swift */; };
-		88DB6E712511DAD7004CB3D4 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E672511DAD7004CB3D4 /* Meal+CoreDataProperties.swift */; };
-		88DB6E722511DAD7004CB3D4 /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E682511DAD7004CB3D4 /* Activity+CoreDataClass.swift */; };
-		88DB6E732511DAD7004CB3D4 /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E692511DAD7004CB3D4 /* Activity+CoreDataProperties.swift */; };
-		88DB6E742511DAD7004CB3D4 /* Picture+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6A2511DAD7004CB3D4 /* Picture+CoreDataClass.swift */; };
-		88DB6E752511DAD7004CB3D4 /* Picture+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6B2511DAD7004CB3D4 /* Picture+CoreDataProperties.swift */; };
-		88DB6E762511DAD7004CB3D4 /* Sensors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6C2511DAD7004CB3D4 /* Sensors+CoreDataClass.swift */; };
-		88DB6E772511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DB6E6D2511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift */; };
+		88DA41732538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88DA41712538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld */; };
+		88DA418D2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */; };
+		88DA418E2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA418C2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift */; };
 		88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C22464748500D954A3 /* AppDelegate.swift */; };
 		88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C42464748500D954A3 /* SceneDelegate.swift */; };
 		88FE34C72464748500D954A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE34C62464748500D954A3 /* ContentView.swift */; };
@@ -56,7 +48,6 @@
 		88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3516246476B600D954A3 /* ImagePicker.swift */; };
 		88FE3519246476CE00D954A3 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3518246476CE00D954A3 /* MealList.swift */; };
 		88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35202464782800D954A3 /* PhonetoWatch.swift */; };
-		88FE35232464783A00D954A3 /* WatchConnectivityPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */; };
 		88FE35262464789B00D954A3 /* authorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35252464789B00D954A3 /* authorizationManager.swift */; };
 		88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3527246478B200D954A3 /* heartRateManager.swift */; };
 		88FE352D2464791000D954A3 /* mainWatchIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352C2464791000D954A3 /* mainWatchIFC.swift */; };
@@ -122,16 +113,9 @@
 		88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Light.ttf"; sourceTree = "<group>"; };
 		88891FC9246E1D7F00ACA3A8 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		88B64C3A2508741B00661F3F /* AddStoredActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredActivity.swift; sourceTree = "<group>"; };
-		88DB6E642511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataClass.swift"; sourceTree = "<group>"; };
-		88DB6E652511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActivityDetail+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		88DB6E662511DAD7004CB3D4 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
-		88DB6E672511DAD7004CB3D4 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		88DB6E682511DAD7004CB3D4 /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		88DB6E692511DAD7004CB3D4 /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		88DB6E6A2511DAD7004CB3D4 /* Picture+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataClass.swift"; sourceTree = "<group>"; };
-		88DB6E6B2511DAD7004CB3D4 /* Picture+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Picture+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		88DB6E6C2511DAD7004CB3D4 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = "<group>"; };
-		88DB6E6D2511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88DA41722538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "STMI-CGMcoreData.xcdatamodel"; sourceTree = "<group>"; };
+		88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88DA418C2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,14 +147,12 @@
 		88FE3516246476B600D954A3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		88FE3518246476CE00D954A3 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		88FE35202464782800D954A3 /* PhonetoWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonetoWatch.swift; sourceTree = "<group>"; };
-		88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityPreview.swift; sourceTree = "<group>"; };
 		88FE35252464789B00D954A3 /* authorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authorizationManager.swift; sourceTree = "<group>"; };
 		88FE3527246478B200D954A3 /* heartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartRateManager.swift; sourceTree = "<group>"; };
 		88FE352C2464791000D954A3 /* mainWatchIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainWatchIFC.swift; sourceTree = "<group>"; };
 		88FE352F2464793E00D954A3 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		88FE3534246479F100D954A3 /* WatchtoPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchtoPhone.swift; sourceTree = "<group>"; };
 		88FE353624647A7D00D954A3 /* AddNewActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivity.swift; sourceTree = "<group>"; };
-		88FE353924647AF600D954A3 /* STMI-CGMcoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "STMI-CGMcoreData.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,17 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				88891FB8246E1D1700ACA3A8 /* Fonts */,
-				881918E4246DFC0A002CB92E /* Pictures */,
 				881918E5246E1439002CB92E /* AddNewEntry.swift */,
 			);
 			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		881918E4246DFC0A002CB92E /* Pictures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pictures;
 			sourceTree = "<group>";
 		};
 		88891FB8246E1D1700ACA3A8 /* Fonts */ = {
@@ -231,6 +205,15 @@
 				88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		88DA417A2538A9EA0007BFF7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */,
+				88DA418C2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		88FE34B62464748500D954A3 = {
@@ -257,20 +240,19 @@
 		88FE34C12464748500D954A3 /* STMI-CGM */ = {
 			isa = PBXGroup;
 			children = (
+				88DA417A2538A9EA0007BFF7 /* CoreData */,
 				881918E1246DFBA3002CB92E /* UserInterface */,
-				88FE353B24647BD700D954A3 /* CoreData */,
 				88FE351F2464781700D954A3 /* WatchConnectivity */,
 				88FE3507246474B800D954A3 /* Sensors */,
 				88FE3506246474B500D954A3 /* Meals */,
 				88FE3505246474AA00D954A3 /* Activity */,
-				8812A0FE24649D0F004EDCFE /* MainUI.swift */,
 				88FE34C22464748500D954A3 /* AppDelegate.swift */,
 				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
 				88FE34C62464748500D954A3 /* ContentView.swift */,
 				88FE34C82464748800D954A3 /* Assets.xcassets */,
 				88FE34CD2464748800D954A3 /* LaunchScreen.storyboard */,
 				88FE34D02464748800D954A3 /* Info.plist */,
-				88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */,
+				88DA41712538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld */,
 				88FE34CA2464748800D954A3 /* Preview Content */,
 			);
 			path = "STMI-CGM";
@@ -298,8 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				88FE35242464788700D954A3 /* Sensors */,
-				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
 				88FE3534246479F100D954A3 /* WatchtoPhone.swift */,
+				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
 				88FE34E72464748900D954A3 /* ContentView.swift */,
 				88FE34E92464748900D954A3 /* HostingController.swift */,
 				88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */,
@@ -357,7 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				88FE35202464782800D954A3 /* PhonetoWatch.swift */,
-				88FE35222464783A00D954A3 /* WatchConnectivityPreview.swift */,
+				8812A0FE24649D0F004EDCFE /* MainUI.swift */,
 			);
 			path = WatchConnectivity;
 			sourceTree = "<group>";
@@ -370,23 +352,6 @@
 				88FE352F2464793E00D954A3 /* MotionManager.swift */,
 			);
 			path = Sensors;
-			sourceTree = "<group>";
-		};
-		88FE353B24647BD700D954A3 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				88DB6E642511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift */,
-				88DB6E652511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift */,
-				88DB6E662511DAD7004CB3D4 /* Meal+CoreDataClass.swift */,
-				88DB6E672511DAD7004CB3D4 /* Meal+CoreDataProperties.swift */,
-				88DB6E682511DAD7004CB3D4 /* Activity+CoreDataClass.swift */,
-				88DB6E692511DAD7004CB3D4 /* Activity+CoreDataProperties.swift */,
-				88DB6E6A2511DAD7004CB3D4 /* Picture+CoreDataClass.swift */,
-				88DB6E6B2511DAD7004CB3D4 /* Picture+CoreDataProperties.swift */,
-				88DB6E6C2511DAD7004CB3D4 /* Sensors+CoreDataClass.swift */,
-				88DB6E6D2511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift */,
-			);
-			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -452,7 +417,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Amin Hamiditabar";
 				TargetAttributes = {
 					88FE34BE2464748500D954A3 = {
@@ -502,7 +467,6 @@
 				88891FC4246E1D1700ACA3A8 /* Anton-Regular.ttf in Resources */,
 				88891FC1246E1D1700ACA3A8 /* IndieFlower-Regular.ttf in Resources */,
 				88FE34C92464748800D954A3 /* Assets.xcassets in Resources */,
-				88891FFA2470596500ACA3A8 /* STMI-CGMcoreData.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,32 +496,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */,
+				88DA41732538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld in Sources */,
 				88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */,
 				881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */,
 				88FE35152464769800D954A3 /* AddStoredMeals.swift in Sources */,
+				88DA418D2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift in Sources */,
 				88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */,
-				88DB6E762511DAD7004CB3D4 /* Sensors+CoreDataClass.swift in Sources */,
-				88FE35232464783A00D954A3 /* WatchConnectivityPreview.swift in Sources */,
 				88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */,
 				88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */,
-				88DB6E712511DAD7004CB3D4 /* Meal+CoreDataProperties.swift in Sources */,
+				88DA418E2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift in Sources */,
 				88FE34C72464748500D954A3 /* ContentView.swift in Sources */,
-				88DB6E752511DAD7004CB3D4 /* Picture+CoreDataProperties.swift in Sources */,
 				88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */,
 				88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */,
 				88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */,
-				88DB6E732511DAD7004CB3D4 /* Activity+CoreDataProperties.swift in Sources */,
-				88DB6E742511DAD7004CB3D4 /* Picture+CoreDataClass.swift in Sources */,
 				88FE3519246476CE00D954A3 /* MealList.swift in Sources */,
-				88DB6E722511DAD7004CB3D4 /* Activity+CoreDataClass.swift in Sources */,
-				88DB6E772511DAD7004CB3D4 /* Sensors+CoreDataProperties.swift in Sources */,
 				88FE350F2464761F00D954A3 /* activityManager.swift in Sources */,
-				88DB6E702511DAD7004CB3D4 /* Meal+CoreDataClass.swift in Sources */,
-				88DB6E6F2511DAD7004CB3D4 /* ActivityDetail+CoreDataProperties.swift in Sources */,
 				88FE3509246475B400D954A3 /* iPhoneMotionIFC.swift in Sources */,
 				88FE350B246475D700D954A3 /* MotionManager.swift in Sources */,
 				8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */,
-				88DB6E6E2511DAD7004CB3D4 /* ActivityDetail+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +595,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -699,6 +656,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -897,14 +855,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		88FE353824647AF600D954A3 /* STMI-CGMcoreData.xcdatamodeld */ = {
+		88DA41712538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				88FE353924647AF600D954A3 /* STMI-CGMcoreData.xcdatamodel */,
+				88DA41722538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodel */,
 			);
-			currentVersion = 88FE353924647AF600D954A3 /* STMI-CGMcoreData.xcdatamodel */;
+			currentVersion = 88DA41722538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodel */;
 			path = "STMI-CGMcoreData.xcdatamodeld";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
