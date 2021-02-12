@@ -9,26 +9,19 @@
 import SwiftUI
 var phoneToWatch = PhonetoWatch()
 struct ContentView: View {
+    @FetchRequest(entity: Credentials.entity(), sortDescriptors: []) var credentials: FetchedResults<Credentials>
+    
     var body: some View {
         MainUI()
-            .onAppear{
-                phoneToWatch.activateSession()
-            }
+        //AuthorizePage()
         /*
-        TabView{
-            MainUI() // Navigates to meals and activities
-                .tabItem {
-                    Text("Entries")
-                    Image(systemName: "book.fill")
-                    
-            }
-            WatchConnectivityPreview() // displayes motion sensor data
-                .tabItem {
-                    Text("Sensors")
-                    Image(systemName: "rays")
-            }
+        if credentials.count == 0 {
+            AuthorizePage()
+        } else {
+            MainUI()
         }
         */
+        
     }
 }
 

@@ -9,7 +9,13 @@
 /* Begin PBXBuildFile section */
 		8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812A0FC24648153004EDCFE /* HealthKit.framework */; };
 		8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812A0FE24649D0F004EDCFE /* MainUI.swift */; };
+		881604822541FE28008F8609 /* AuthorizePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881604812541FE28008F8609 /* AuthorizePage.swift */; };
+		8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; };
+		8816048725421791008F8609 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881918E5246E1439002CB92E /* AddNewEntry.swift */; };
+		885B6ACE258A8FA000124829 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6ACD258A8FA000124829 /* Buttons.swift */; };
+		885B6AE3258BD89200124829 /* DisplayMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6AE2258BD89200124829 /* DisplayMeal.swift */; };
+		885B6AE7258BD92500124829 /* fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6AE6258BD92500124829 /* fade.swift */; };
 		88891FC1246E1D1700ACA3A8 /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FB9246E1D1700ACA3A8 /* IndieFlower-Regular.ttf */; };
 		88891FC2246E1D1700ACA3A8 /* Teko-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBA246E1D1700ACA3A8 /* Teko-Bold.ttf */; };
 		88891FC3246E1D1700ACA3A8 /* Teko-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBB246E1D1700ACA3A8 /* Teko-Medium.ttf */; };
@@ -18,6 +24,10 @@
 		88891FC6246E1D1700ACA3A8 /* Teko-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBE246E1D1700ACA3A8 /* Teko-SemiBold.ttf */; };
 		88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */; };
 		88891FC8246E1D1700ACA3A8 /* Teko-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */; };
+		888EE27D2589BC6C00E66110 /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EE27B2589BC6B00E66110 /* Meal+CoreDataClass.swift */; };
+		888EE27E2589BC6C00E66110 /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888EE27C2589BC6C00E66110 /* Meal+CoreDataProperties.swift */; };
+		88A888BF255C809E00524028 /* Credentials+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A888BD255C809E00524028 /* Credentials+CoreDataClass.swift */; };
+		88A888C0255C809E00524028 /* Credentials+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A888BE255C809E00524028 /* Credentials+CoreDataProperties.swift */; };
 		88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B64C3A2508741B00661F3F /* AddStoredActivity.swift */; };
 		88DA41732538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88DA41712538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld */; };
 		88DA418D2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */; };
@@ -44,7 +54,6 @@
 		88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE350C2464760400D954A3 /* ActivityMainIFC.swift */; };
 		88FE350F2464761F00D954A3 /* activityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE350E2464761F00D954A3 /* activityManager.swift */; };
 		88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35122464768400D954A3 /* AddNewMeal.swift */; };
-		88FE35152464769800D954A3 /* AddStoredMeals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35142464769800D954A3 /* AddStoredMeals.swift */; };
 		88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3516246476B600D954A3 /* ImagePicker.swift */; };
 		88FE3519246476CE00D954A3 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3518246476CE00D954A3 /* MealList.swift */; };
 		88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35202464782800D954A3 /* PhonetoWatch.swift */; };
@@ -57,6 +66,111 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		88DA419C2538D6CA0007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		88DA419E2538D6CA0007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
+			remoteInfo = OAuthSwiftMacOS;
+		};
+		88DA41A02538D6CA0007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
+			remoteInfo = OAuthSwiftTVOS;
+		};
+		88DA41A22538D6CA0007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C40890C01C11B37000E3146A;
+			remoteInfo = OAuthSwiftWatchOS;
+		};
+		88DA41A42538D6CA0007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		88DA41A62538D6CA0007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
+			remoteInfo = OAuthSwiftMacOSDemo;
+		};
+		88DA41A82538D6CA0007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
+			remoteInfo = OAuthSwiftTests;
+		};
+		88DA41BD2538D6D00007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		88DA41BF2538D6D00007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
+			remoteInfo = OAuthSwiftMacOS;
+		};
+		88DA41C12538D6D00007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
+			remoteInfo = OAuthSwiftTVOS;
+		};
+		88DA41C32538D6D00007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C40890C01C11B37000E3146A;
+			remoteInfo = OAuthSwiftWatchOS;
+		};
+		88DA41C52538D6D00007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		88DA41C72538D6D00007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
+			remoteInfo = OAuthSwiftMacOSDemo;
+		};
+		88DA41C92538D6D00007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
+			remoteInfo = OAuthSwiftTests;
+		};
+		88DA41CE2538D7290007BFF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
 		88FE34D52464748800D954A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88FE34B72464748500D954A3 /* Project object */;
@@ -74,6 +188,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		8816048825421791008F8609 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8816048725421791008F8609 /* OAuthSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88FE34FD2464748A00D954A3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -102,7 +227,11 @@
 		8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "STMI-CGM WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8812A0FC24648153004EDCFE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		8812A0FE24649D0F004EDCFE /* MainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUI.swift; sourceTree = "<group>"; };
+		881604812541FE28008F8609 /* AuthorizePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizePage.swift; sourceTree = "<group>"; };
 		881918E5246E1439002CB92E /* AddNewEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntry.swift; sourceTree = "<group>"; };
+		885B6ACD258A8FA000124829 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		885B6AE2258BD89200124829 /* DisplayMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMeal.swift; sourceTree = "<group>"; };
+		885B6AE6258BD92500124829 /* fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fade.swift; sourceTree = "<group>"; };
 		88891FB9246E1D1700ACA3A8 /* IndieFlower-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IndieFlower-Regular.ttf"; sourceTree = "<group>"; };
 		88891FBA246E1D1700ACA3A8 /* Teko-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Bold.ttf"; sourceTree = "<group>"; };
 		88891FBB246E1D1700ACA3A8 /* Teko-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Medium.ttf"; sourceTree = "<group>"; };
@@ -112,10 +241,16 @@
 		88891FBF246E1D1700ACA3A8 /* Teko-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Regular.ttf"; sourceTree = "<group>"; };
 		88891FC0246E1D1700ACA3A8 /* Teko-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Teko-Light.ttf"; sourceTree = "<group>"; };
 		88891FC9246E1D7F00ACA3A8 /* DancingScript-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		888EE27B2589BC6B00E66110 /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		888EE27C2589BC6C00E66110 /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88A888BD255C809E00524028 /* Credentials+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Credentials+CoreDataClass.swift"; sourceTree = "<group>"; };
+		88A888BE255C809E00524028 /* Credentials+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Credentials+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88B64C3A2508741B00661F3F /* AddStoredActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredActivity.swift; sourceTree = "<group>"; };
 		88DA41722538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "STMI-CGMcoreData.xcdatamodel"; sourceTree = "<group>"; };
 		88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = "<group>"; };
 		88DA418C2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
+		88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +278,6 @@
 		88FE350C2464760400D954A3 /* ActivityMainIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMainIFC.swift; sourceTree = "<group>"; };
 		88FE350E2464761F00D954A3 /* activityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityManager.swift; sourceTree = "<group>"; };
 		88FE35122464768400D954A3 /* AddNewMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMeal.swift; sourceTree = "<group>"; };
-		88FE35142464769800D954A3 /* AddStoredMeals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoredMeals.swift; sourceTree = "<group>"; };
 		88FE3516246476B600D954A3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		88FE3518246476CE00D954A3 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		88FE35202464782800D954A3 /* PhonetoWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonetoWatch.swift; sourceTree = "<group>"; };
@@ -160,6 +294,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +312,7 @@
 		8812A0FB24648153004EDCFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */,
 				8812A0FC24648153004EDCFE /* HealthKit.framework */,
 			);
 			name = Frameworks;
@@ -187,6 +323,8 @@
 			children = (
 				88891FB8246E1D1700ACA3A8 /* Fonts */,
 				881918E5246E1439002CB92E /* AddNewEntry.swift */,
+				885B6ACD258A8FA000124829 /* Buttons.swift */,
+				885B6AE6258BD92500124829 /* fade.swift */,
 			);
 			path = UserInterface;
 			sourceTree = "<group>";
@@ -210,15 +348,48 @@
 		88DA417A2538A9EA0007BFF7 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				888EE27B2589BC6B00E66110 /* Meal+CoreDataClass.swift */,
+				888EE27C2589BC6C00E66110 /* Meal+CoreDataProperties.swift */,
+				88A888BD255C809E00524028 /* Credentials+CoreDataClass.swift */,
+				88A888BE255C809E00524028 /* Credentials+CoreDataProperties.swift */,
 				88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */,
 				88DA418C2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		88DA41932538D6CA0007BFF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88DA419D2538D6CA0007BFF7 /* OAuthSwift.framework */,
+				88DA419F2538D6CA0007BFF7 /* OAuthSwift.framework */,
+				88DA41A12538D6CA0007BFF7 /* OAuthSwift.framework */,
+				88DA41A32538D6CA0007BFF7 /* OAuthSwift.framework */,
+				88DA41A52538D6CA0007BFF7 /* OAuthSwiftDemo.app */,
+				88DA41A72538D6CA0007BFF7 /* OAuthSwiftMacOSDemo.app */,
+				88DA41A92538D6CA0007BFF7 /* OAuthSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88DA41B42538D6D00007BFF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */,
+				88DA41C02538D6D00007BFF7 /* OAuthSwift.framework */,
+				88DA41C22538D6D00007BFF7 /* OAuthSwift.framework */,
+				88DA41C42538D6D00007BFF7 /* OAuthSwift.framework */,
+				88DA41C62538D6D00007BFF7 /* OAuthSwiftDemo.app */,
+				88DA41C82538D6D00007BFF7 /* OAuthSwiftMacOSDemo.app */,
+				88DA41CA2538D6D00007BFF7 /* OAuthSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		88FE34B62464748500D954A3 = {
 			isa = PBXGroup;
 			children = (
+				88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */,
 				88FE34C12464748500D954A3 /* STMI-CGM */,
 				88FE34D72464748800D954A3 /* STMI-CGM WatchKit App */,
 				88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */,
@@ -247,6 +418,7 @@
 				88FE3506246474B500D954A3 /* Meals */,
 				88FE3505246474AA00D954A3 /* Activity */,
 				88FE34C22464748500D954A3 /* AppDelegate.swift */,
+				881604812541FE28008F8609 /* AuthorizePage.swift */,
 				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
 				88FE34C62464748500D954A3 /* ContentView.swift */,
 				88FE34C82464748800D954A3 /* Assets.xcassets */,
@@ -320,7 +492,7 @@
 			children = (
 				88FE3518246476CE00D954A3 /* MealList.swift */,
 				88FE35122464768400D954A3 /* AddNewMeal.swift */,
-				88FE35142464769800D954A3 /* AddStoredMeals.swift */,
+				885B6AE2258BD89200124829 /* DisplayMeal.swift */,
 				88FE3516246476B600D954A3 /* ImagePicker.swift */,
 			);
 			path = Meals;
@@ -365,10 +537,12 @@
 				88FE34BC2464748500D954A3 /* Frameworks */,
 				88FE34BD2464748500D954A3 /* Resources */,
 				88FE35012464748A00D954A3 /* Embed Watch Content */,
+				8816048825421791008F8609 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				88DA41CF2538D7290007BFF7 /* PBXTargetDependency */,
 				88FE34D62464748800D954A3 /* PBXTargetDependency */,
 			);
 			name = "STMI-CGM";
@@ -442,6 +616,16 @@
 			mainGroup = 88FE34B62464748500D954A3;
 			productRefGroup = 88FE34C02464748500D954A3 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 88DA41B42538D6D00007BFF7 /* Products */;
+					ProjectRef = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
+				},
+				{
+					ProductGroup = 88DA41932538D6CA0007BFF7 /* Products */;
+					ProjectRef = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				88FE34BE2464748500D954A3 /* STMI-CGM */,
@@ -450,6 +634,107 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		88DA419D2538D6CA0007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA419C2538D6CA0007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA419F2538D6CA0007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA419E2538D6CA0007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41A12538D6CA0007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA41A02538D6CA0007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41A32538D6CA0007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA41A22538D6CA0007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41A52538D6CA0007BFF7 /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = 88DA41A42538D6CA0007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41A72538D6CA0007BFF7 /* OAuthSwiftMacOSDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftMacOSDemo.app;
+			remoteRef = 88DA41A62538D6CA0007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41A92538D6CA0007BFF7 /* OAuthSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuthSwiftTests.xctest;
+			remoteRef = 88DA41A82538D6CA0007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA41BD2538D6D00007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41C02538D6D00007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA41BF2538D6D00007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41C22538D6D00007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA41C12538D6D00007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41C42538D6D00007BFF7 /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 88DA41C32538D6D00007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41C62538D6D00007BFF7 /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = 88DA41C52538D6D00007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41C82538D6D00007BFF7 /* OAuthSwiftMacOSDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftMacOSDemo.app;
+			remoteRef = 88DA41C72538D6D00007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		88DA41CA2538D6D00007BFF7 /* OAuthSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuthSwiftTests.xctest;
+			remoteRef = 88DA41C92538D6D00007BFF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		88FE34BD2464748500D954A3 /* Resources */ = {
@@ -497,19 +782,26 @@
 			files = (
 				88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */,
 				88DA41732538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld in Sources */,
+				888EE27E2589BC6C00E66110 /* Meal+CoreDataProperties.swift in Sources */,
+				885B6AE7258BD92500124829 /* fade.swift in Sources */,
+				881604822541FE28008F8609 /* AuthorizePage.swift in Sources */,
 				88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */,
+				885B6AE3258BD89200124829 /* DisplayMeal.swift in Sources */,
 				881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */,
-				88FE35152464769800D954A3 /* AddStoredMeals.swift in Sources */,
+				88A888C0255C809E00524028 /* Credentials+CoreDataProperties.swift in Sources */,
 				88DA418D2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift in Sources */,
 				88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */,
 				88B64C3B2508741B00661F3F /* AddStoredActivity.swift in Sources */,
 				88FE34C52464748500D954A3 /* SceneDelegate.swift in Sources */,
+				888EE27D2589BC6C00E66110 /* Meal+CoreDataClass.swift in Sources */,
+				88A888BF255C809E00524028 /* Credentials+CoreDataClass.swift in Sources */,
 				88DA418E2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift in Sources */,
 				88FE34C72464748500D954A3 /* ContentView.swift in Sources */,
 				88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */,
 				88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */,
 				88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */,
 				88FE3519246476CE00D954A3 /* MealList.swift in Sources */,
+				885B6ACE258A8FA000124829 /* Buttons.swift in Sources */,
 				88FE350F2464761F00D954A3 /* activityManager.swift in Sources */,
 				88FE3509246475B400D954A3 /* iPhoneMotionIFC.swift in Sources */,
 				88FE350B246475D700D954A3 /* MotionManager.swift in Sources */,
@@ -537,6 +829,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		88DA41CF2538D7290007BFF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = 88DA41CE2538D7290007BFF7 /* PBXContainerItemProxy */;
+		};
 		88FE34D62464748800D954A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88FE34D22464748800D954A3 /* STMI-CGM WatchKit App */;
@@ -782,6 +1079,7 @@
 				DEVELOPMENT_TEAM = V34SA3KVD3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "STMI-CGM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -802,6 +1100,7 @@
 				DEVELOPMENT_TEAM = V34SA3KVD3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "STMI-CGM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

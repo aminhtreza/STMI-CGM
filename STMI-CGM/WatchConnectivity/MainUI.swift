@@ -19,6 +19,8 @@ struct MainUI: View {
     @State var username = "Amin"
     @State var dayNum = 1
     @State var addNewEntry = false
+    
+    @State var showSheet = false
 
     func calcTotEntries(count: inout Int) {
         //count = meals.count + activities.count
@@ -35,6 +37,10 @@ struct MainUI: View {
                 Text("\(sensors.count)")
                 Button("Clear data") {
                     self.clearSensors()
+                }
+                
+                Button("Authorization Page") {
+                    self.showSheet = true
                 }
             }
             AddNewEntry()

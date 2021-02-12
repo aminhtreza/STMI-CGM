@@ -10,21 +10,25 @@ import SwiftUI
 
 struct MealList: View {
     @Environment(\.managedObjectContext) var moc
-    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     @State private var showSheet = false
     @State private var activeSheet: ActiveSheet = .first
     
+    @State var image: Image?
+    @State var mealName = ""
+    @State var startTime = Date()
+    @State var finishTime = Date()
+    @State var calories = 0.0
+    @State var protein = 0.0
+    @State var carbs = 0.0
+    @State var fat = 0.0
+    
     let dateFormatter = DateFormatter()
-    func dateformatter() {
-        dateFormatter.dateStyle = .short
-        dateFormatter.timeStyle = .short
-    }
     
     var body: some View {
         VStack {
-            NavigationView {
+            NavigationView { // My meals
                 List{
-                    /*
                     Button(action: {
                         self.showSheet = true
                         self.activeSheet = .first
@@ -40,69 +44,78 @@ struct MealList: View {
                             }
                         }
                     }.padding()
-                    Button(action: {
-                        self.showSheet = true
-                        self.activeSheet = .second
-                        print(self.meals.count)
-                    }) {
-                        Section {
-                            HStack{
-                                Text("Add existing meal")
-                                Spacer()
-                                Image(systemName: "doc.fill")
-                                .foregroundColor(.blue)
-                                .imageScale(.large)
-                            }
-                        }
-                    }.padding()
-                    */
+
                     Section(header: Text("History")) {
-                        /*
-                        ForEach(meals, id: \.self) {meal in
+                        ForEach(meals.reversed(), id: \.self) {meal in
                            HStack {
-                                Text("\(meal.mealName!)")
-                                .font(.title)
-                                .frame(width: 117, height: 60, alignment: .center)
-                                Divider()
+                                Image(uiImage: UIImage(data: Data((meal.picture!)))!)
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 100, height: 100, alignment: .center)
+                                    .clipShape(Circle())
+                                    .cornerRadius(20)
+                                    .shadow(radius: 10)
+                                    .padding()
                                 VStack {
-                                    Text("Calories: \(Int(meal.calories))")
-                                    .multilineTextAlignment(.leading)
-                                    Text("Date: \(self.dateFormatter.string(from: meal.inputDate!))")
+                                    Text("\(meal.mealName!)")
+                                        .font(.headline)
+                                    Text(meal.startTime, style: .date)
+                                    HStack {
+                                        Text(meal.startTime, style: .time)
+                                        Text("-")
+                                        Text(meal.finishTime, style: .time)
+                                    }
+                                    
                                 }                                
-                            }
+                           }.onTapGesture {
+                                self.image = Image(uiImage: UIImage(data: Data((meal.picture!)))!)
+                                self.startTime = meal.startTime
+                                self.finishTime = meal.finishTime
+                                self.mealName = meal.mealName ?? "Meal name was not inputted"
+                                self.calories = meal.calories
+                                self.carbs = meal.carbs
+                                self.fat = meal.fat
+                                self.protein = meal.protein
+                                self.activeSheet = .second
+                                self.showSheet = true
+                           }
                         }.onDelete(perform: deleteMeal)
-                        */
                     }
-                }
-                .navigationBarTitle(Text("My meals"),displayMode: .inline)
-            }.onAppear(perform: dateformatter)
+                }.navigationBarTitle(Text("My meals"),displayMode: .inline)
+            }//.onAppear(perform: dateformatter)
             .sheet(isPresented: $showSheet, onDismiss: closeSheet) {
                 if self.activeSheet == .first {
                     AddNewMeal().navigationBarTitle("STMI", displayMode: .inline)
-                    .environment(\.managedObjectContext, self.moc)
-                } else {
-                    AddStoredMeals().navigationBarTitle("STMI", displayMode: .inline)
-                    .environment(\.managedObjectContext, self.moc)
+                        .environment(\.managedObjectContext, self.moc)
+                } else if self.activeSheet == .second {
+                    DisplayMeal(mealName: self.mealName, image: self.image, startTime: self.startTime, finishTime: self.finishTime, calories: self.calories, protein: self.protein, carbs: self.carbs, fat: self.fat)
                 }
             }
         }
     }
-    
+}
+
+extension MealList {
     func deleteMeal(at offsets: IndexSet) {
-        /*
         for i in offsets {
-            let meal = meals[i]
+            let meal = meals.reversed()[i]
             moc.delete(meal)
         }
         try! self.moc.save()
-         */
+         
     }
     
     func closeSheet() {
         self.showSheet = false
     }
+    
     enum ActiveSheet {
        case first, second
+    }
+    
+    func dateformatter() {
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
     }
 }
 

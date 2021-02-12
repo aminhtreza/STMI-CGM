@@ -15,8 +15,13 @@ struct AddNewMeal: View {
     @State var carbs: String = ""
     @State var fat: String = ""
     
+    @State var startTime: Date = Date()
+    @State var startTimeSelected = false
+    @State var finishTime: Date = Date()
+    @State var finishTimeSelected = false
+    
     @Environment(\.managedObjectContext) var moc
-    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     @Environment(\.presentationMode) var presentation // to make this view dismiss itself
     
     @State var showActionSheet = false
@@ -27,48 +32,85 @@ struct AddNewMeal: View {
     @State var inputImage: UIImage?
     @State var cameraPic = false
     
-
+    @State var eatingNow = false
+    @State var oldMeal = false
     
     var body: some View {
         GeometryReader { geo in
             VStack {
-                VStack{
-                    if self.image != nil {
-                         self.image?
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: geo.size.width * (3/4), height: geo.size.width * (3/4), alignment: .center)
-                            .cornerRadius(30)
-                            .clipShape(Rectangle())
-                            .shadow(radius: 10)
-                            .padding().padding(.top, 20)
-                            .onTapGesture {
-                                self.showActionSheet = true
-                            }
-                        
-                    } else {
-                        CameraButton(showActionSheet: self.$showActionSheet)
-                                .frame(width: 100, height: 100, alignment: .center
-                        )
+                HStack {
+                    Section{
+                        List {
+                            TextField("Name" ,text:  self.$mealName)
+                            TextField("Calories", text: self.$calories)
+                            TextField("Protein", text: self.$protein)
+                            TextField("Carbs", text: self.$carbs)
+                            TextField("Fat", text: self.$fat)
+                        }
+                        .padding()
                     }
-                }
-                .onTapGesture {
-                    self.showActionSheet = true
-                }
-                .frame(width: 250, height: 250, alignment: .center)
-
+                    VStack{
+                        if self.image != nil {
+                             self.image?
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 150, height: 150, alignment: .center)
+                                .clipShape(Rectangle())
+                                .cornerRadius(20)
+                                .shadow(radius: 10)
+                                .onTapGesture {self.showActionSheet = true}
+                                .padding()
+                        } else {
+                            Image(systemName: "camera.circle.fill")
+                                .resizable()
+                                .foregroundColor(.blue)
+                                .imageScale(.large)
+                                .frame(width: 130, height: 130, alignment: .center)
+                                .onTapGesture {self.showActionSheet = true}
+                                .padding()
+                        }
+                    }.onTapGesture {self.showActionSheet = true}
+                }.frame(width: geo.size.width, height: geo.size.height/2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 
-                Section{
-                    List {
-                        TextField("Name" ,text:  self.$mealName)
-                        TextField("Calories", text: self.$calories)
-                        TextField("Protein", text: self.$protein)
-                        TextField("Carbs", text: self.$carbs)
-                        TextField("Fat", text: self.$fat)
+                HStack {
+                    Button("Start eating") {
+                        withAnimation{self.eatingNow.toggle()}
+                    }.buttonStyle(NotSelectedButtonStyle(selected: self.eatingNow)).padding()
+                    Button("Input old meal") {
+                        withAnimation{self.oldMeal.toggle()}
+                    }.buttonStyle(NotSelectedButtonStyle(selected: self.oldMeal)).padding()
+                }.padding()
+                
+                if eatingNow {
+                    VStack {
+                        if !startTimeSelected {
+                            Button("Start") {
+                                self.startTime = Date()
+                                withAnimation{self.startTimeSelected = true}
+                            }.buttonStyle(NotSelectedButtonStyle())
+                        } else {
+                            Text(startTime, style: .time).padding(.horizontal)
+                        }
+                        
+                        if !finishTimeSelected {
+                            Button("Finish") {
+                                self.finishTime = Date()
+                                withAnimation{self.finishTimeSelected = true}
+                            }.buttonStyle(NotSelectedButtonStyle())
+                        } else {
+                            Text(finishTime, style: .time).padding(.horizontal)
+                        }
                     }
-                    .frame(height: 210)
-                    .padding()
                 }
+                
+                if oldMeal {
+                    VStack {
+                        DatePicker("Start time", selection: self.$startTime)
+                        DatePicker("Finish time", selection: self.$finishTime)
+                    }.padding()
+                }
+                
+                Spacer()
                 Button(action: {
                     if self.image != nil {
                         self.saveToMoc()
@@ -82,10 +124,10 @@ struct AddNewMeal: View {
                     .frame(width: 220, height: 60, alignment: .center)
                     .background(Color.blue)
                     .cornerRadius(40)
-                }
+                }.padding()
 
-                    // Whenever you click on the camera this will open
-                    .actionSheet(isPresented: self.$showActionSheet, content: { () -> ActionSheet in
+                // Whenever you click on the camera this will open
+                .actionSheet(isPresented: self.$showActionSheet, content: { () -> ActionSheet in
                     ActionSheet(title: Text("Select Image"), buttons: [
                         ActionSheet.Button.default(Text("Camera"), action: {
                             self.showImagePicker.toggle()
@@ -96,7 +138,8 @@ struct AddNewMeal: View {
                             self.showImagePicker.toggle()
                             self.sourceType = .photoLibrary
                             self.cameraPic = false
-                        })
+                        }),
+                        ActionSheet.Button.cancel()
                     ])
                 })
                     // After choosing from camera or gallery this will open
@@ -118,29 +161,29 @@ struct AddNewMeal: View {
     }
     
     func saveToMoc() {
-        /*
         let meal = Meal(context: self.moc)
         meal.mealName = self.mealName
         meal.calories = Double(self.calories) ?? 0
         meal.carbs = Double(self.carbs) ?? 0
         meal.protein = Double(self.protein) ?? 0
         meal.fat = Double(self.fat) ?? 0
-        meal.inputDate = Date()
-        
-        meal.picture = Picture(context: self.moc)
-        meal.picture?.imageData = self.inputImage?.jpegData(compressionQuality: 100)
+        meal.startTime = startTime
+        meal.finishTime = finishTime
+        meal.picture = self.inputImage?.jpegData(compressionQuality: 100)
         
         do {try self.moc.save()}
         catch {print(error)}
     
         self.presentation.wrappedValue.dismiss()
-        */
+        
     }
 }
 
 
+/*
 struct AddMeal_Previews: PreviewProvider {
     static var previews: some View {
         AddNewMeal(mealName: "", calories: "", protein: "", carbs: "", fat: "")
     }
 }
+*/

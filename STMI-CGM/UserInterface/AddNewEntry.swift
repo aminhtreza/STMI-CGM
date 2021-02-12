@@ -11,7 +11,7 @@ import SwiftUI
 struct AddNewEntry: View {
     
     @Environment(\.managedObjectContext) var moc
-    //@FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
+    @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     enum ActiveSheet {
        case first, second
     }
@@ -20,7 +20,7 @@ struct AddNewEntry: View {
     }
 
     @State private var showSheet = false
-    @State private var activeSheet: ActiveSheet = .first
+    @State private var activeSheet: ActiveSheet?
     
     var body: some View {
         HStack{
