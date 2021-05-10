@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="19H114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H1210" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activities" representedClassName="Activities" syncable="YES" codeGenerationType="class">
+        <attribute name="activityDetail" optional="YES" attributeType="String"/>
+        <attribute name="activityType" optional="YES" attributeType="String"/>
+        <attribute name="finishTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="travelFrom" optional="YES" attributeType="String"/>
+        <attribute name="travelTo" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Credentials" representedClassName="Credentials" syncable="YES">
         <attribute name="password" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
@@ -28,5 +36,6 @@
         <element name="Credentials" positionX="-54" positionY="54" width="128" height="73"/>
         <element name="Meal" positionX="-54" positionY="54" width="128" height="163"/>
         <element name="Sensors" positionX="-54" positionY="-9" width="128" height="163"/>
+        <element name="Activities" positionX="-36" positionY="108" width="128" height="133"/>
     </elements>
 </model>

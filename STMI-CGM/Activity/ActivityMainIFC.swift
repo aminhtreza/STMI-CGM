@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ActivityMainIFC: View {
     @Environment(\.managedObjectContext) var moc
-    //@FetchRequest(entity: Activity.entity(), sortDescriptors: []) var activities: FetchedResults<Activity>
+    @FetchRequest(entity: Activities.entity(), sortDescriptors: []) var activities: FetchedResults<Activities>
     @State private var showSheet = false
     @State private var activeSheet: ActiveSheet = .first
     
@@ -24,11 +24,9 @@ struct ActivityMainIFC: View {
         VStack {
             NavigationView {
                 List{
-                    /*
                     Button(action: {
                         self.showSheet = true
                         self.activeSheet = .first
-                        print(self.activities.count)
                     }) {
                         Section {
                             HStack{
@@ -40,10 +38,8 @@ struct ActivityMainIFC: View {
                             }
                         }
                     }.padding()
-                    */
                     Section(header: Text("History")) {
-                        /*
-                        ForEach(activities, id: \.self) {activity in
+                        ForEach(activities.reversed(), id: \.self) {activity in
                            VStack {
                                 HStack{
                                     Text("\(activity.activityType!)")
@@ -51,12 +47,16 @@ struct ActivityMainIFC: View {
                                         .frame(width: 117, height: 60, alignment: .center)
                                     Divider()
                                     VStack {
-                                        Text("\(activity.activityDetail!.detail!)")
-                                        Text("Start: \(self.dateFormatter.string(from: activity.startTime!))")
-                                        Text("Finish: \(self.dateFormatter.string(from: activity.endTime!)) ")
+                                        Text(activity.startTime!, style: .date)
                                         HStack{
-                                            Text("\(activity.activityDetail!.from ?? "")")
-                                            Text("\(activity.activityDetail!.to ?? "")")
+                                            Text(activity.startTime!, style: .time)
+                                            Text("-");
+                                            Text(activity.finishTime!, style: .time)
+                                        }
+                                        Text("\(activity.activityDetail!)")
+                                        if activity.activityType == "Travel" {
+                                            Text("From \(activity.travelFrom ?? "")")
+                                            Text("to \(activity.travelTo ?? "")")
                                         }
                                     }
                                     .multilineTextAlignment(.leading)
@@ -64,7 +64,6 @@ struct ActivityMainIFC: View {
                                 //Text("\(self.dateFormatter.string(from: activity.inputDate!))")
                             }
                         }.onDelete(perform: deleteMeal)
-                        */
                     }
                 }.navigationBarTitle(Text("My activities"),displayMode: .inline)
             }.onAppear(perform: dateformatter)
@@ -81,13 +80,11 @@ struct ActivityMainIFC: View {
     }
     
     func deleteMeal(at offsets: IndexSet) {
-        /*
         for i in offsets {
-            let activity = activities[i]
+            let activity = activities.reversed()[i]
             moc.delete(activity)
         }
         try! self.moc.save()
-         */
     }
      
     func closeSheet() {

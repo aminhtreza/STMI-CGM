@@ -20,27 +20,23 @@ struct AddNewActivity: View {
                                 ForEach(0..<activityType.count) {
                                     Text(self.activityType[$0]).foregroundColor(.blue)
                                 }
-                            }
-                                .pickerStyle(SegmentedPickerStyle())
+                            }.pickerStyle(SegmentedPickerStyle())
 
-                                
                             if self.typeSelection == 1 {
                                 Picker(selection: $fromSelection, label: Text("From")) {
                                     ForEach(0..<travelingLocation.count) {
                                         Text(self.travelingLocation[$0]).foregroundColor(.blue)
                                     }
-                                }.padding()
+                                }
                                 Picker(selection: $toSelection, label: Text("To")) {
                                     ForEach(0..<travelingLocation.count) {
                                         Text(self.travelingLocation[$0]).foregroundColor(.blue)
                                     }
-                                }.padding()
+                                }
                             }
                             if self.typeSelection == 4 {
                                 TextField("Description:", text: $otherActivity)
-                                .padding()
                             } else {
-                            // Start Activity detail
                                 Picker(selection: $detailSelection, label: Text("Activity detail")) {
                                     if self.typeSelection == 0 { // Exercising
                                         ForEach(0..<exercisingType.count) {
@@ -59,20 +55,18 @@ struct AddNewActivity: View {
                                             Text(self.workingType[$0]).foregroundColor(.blue)
                                         }
                                     }
-                                }.padding()
+                                }
                             }
                             
                             // End Activity detail
                             DatePicker(selection: $startTime) {
                                 Text("Start")
-                                .padding()
                             }
                             DatePicker(selection: $finishTime) {
                                 Text("Finish")
-                                .padding()
                             }
                         }
-                    } .navigationBarTitle("Choose activity").padding()
+                    } .navigationBarTitle("Choose activity")
                     Button(action: {
                         self.saveToMoc()
                     }) {
@@ -109,32 +103,31 @@ struct AddNewActivity: View {
     @State var finishTime = Date()
     
     func saveToMoc() {
-        /*
-        let activity = Activity(context: self.moc)
-        activity.activityDetail = ActivityDetail(context: self.moc)
+        let activity = Activities(context: self.moc)
+        activity.activityType = self.activityType[typeSelection]
         switch self.typeSelection {
         case 0:
-            activity.activityDetail!.detail = self.exercisingType[self.detailSelection]
+            activity.activityDetail = self.exercisingType[self.detailSelection]
         case 1:
-            activity.activityDetail!.detail = self.travelingType[self.detailSelection]
-            activity.activityDetail!.from = self.travelingLocation[self.fromSelection]
-            activity.activityDetail!.to = "to \(self.travelingLocation[self.toSelection])"
+            activity.activityDetail = self.travelingType[self.detailSelection]
+            activity.travelFrom = self.travelingLocation[self.fromSelection]
+            activity.travelTo = self.travelingLocation[self.toSelection]
         case 2:
-            activity.activityDetail!.detail = self.eatingType[self.detailSelection]
+            activity.activityDetail = self.eatingType[self.detailSelection]
         case 3:
-            activity.activityDetail!.detail = self.workingType[self.detailSelection]
+            activity.activityDetail = self.workingType[self.detailSelection]
+        case 4:
+            activity.activityDetail = self.otherActivity
         default:
-            activity.activityDetail!.detail = "no activity"
+            activity.activityDetail = "no activity"
         }
-        activity.activityType = activityType[typeSelection]
         activity.startTime = self.startTime
-        activity.endTime = self.finishTime
+        activity.finishTime = self.finishTime
         
         do {try self.moc.save()}
         catch {print(error)}
     
         self.presentation.wrappedValue.dismiss()
-        */
     }
 }
 
