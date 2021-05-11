@@ -17,6 +17,9 @@
 		885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38F22649FD3700B6C326 /* CoreBluetooth.framework */; };
 		885A38F72649FDBE00B6C326 /* E4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A38F62649FDBE00B6C326 /* E4.swift */; };
 		885A3907264A33B100B6C326 /* E4Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A3906264A33B100B6C326 /* E4Main.swift */; };
+		885A3911264B25D400B6C326 /* lunch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885A390E264B25D400B6C326 /* lunch.mp3 */; };
+		885A3912264B25D400B6C326 /* breakfast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885A390F264B25D400B6C326 /* breakfast.mp3 */; };
+		885A3913264B25D400B6C326 /* dinner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885A3910264B25D400B6C326 /* dinner.mp3 */; };
 		885B6ACE258A8FA000124829 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6ACD258A8FA000124829 /* Buttons.swift */; };
 		885B6AE3258BD89200124829 /* DisplayMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6AE2258BD89200124829 /* DisplayMeal.swift */; };
 		885B6AE7258BD92500124829 /* fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6AE6258BD92500124829 /* fade.swift */; };
@@ -238,6 +241,9 @@
 		885A38F22649FD3700B6C326 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		885A38F62649FDBE00B6C326 /* E4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4.swift; sourceTree = "<group>"; };
 		885A3906264A33B100B6C326 /* E4Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4Main.swift; sourceTree = "<group>"; };
+		885A390E264B25D400B6C326 /* lunch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lunch.mp3; sourceTree = "<group>"; };
+		885A390F264B25D400B6C326 /* breakfast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breakfast.mp3; sourceTree = "<group>"; };
+		885A3910264B25D400B6C326 /* dinner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dinner.mp3; sourceTree = "<group>"; };
 		885B6ACD258A8FA000124829 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		885B6AE2258BD89200124829 /* DisplayMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMeal.swift; sourceTree = "<group>"; };
 		885B6AE6258BD92500124829 /* fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fade.swift; sourceTree = "<group>"; };
@@ -335,11 +341,29 @@
 			isa = PBXGroup;
 			children = (
 				88891FB8246E1D1700ACA3A8 /* Fonts */,
-				881918E5246E1439002CB92E /* AddNewEntry.swift */,
 				885B6ACD258A8FA000124829 /* Buttons.swift */,
 				885B6AE6258BD92500124829 /* fade.swift */,
 			);
 			path = UserInterface;
+			sourceTree = "<group>";
+		};
+		885A390A264B1DE800B6C326 /* E4 */ = {
+			isa = PBXGroup;
+			children = (
+				885A3906264A33B100B6C326 /* E4Main.swift */,
+				885A38F62649FDBE00B6C326 /* E4.swift */,
+			);
+			path = E4;
+			sourceTree = "<group>";
+		};
+		885A390D264B25D400B6C326 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				885A390E264B25D400B6C326 /* lunch.mp3 */,
+				885A390F264B25D400B6C326 /* breakfast.mp3 */,
+				885A3910264B25D400B6C326 /* dinner.mp3 */,
+			);
+			path = audio;
 			sourceTree = "<group>";
 		};
 		88891FB8246E1D1700ACA3A8 /* Fonts */ = {
@@ -424,6 +448,7 @@
 		88FE34C12464748500D954A3 /* STMI-CGM */ = {
 			isa = PBXGroup;
 			children = (
+				885A390A264B1DE800B6C326 /* E4 */,
 				88DA417A2538A9EA0007BFF7 /* CoreData */,
 				881918E1246DFBA3002CB92E /* UserInterface */,
 				88FE351F2464781700D954A3 /* WatchConnectivity */,
@@ -431,8 +456,6 @@
 				88FE3506246474B500D954A3 /* Meals */,
 				88FE3505246474AA00D954A3 /* Activity */,
 				88FE34C22464748500D954A3 /* AppDelegate.swift */,
-				885A3906264A33B100B6C326 /* E4Main.swift */,
-				885A38F62649FDBE00B6C326 /* E4.swift */,
 				881604812541FE28008F8609 /* AuthorizePage.swift */,
 				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
 				88FE34C62464748500D954A3 /* ContentView.swift */,
@@ -441,6 +464,7 @@
 				88FE34D02464748800D954A3 /* Info.plist */,
 				88DA41712538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld */,
 				885A38CC2649F51A00B6C326 /* E4tester-Bridging-Header.h */,
+				885A390D264B25D400B6C326 /* audio */,
 				88FE34CA2464748800D954A3 /* Preview Content */,
 			);
 			path = "STMI-CGM";
@@ -528,6 +552,7 @@
 			children = (
 				88FE35202464782800D954A3 /* PhonetoWatch.swift */,
 				8812A0FE24649D0F004EDCFE /* MainUI.swift */,
+				881918E5246E1439002CB92E /* AddNewEntry.swift */,
 			);
 			path = WatchConnectivity;
 			sourceTree = "<group>";
@@ -758,6 +783,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */,
+				885A3911264B25D400B6C326 /* lunch.mp3 in Resources */,
 				88FE34CF2464748800D954A3 /* LaunchScreen.storyboard in Resources */,
 				88FE34CC2464748800D954A3 /* Preview Assets.xcassets in Resources */,
 				88891FC6246E1D1700ACA3A8 /* Teko-SemiBold.ttf in Resources */,
@@ -766,6 +792,8 @@
 				88891FC5246E1D1700ACA3A8 /* YanoneKaffeesatz-VariableFont_wght.ttf in Resources */,
 				88891FC2246E1D1700ACA3A8 /* Teko-Bold.ttf in Resources */,
 				88891FC4246E1D1700ACA3A8 /* Anton-Regular.ttf in Resources */,
+				885A3913264B25D400B6C326 /* dinner.mp3 in Resources */,
+				885A3912264B25D400B6C326 /* breakfast.mp3 in Resources */,
 				88891FC1246E1D1700ACA3A8 /* IndieFlower-Regular.ttf in Resources */,
 				88FE34C92464748800D954A3 /* Assets.xcassets in Resources */,
 			);
@@ -1091,7 +1119,7 @@
 		88FE35032464748A00D954A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
 				DEVELOPMENT_TEAM = V34SA3KVD3;
@@ -1119,7 +1147,7 @@
 		88FE35042464748A00D954A3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
 				DEVELOPMENT_TEAM = V34SA3KVD3;

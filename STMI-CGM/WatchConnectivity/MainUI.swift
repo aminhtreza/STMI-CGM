@@ -33,15 +33,13 @@ struct MainUI: View {
                     .frame(width: 300, height: 150, alignment: .center)
                     .font(.custom("Anton-Regular", size: 30))
                 
-                Text(phonetoWatch.watchReachable() ? "Connected to watch": phonetoWatch.appInstalled() ? "Please open the app on your watch": "Please install the watch app")
-                Text("\(sensors.count)")
+                Text(phonetoWatch.watchReachable() ? "Connected to watch": phonetoWatch.appInstalled() ? "Please open the app on your watch": "Please install the watch app").font(.custom("", size: 15))
+                Text("Number of events stored: \(sensors.count)").font(.custom("", size: 12))
                 Button("Clear data") {
                     self.clearSensors()
                 }
+                //Button("Authorization Page") {self.showSheet = true}
                 
-                Button("Authorization Page") {
-                    self.showSheet = true
-                }
             }
             AddNewEntry()
         }
@@ -58,7 +56,7 @@ extension MainUI {
     func updateUI() {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
             self.phonetoWatch.updateUI()
-            print(self.phonetoWatch.background() ? "Backgrounds":"Foregrounds")
+            //print(self.phonetoWatch.background() ? "Backgrounds":"Foregrounds")
             self.saveToMoc()
         }
     }
@@ -71,7 +69,7 @@ extension MainUI {
     }
     
     func saveToMoc() {
-        print("Saving \(dateArray.count)")
+        //print("Saving \(dateArray.count)")
         for i in 0..<dateArray.count {
             print("saving?")
             let sensors = Sensors(context: self.moc)
