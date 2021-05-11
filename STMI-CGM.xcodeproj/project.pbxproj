@@ -13,6 +13,10 @@
 		8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; };
 		8816048725421791008F8609 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881918E5246E1439002CB92E /* AddNewEntry.swift */; };
+		885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38E92649F81600B6C326 /* E4link.framework */; };
+		885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38F22649FD3700B6C326 /* CoreBluetooth.framework */; };
+		885A38F72649FDBE00B6C326 /* E4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A38F62649FDBE00B6C326 /* E4.swift */; };
+		885A3907264A33B100B6C326 /* E4Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A3906264A33B100B6C326 /* E4Main.swift */; };
 		885B6ACE258A8FA000124829 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6ACD258A8FA000124829 /* Buttons.swift */; };
 		885B6AE3258BD89200124829 /* DisplayMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6AE2258BD89200124829 /* DisplayMeal.swift */; };
 		885B6AE7258BD92500124829 /* fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B6AE6258BD92500124829 /* fade.swift */; };
@@ -229,6 +233,11 @@
 		8812A0FE24649D0F004EDCFE /* MainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUI.swift; sourceTree = "<group>"; };
 		881604812541FE28008F8609 /* AuthorizePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizePage.swift; sourceTree = "<group>"; };
 		881918E5246E1439002CB92E /* AddNewEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewEntry.swift; sourceTree = "<group>"; };
+		885A38CC2649F51A00B6C326 /* E4tester-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "E4tester-Bridging-Header.h"; sourceTree = "<group>"; };
+		885A38E92649F81600B6C326 /* E4link.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = E4link.framework; path = Libs/E4link.framework; sourceTree = "<group>"; };
+		885A38F22649FD3700B6C326 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		885A38F62649FDBE00B6C326 /* E4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4.swift; sourceTree = "<group>"; };
+		885A3906264A33B100B6C326 /* E4Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4Main.swift; sourceTree = "<group>"; };
 		885B6ACD258A8FA000124829 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		885B6AE2258BD89200124829 /* DisplayMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayMeal.swift; sourceTree = "<group>"; };
 		885B6AE6258BD92500124829 /* fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fade.swift; sourceTree = "<group>"; };
@@ -295,6 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */,
+				885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */,
+				885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +323,8 @@
 		8812A0FB24648153004EDCFE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				885A38F22649FD3700B6C326 /* CoreBluetooth.framework */,
+				885A38E92649F81600B6C326 /* E4link.framework */,
 				88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */,
 				8812A0FC24648153004EDCFE /* HealthKit.framework */,
 			);
@@ -418,6 +431,8 @@
 				88FE3506246474B500D954A3 /* Meals */,
 				88FE3505246474AA00D954A3 /* Activity */,
 				88FE34C22464748500D954A3 /* AppDelegate.swift */,
+				885A3906264A33B100B6C326 /* E4Main.swift */,
+				885A38F62649FDBE00B6C326 /* E4.swift */,
 				881604812541FE28008F8609 /* AuthorizePage.swift */,
 				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
 				88FE34C62464748500D954A3 /* ContentView.swift */,
@@ -425,6 +440,7 @@
 				88FE34CD2464748800D954A3 /* LaunchScreen.storyboard */,
 				88FE34D02464748800D954A3 /* Info.plist */,
 				88DA41712538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld */,
+				885A38CC2649F51A00B6C326 /* E4tester-Bridging-Header.h */,
 				88FE34CA2464748800D954A3 /* Preview Content */,
 			);
 			path = "STMI-CGM";
@@ -785,6 +801,7 @@
 				888EE27E2589BC6C00E66110 /* Meal+CoreDataProperties.swift in Sources */,
 				885B6AE7258BD92500124829 /* fade.swift in Sources */,
 				881604822541FE28008F8609 /* AuthorizePage.swift in Sources */,
+				885A3907264A33B100B6C326 /* E4Main.swift in Sources */,
 				88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */,
 				885B6AE3258BD89200124829 /* DisplayMeal.swift in Sources */,
 				881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */,
@@ -800,6 +817,7 @@
 				88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */,
 				88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */,
 				88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */,
+				885A38F72649FDBE00B6C326 /* E4.swift in Sources */,
 				88FE3519246476CE00D954A3 /* MealList.swift in Sources */,
 				885B6ACE258A8FA000124829 /* Buttons.swift in Sources */,
 				88FE350F2464761F00D954A3 /* activityManager.swift in Sources */,
@@ -1077,7 +1095,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
 				DEVELOPMENT_TEAM = V34SA3KVD3;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = "STMI-CGM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1086,6 +1110,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/imac/Desktop/School/Fall 2020/STMI/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1098,7 +1123,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
 				DEVELOPMENT_TEAM = V34SA3KVD3;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Libs",
+				);
 				INFOPLIST_FILE = "STMI-CGM/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1107,6 +1138,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/imac/Desktop/School/Fall 2020/STMI/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

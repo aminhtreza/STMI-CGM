@@ -12,7 +12,7 @@ struct ContentView: View {
     @FetchRequest(entity: Credentials.entity(), sortDescriptors: []) var credentials: FetchedResults<Credentials>
     
     var body: some View {
-        MainUI()
+        E4()
         //AuthorizePage()
         /*
         if credentials.count == 0 {
