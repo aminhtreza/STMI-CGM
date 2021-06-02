@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import OAuthSwift
+//import OAuthSwift
 
 
 @UIApplicationMain
@@ -29,9 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let url = URLContexts.first?.url else {
             return
         }
+        /*
         if url.host == "oauth-callback" {
             OAuthSwift.handle(url: url)
         }
+ */
         
     }
 

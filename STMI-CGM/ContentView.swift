@@ -45,6 +45,7 @@ extension ContentView {
         scheduleNotification()
     }
     
+    // hackingwithswift.com
     func scheduleNotification() {
         let center = UNUserNotificationCenter.current()
         

@@ -10,8 +10,6 @@
 		8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812A0FC24648153004EDCFE /* HealthKit.framework */; };
 		8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812A0FE24649D0F004EDCFE /* MainUI.swift */; };
 		881604822541FE28008F8609 /* AuthorizePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881604812541FE28008F8609 /* AuthorizePage.swift */; };
-		8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; };
-		8816048725421791008F8609 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881918E5246E1439002CB92E /* AddNewEntry.swift */; };
 		885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38E92649F81600B6C326 /* E4link.framework */; };
 		885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38F22649FD3700B6C326 /* CoreBluetooth.framework */; };
@@ -122,62 +120,6 @@
 			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
 			remoteInfo = OAuthSwiftTests;
 		};
-		88DA41BD2538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F435027A1A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-		88DA41BF2538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
-			remoteInfo = OAuthSwiftMacOS;
-		};
-		88DA41C12538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
-			remoteInfo = OAuthSwiftTVOS;
-		};
-		88DA41C32538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C40890C01C11B37000E3146A;
-			remoteInfo = OAuthSwiftWatchOS;
-		};
-		88DA41C52538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F451E3C5195B8CD80051434C;
-			remoteInfo = OAuthSwiftDemo;
-		};
-		88DA41C72538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
-			remoteInfo = OAuthSwiftMacOSDemo;
-		};
-		88DA41C92538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
-			remoteInfo = OAuthSwiftTests;
-		};
-		88DA41CE2538D7290007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F43502791A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
 		88FE34D52464748800D954A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88FE34B72464748500D954A3 /* Project object */;
@@ -195,17 +137,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8816048825421791008F8609 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8816048725421791008F8609 /* OAuthSwift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88FE34FD2464748A00D954A3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,7 +196,6 @@
 		88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = "<group>"; };
 		88DA418C2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
-		88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -309,7 +239,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */,
 				885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */,
 				885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */,
 			);
@@ -409,24 +338,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		88DA41B42538D6D00007BFF7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C02538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C22538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C42538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C62538D6D00007BFF7 /* OAuthSwiftDemo.app */,
-				88DA41C82538D6D00007BFF7 /* OAuthSwiftMacOSDemo.app */,
-				88DA41CA2538D6D00007BFF7 /* OAuthSwiftTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		88FE34B62464748500D954A3 = {
 			isa = PBXGroup;
 			children = (
-				88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */,
 				88FE34C12464748500D954A3 /* STMI-CGM */,
 				88FE34D72464748800D954A3 /* STMI-CGM WatchKit App */,
 				88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */,
@@ -578,12 +492,10 @@
 				88FE34BC2464748500D954A3 /* Frameworks */,
 				88FE34BD2464748500D954A3 /* Resources */,
 				88FE35012464748A00D954A3 /* Embed Watch Content */,
-				8816048825421791008F8609 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				88DA41CF2538D7290007BFF7 /* PBXTargetDependency */,
 				88FE34D62464748800D954A3 /* PBXTargetDependency */,
 			);
 			name = "STMI-CGM";
@@ -659,10 +571,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 88DA41B42538D6D00007BFF7 /* Products */;
-					ProjectRef = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-				},
-				{
 					ProductGroup = 88DA41932538D6CA0007BFF7 /* Products */;
 					ProjectRef = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
 				},
@@ -724,55 +632,6 @@
 			fileType = wrapper.cfbundle;
 			path = OAuthSwiftTests.xctest;
 			remoteRef = 88DA41A82538D6CA0007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41BD2538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C02538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41BF2538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C22538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41C12538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C42538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41C32538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C62538D6D00007BFF7 /* OAuthSwiftDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftDemo.app;
-			remoteRef = 88DA41C52538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C82538D6D00007BFF7 /* OAuthSwiftMacOSDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftMacOSDemo.app;
-			remoteRef = 88DA41C72538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41CA2538D6D00007BFF7 /* OAuthSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OAuthSwiftTests.xctest;
-			remoteRef = 88DA41C92538D6D00007BFF7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -875,11 +734,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		88DA41CF2538D7290007BFF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OAuthSwift;
-			targetProxy = 88DA41CE2538D7290007BFF7 /* PBXContainerItemProxy */;
-		};
 		88FE34D62464748800D954A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88FE34D22464748800D954A3 /* STMI-CGM WatchKit App */;
@@ -1035,7 +889,7 @@
 				CODE_SIGN_ENTITLEMENTS = "STMI-CGM WatchKit Extension/STMI-CGM WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = V34SA3KVD3;
+				DEVELOPMENT_TEAM = UWZQK5864V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "STMI-CGM WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1043,7 +897,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucychik.STMI-CGM.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1060,7 +914,7 @@
 				CODE_SIGN_ENTITLEMENTS = "STMI-CGM WatchKit Extension/STMI-CGM WatchKit Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM WatchKit Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = V34SA3KVD3;
+				DEVELOPMENT_TEAM = UWZQK5864V;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "STMI-CGM WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1068,7 +922,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucychik.STMI-CGM.watchkitapp.watchkitextension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1084,10 +938,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V34SA3KVD3;
+				DEVELOPMENT_TEAM = UWZQK5864V;
 				IBSC_MODULE = STMI_CGM_WatchKit_Extension;
 				INFOPLIST_FILE = "STMI-CGM WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucychik.STMI-CGM.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1103,10 +957,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V34SA3KVD3;
+				DEVELOPMENT_TEAM = UWZQK5864V;
 				IBSC_MODULE = STMI_CGM_WatchKit_Extension;
 				INFOPLIST_FILE = "STMI-CGM WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucychik.STMI-CGM.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1122,7 +976,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
-				DEVELOPMENT_TEAM = V34SA3KVD3;
+				DEVELOPMENT_TEAM = UWZQK5864V;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1136,9 +990,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucychik.STMI-CGM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/imac/Desktop/School/Fall 2020/STMI/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mainoku/Desktop/desktopITEMS/Duke/PhD_Research/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1150,7 +1004,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STMI-CGM/Preview Content\"";
-				DEVELOPMENT_TEAM = V34SA3KVD3;
+				DEVELOPMENT_TEAM = UWZQK5864V;
 				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1164,9 +1018,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucychik.STMI-CGM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/imac/Desktop/School/Fall 2020/STMI/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/mainoku/Desktop/desktopITEMS/Duke/PhD_Research/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
