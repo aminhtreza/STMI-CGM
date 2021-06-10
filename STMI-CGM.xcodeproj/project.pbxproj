@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BED70B926723C57006454BD /* lunch_.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BED70B826723C56006454BD /* lunch_.mp3 */; };
+		5BED70BE26723C63006454BD /* dinner_.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BED70BD26723C63006454BD /* dinner_.mp3 */; };
+		5BED70C326723C72006454BD /* breakfast_.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BED70C226723C72006454BD /* breakfast_.mp3 */; };
 		8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812A0FC24648153004EDCFE /* HealthKit.framework */; };
 		8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812A0FE24649D0F004EDCFE /* MainUI.swift */; };
 		881604822541FE28008F8609 /* AuthorizePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881604812541FE28008F8609 /* AuthorizePage.swift */; };
@@ -162,6 +165,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5BED70B826723C56006454BD /* lunch_.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = lunch_.mp3; path = ../../../../../../../Downloads/lunch_.mp3; sourceTree = "<group>"; };
+		5BED70BD26723C63006454BD /* dinner_.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = dinner_.mp3; path = ../../../../../../../Downloads/dinner_.mp3; sourceTree = "<group>"; };
+		5BED70C226723C72006454BD /* breakfast_.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = breakfast_.mp3; path = ../../../../../../../Downloads/breakfast_.mp3; sourceTree = "<group>"; };
 		8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "STMI-CGM WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8812A0FC24648153004EDCFE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		8812A0FE24649D0F004EDCFE /* MainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUI.swift; sourceTree = "<group>"; };
@@ -291,6 +297,9 @@
 				885A390E264B25D400B6C326 /* lunch.mp3 */,
 				885A390F264B25D400B6C326 /* breakfast.mp3 */,
 				885A3910264B25D400B6C326 /* dinner.mp3 */,
+				5BED70B826723C56006454BD /* lunch_.mp3 */,
+				5BED70BD26723C63006454BD /* dinner_.mp3 */,
+				5BED70C226723C72006454BD /* breakfast_.mp3 */,
 			);
 			path = audio;
 			sourceTree = "<group>";
@@ -649,12 +658,15 @@
 				88891FC3246E1D1700ACA3A8 /* Teko-Medium.ttf in Resources */,
 				88891FC8246E1D1700ACA3A8 /* Teko-Light.ttf in Resources */,
 				88891FC5246E1D1700ACA3A8 /* YanoneKaffeesatz-VariableFont_wght.ttf in Resources */,
+				5BED70BE26723C63006454BD /* dinner_.mp3 in Resources */,
 				88891FC2246E1D1700ACA3A8 /* Teko-Bold.ttf in Resources */,
+				5BED70C326723C72006454BD /* breakfast_.mp3 in Resources */,
 				88891FC4246E1D1700ACA3A8 /* Anton-Regular.ttf in Resources */,
 				885A3913264B25D400B6C326 /* dinner.mp3 in Resources */,
 				885A3912264B25D400B6C326 /* breakfast.mp3 in Resources */,
 				88891FC1246E1D1700ACA3A8 /* IndieFlower-Regular.ttf in Resources */,
 				88FE34C92464748800D954A3 /* Assets.xcassets in Resources */,
+				5BED70B926723C57006454BD /* lunch_.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
