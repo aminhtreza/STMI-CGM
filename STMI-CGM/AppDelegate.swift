@@ -8,18 +8,17 @@
 
 import UIKit
 import CoreData
-import OAuthSwift
 
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var empatica = Empatica()
+    //var empatica = Empatica()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        EmpaticaAPI.initialize()
+        //EmpaticaAPI.initialize()
         return true
     }
     
@@ -30,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         if url.host == "oauth-callback" {
-            OAuthSwift.handle(url: url)
+            //OAuthSwift.handle(url: url)
         }
         
     }

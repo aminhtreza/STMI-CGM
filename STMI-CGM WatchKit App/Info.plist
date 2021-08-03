@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.AminHamiditabar.STMI-CGM</string>
+	<string>com.SorushOmidvar.STMI-CGM</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

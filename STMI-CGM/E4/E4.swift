@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+/*
 struct E4: View {
     @ObservedObject var empatica: Empatica = Empatica()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -212,3 +212,4 @@ extension Empatica: EmpaticaDeviceDelegate {
     }
 }
 
+*/

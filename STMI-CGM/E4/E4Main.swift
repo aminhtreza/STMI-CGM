@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-
+/*
 struct E4Main: View {
     @ObservedObject var empatica = Empatica()
     @State var showSheet = false
@@ -47,3 +47,4 @@ struct E4Main_Previews: PreviewProvider {
         E4Main()
     }
 }
+*/
