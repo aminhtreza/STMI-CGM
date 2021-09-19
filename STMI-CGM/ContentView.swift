@@ -18,7 +18,6 @@ struct ContentView: View {
         MainUI()
             .onAppear {
                 requestAuthorization()
-                
             }
         //AuthorizePage()
         /*

@@ -14,6 +14,7 @@ struct ContentView: View {
     @State var authorized = false
     @State var showAlert = false
     
+    var HeartRateManager = heartRateManager()
     var body: some View {
         VStack {
             if authorized {
@@ -21,9 +22,9 @@ struct ContentView: View {
             } else {
                 Text("Need access to HealthKit")
                 Button("Authorize HealthKit") {
-                    AuthorizationManager.AuthorizeHK()
+                    HeartRateManager.AuthorizeHK()
                     withAnimation {
-                        if AuthorizationManager.authorized {
+                        if HeartRateManager.authorized {
                             self.authorized = true
                         } else {
                             self.showAlert = true
@@ -33,13 +34,13 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            if AuthorizationManager.authorized {
+            if HeartRateManager.authorized {
                 self.authorized = true
             } else {
-                AuthorizationManager.AuthorizeHK()
+                HeartRateManager.AuthorizeHK()
             }
         }
-        .onAppear(perform: AuthorizationManager.AuthorizeHK)
+        .onAppear(perform: HeartRateManager.AuthorizeHK)
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Authorization Failed"), message: Text("Try restarting or reinstalling the app"), dismissButton: .default(Text("Dismiss")))
         }

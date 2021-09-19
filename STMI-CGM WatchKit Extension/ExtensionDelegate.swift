@@ -14,7 +14,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         print("We here")
-        AuthorizationManager.AuthorizeHK() // Ask for Healthkit permission
+        self.HeartRateManager.AuthorizeHK() // Ask for Healthkit permission
         watchToPhone.activateSession() // Activate WCSession from our global variable
         self.motionManager.startQueuedMotionUpdates()
         self.motionManager.setupLocation()

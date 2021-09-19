@@ -19,6 +19,26 @@ class heartRateManager: NSObject, ObservableObject, HKLiveWorkoutBuilderDelegate
     // https://www.appsdissected.com/swiftui-updates-main-thread-debug-crash/
     @Published var updatedHRValue: Double = 0.0
     
+    var authorized: Bool = false
+    
+    // Authorize Healthkit
+    func AuthorizeHK() {
+        if HKHealthStore.isHealthDataAvailable() {
+            //let heartRateQuantityType = HKObjectType.quantityType(forIdentifier: .heartRate)!
+            let typesToShare: Set = [HKQuantityType.workoutType()]
+            let typesToRead: Set = [HKQuantityType.quantityType(forIdentifier: .heartRate)!]
+            healthStore.requestAuthorization(toShare: typesToShare, read: typesToRead) { (succ, error) in
+                if !succ {
+                    fatalError("Error requesting authorization from health store: \(String(describing: error)))")
+                }
+            }
+            authorized = true
+            print("HealthKit authorized")
+        } else {
+            fatalError("Healthkit is not available for device")
+        }
+    }
+    
     func startWorkout() {
         initWorkout() // Initialize our workout
         session.startActivity(with: Date()) // Start the workout session and begin data collection
@@ -82,6 +102,8 @@ class heartRateManager: NSObject, ObservableObject, HKLiveWorkoutBuilderDelegate
                 let heartRateUnit = HKUnit.count().unitDivided(by: HKUnit.minute())
                 let value = statistics!.mostRecentQuantity()?.doubleValue(for: heartRateUnit)
                 HR = Double(round(1 * value!) / 1)
+                
+            
             default:
                 return
             }
