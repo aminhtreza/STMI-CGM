@@ -7,6 +7,7 @@
 //
 
 import WatchKit
+import Firebase
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
     var HeartRateManager = heartRateManager()
@@ -14,13 +15,16 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         print("We here")
+        FirebaseApp.configure()
+        /*
         self.HeartRateManager.AuthorizeHK() // Ask for Healthkit permission
         watchToPhone.activateSession() // Activate WCSession from our global variable
         self.motionManager.startQueuedMotionUpdates()
         self.motionManager.setupLocation()
         self.HeartRateManager.startWorkout()
+         */
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (Timer) in
-            watchToPhone.sendSensorDataToPhone()
+            //watchToPhone.sendSensorDataToPhone()
         })
         sensorData["altitude"] = 0.0
         sensorData["longitude"] = 0.0

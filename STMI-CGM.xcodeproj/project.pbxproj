@@ -3,15 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78A1EBB926F822BA0098C14B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1EBB826F822BA0098C14B /* File.swift */; };
+		78D8DBDC26F80A33003757D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */; };
+		78D8DBDD26F80A33003757D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */; };
+		78D8DBDE26F80A33003757D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */; };
+		78D8DBE126F80AB5003757D1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 78D8DBE026F80AB5003757D1 /* FirebaseDatabase */; };
+		78D8DBE326F81951003757D1 /* CoreMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8DBE226F81951003757D1 /* CoreMotionManager.swift */; };
+		78D8DBE426F81951003757D1 /* CoreMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8DBE226F81951003757D1 /* CoreMotionManager.swift */; };
 		8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812A0FC24648153004EDCFE /* HealthKit.framework */; };
 		8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812A0FE24649D0F004EDCFE /* MainUI.swift */; };
 		881604822541FE28008F8609 /* AuthorizePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881604812541FE28008F8609 /* AuthorizePage.swift */; };
-		8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; };
-		8816048725421791008F8609 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881918E5246E1439002CB92E /* AddNewEntry.swift */; };
 		885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38E92649F81600B6C326 /* E4link.framework */; };
 		885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38F22649FD3700B6C326 /* CoreBluetooth.framework */; };
@@ -64,7 +69,6 @@
 		88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3516246476B600D954A3 /* ImagePicker.swift */; };
 		88FE3519246476CE00D954A3 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3518246476CE00D954A3 /* MealList.swift */; };
 		88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35202464782800D954A3 /* PhonetoWatch.swift */; };
-		88FE35262464789B00D954A3 /* authorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE35252464789B00D954A3 /* authorizationManager.swift */; };
 		88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3527246478B200D954A3 /* heartRateManager.swift */; };
 		88FE352D2464791000D954A3 /* mainWatchIFC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352C2464791000D954A3 /* mainWatchIFC.swift */; };
 		88FE35302464793E00D954A3 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352F2464793E00D954A3 /* MotionManager.swift */; };
@@ -122,62 +126,6 @@
 			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
 			remoteInfo = OAuthSwiftTests;
 		};
-		88DA41BD2538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F435027A1A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-		88DA41BF2538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
-			remoteInfo = OAuthSwiftMacOS;
-		};
-		88DA41C12538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
-			remoteInfo = OAuthSwiftTVOS;
-		};
-		88DA41C32538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C40890C01C11B37000E3146A;
-			remoteInfo = OAuthSwiftWatchOS;
-		};
-		88DA41C52538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F451E3C5195B8CD80051434C;
-			remoteInfo = OAuthSwiftDemo;
-		};
-		88DA41C72538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
-			remoteInfo = OAuthSwiftMacOSDemo;
-		};
-		88DA41C92538D6D00007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
-			remoteInfo = OAuthSwiftTests;
-		};
-		88DA41CE2538D7290007BFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F43502791A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
 		88FE34D52464748800D954A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88FE34B72464748500D954A3 /* Project object */;
@@ -195,17 +143,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		8816048825421791008F8609 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				8816048725421791008F8609 /* OAuthSwift.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		88FE34FD2464748A00D954A3 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +168,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		78A1EBB826F822BA0098C14B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78D8DBE226F81951003757D1 /* CoreMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionManager.swift; sourceTree = "<group>"; };
 		8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "STMI-CGM WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8812A0FC24648153004EDCFE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		8812A0FE24649D0F004EDCFE /* MainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUI.swift; sourceTree = "<group>"; };
@@ -265,7 +205,6 @@
 		88DA418B2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataClass.swift"; sourceTree = "<group>"; };
 		88DA418C2538ABDE0007BFF7 /* Sensors+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sensors+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
-		88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		88FE34BF2464748500D954A3 /* STMI-CGM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "STMI-CGM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88FE34C22464748500D954A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88FE34C42464748500D954A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -296,7 +235,6 @@
 		88FE3516246476B600D954A3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		88FE3518246476CE00D954A3 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		88FE35202464782800D954A3 /* PhonetoWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhonetoWatch.swift; sourceTree = "<group>"; };
-		88FE35252464789B00D954A3 /* authorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = authorizationManager.swift; sourceTree = "<group>"; };
 		88FE3527246478B200D954A3 /* heartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heartRateManager.swift; sourceTree = "<group>"; };
 		88FE352C2464791000D954A3 /* mainWatchIFC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainWatchIFC.swift; sourceTree = "<group>"; };
 		88FE352F2464793E00D954A3 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
@@ -309,7 +247,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8816048625421791008F8609 /* OAuthSwift.framework in Frameworks */,
 				885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */,
 				885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */,
 			);
@@ -319,6 +256,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D8DBE126F80AB5003757D1 /* FirebaseDatabase in Frameworks */,
 				8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,24 +347,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		88DA41B42538D6D00007BFF7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C02538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C22538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C42538D6D00007BFF7 /* OAuthSwift.framework */,
-				88DA41C62538D6D00007BFF7 /* OAuthSwiftDemo.app */,
-				88DA41C82538D6D00007BFF7 /* OAuthSwiftMacOSDemo.app */,
-				88DA41CA2538D6D00007BFF7 /* OAuthSwiftTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		88FE34B62464748500D954A3 = {
 			isa = PBXGroup;
 			children = (
-				88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */,
 				88FE34C12464748500D954A3 /* STMI-CGM */,
 				88FE34D72464748800D954A3 /* STMI-CGM WatchKit App */,
 				88FE34E62464748900D954A3 /* STMI-CGM WatchKit Extension */,
@@ -448,6 +371,7 @@
 		88FE34C12464748500D954A3 /* STMI-CGM */ = {
 			isa = PBXGroup;
 			children = (
+				78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */,
 				885A390A264B1DE800B6C326 /* E4 */,
 				88DA417A2538A9EA0007BFF7 /* CoreData */,
 				881918E1246DFBA3002CB92E /* UserInterface */,
@@ -492,9 +416,10 @@
 			isa = PBXGroup;
 			children = (
 				88FE35242464788700D954A3 /* Sensors */,
-				88FE3534246479F100D954A3 /* WatchtoPhone.swift */,
-				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
 				88FE34E72464748900D954A3 /* ContentView.swift */,
+				78D8DBE226F81951003757D1 /* CoreMotionManager.swift */,
+				78A1EBB826F822BA0098C14B /* File.swift */,
+				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
 				88FE34E92464748900D954A3 /* HostingController.swift */,
 				88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */,
 				88FE34ED2464748900D954A3 /* NotificationController.swift */,
@@ -560,8 +485,8 @@
 		88FE35242464788700D954A3 /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
-				88FE35252464789B00D954A3 /* authorizationManager.swift */,
 				88FE3527246478B200D954A3 /* heartRateManager.swift */,
+				88FE3534246479F100D954A3 /* WatchtoPhone.swift */,
 				88FE352F2464793E00D954A3 /* MotionManager.swift */,
 			);
 			path = Sensors;
@@ -578,12 +503,10 @@
 				88FE34BC2464748500D954A3 /* Frameworks */,
 				88FE34BD2464748500D954A3 /* Resources */,
 				88FE35012464748A00D954A3 /* Embed Watch Content */,
-				8816048825421791008F8609 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				88DA41CF2538D7290007BFF7 /* PBXTargetDependency */,
 				88FE34D62464748800D954A3 /* PBXTargetDependency */,
 			);
 			name = "STMI-CGM";
@@ -621,6 +544,9 @@
 			dependencies = (
 			);
 			name = "STMI-CGM WatchKit Extension";
+			packageProductDependencies = (
+				78D8DBE026F80AB5003757D1 /* FirebaseDatabase */,
+			);
 			productName = "STMI-CGM WatchKit Extension";
 			productReference = 88FE34E22464748900D954A3 /* STMI-CGM WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -655,13 +581,12 @@
 				Base,
 			);
 			mainGroup = 88FE34B62464748500D954A3;
+			packageReferences = (
+				78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 88FE34C02464748500D954A3 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = 88DA41B42538D6D00007BFF7 /* Products */;
-					ProjectRef = 88DA41B32538D6D00007BFF7 /* OAuthSwift.xcodeproj */;
-				},
 				{
 					ProductGroup = 88DA41932538D6CA0007BFF7 /* Products */;
 					ProjectRef = 88DA41922538D6CA0007BFF7 /* OAuthSwift.xcodeproj */;
@@ -726,55 +651,6 @@
 			remoteRef = 88DA41A82538D6CA0007BFF7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		88DA41BE2538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41BD2538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C02538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41BF2538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C22538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41C12538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C42538D6D00007BFF7 /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 88DA41C32538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C62538D6D00007BFF7 /* OAuthSwiftDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftDemo.app;
-			remoteRef = 88DA41C52538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41C82538D6D00007BFF7 /* OAuthSwiftMacOSDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftMacOSDemo.app;
-			remoteRef = 88DA41C72538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		88DA41CA2538D6D00007BFF7 /* OAuthSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OAuthSwiftTests.xctest;
-			remoteRef = 88DA41C92538D6D00007BFF7 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -784,6 +660,7 @@
 			files = (
 				88891FC7246E1D1700ACA3A8 /* Teko-Regular.ttf in Resources */,
 				885A3911264B25D400B6C326 /* lunch.mp3 in Resources */,
+				78D8DBDC26F80A33003757D1 /* GoogleService-Info.plist in Resources */,
 				88FE34CF2464748800D954A3 /* LaunchScreen.storyboard in Resources */,
 				88FE34CC2464748800D954A3 /* Preview Assets.xcassets in Resources */,
 				88891FC6246E1D1700ACA3A8 /* Teko-SemiBold.ttf in Resources */,
@@ -805,6 +682,7 @@
 			files = (
 				88FE34DC2464748900D954A3 /* Assets.xcassets in Resources */,
 				88FE34DA2464748800D954A3 /* Interface.storyboard in Resources */,
+				78D8DBDD26F80A33003757D1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +692,7 @@
 			files = (
 				88FE34F52464748A00D954A3 /* Preview Assets.xcassets in Resources */,
 				88FE34F22464748A00D954A3 /* Assets.xcassets in Resources */,
+				78D8DBDE26F80A33003757D1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +705,7 @@
 			files = (
 				88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */,
 				88DA41732538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld in Sources */,
+				78D8DBE326F81951003757D1 /* CoreMotionManager.swift in Sources */,
 				888EE27E2589BC6C00E66110 /* Meal+CoreDataProperties.swift in Sources */,
 				885B6AE7258BD92500124829 /* fade.swift in Sources */,
 				881604822541FE28008F8609 /* AuthorizePage.swift in Sources */,
@@ -862,12 +742,13 @@
 				88FE34EA2464748900D954A3 /* HostingController.swift in Sources */,
 				88FE35302464793E00D954A3 /* MotionManager.swift in Sources */,
 				88FE34E82464748900D954A3 /* ContentView.swift in Sources */,
+				78D8DBE426F81951003757D1 /* CoreMotionManager.swift in Sources */,
 				88FE34EE2464748900D954A3 /* NotificationController.swift in Sources */,
 				88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */,
-				88FE35262464789B00D954A3 /* authorizationManager.swift in Sources */,
 				88FE34EC2464748900D954A3 /* ExtensionDelegate.swift in Sources */,
 				88FE3535246479F100D954A3 /* WatchtoPhone.swift in Sources */,
 				88FE352D2464791000D954A3 /* mainWatchIFC.swift in Sources */,
+				78A1EBB926F822BA0098C14B /* File.swift in Sources */,
 				88FE34F02464748900D954A3 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -875,11 +756,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		88DA41CF2538D7290007BFF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OAuthSwift;
-			targetProxy = 88DA41CE2538D7290007BFF7 /* PBXContainerItemProxy */;
-		};
 		88FE34D62464748800D954A3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 88FE34D22464748800D954A3 /* STMI-CGM WatchKit App */;
@@ -1049,7 +925,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -1074,7 +950,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
@@ -1093,7 +969,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Debug;
 		};
@@ -1112,7 +988,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
 			};
 			name = Release;
 		};
@@ -1138,7 +1014,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/imac/Desktop/School/Fall 2020/STMI/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1166,7 +1041,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AminHamiditabar.STMI-CGM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/imac/Desktop/School/Fall 2020/STMI/STMI-CGM/STMI-CGM/E4tester-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1212,6 +1086,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		78D8DBE026F80AB5003757D1 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		88DA41712538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld */ = {

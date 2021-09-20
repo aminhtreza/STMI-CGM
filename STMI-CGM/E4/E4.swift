@@ -6,6 +6,7 @@
 //  Copyright © 2021 Amin Hamiditabar. All rights reserved.
 //
 
+/*
 import SwiftUI
 
 struct E4: View {
@@ -212,3 +213,4 @@ extension Empatica: EmpaticaDeviceDelegate {
     }
 }
 
+*/
