@@ -29,5 +29,13 @@
 	<string>com.AminHamiditabar.STMI-CGM</string>
 	<key>WKWatchKitApp</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This let the app to run in the background</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>processing</string>
+		<string>location</string>
+		<string>external-accessory</string>
+	</array>
 </dict>
 </plist>

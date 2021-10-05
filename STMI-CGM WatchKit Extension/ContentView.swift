@@ -18,7 +18,6 @@ struct ContentView: View {
     @ObservedObject var coreMotionManager = CoreMotionManager()
     let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
-    var HeartRateManager = heartRateManager()
     var body: some View {
         VStack{
             HStack{
@@ -38,25 +37,14 @@ struct ContentView: View {
             }
         }
         .padding()
+        
         .onAppear {
             coreMotionManager.loader()
-            print("loader ran")
-            if HeartRateManager.authorized {
-                self.authorized = true
-            } else {
-                HeartRateManager.AuthorizeHK()
-            }
-            
-            
         }
-        .onAppear(perform: HeartRateManager.AuthorizeHK)
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Authorization Failed"), message: Text("Try restarting or reinstalling the app"), dismissButton: .default(Text("Dismiss")))
         }
-        .onReceive(timer) { _ in
-            coreMotionManager.storeMotionData()
-            //self.ref.child("motion").child("roll").setValue(["username": "username"])
-        }
+         
     }
 }
 

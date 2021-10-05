@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78A1EBB926F822BA0098C14B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1EBB826F822BA0098C14B /* File.swift */; };
+		78A1EBB926F822BA0098C14B /* CoreMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A1EBB826F822BA0098C14B /* CoreMotionManager.swift */; };
 		78D8DBDC26F80A33003757D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */; };
 		78D8DBDD26F80A33003757D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */; };
 		78D8DBDE26F80A33003757D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */; };
 		78D8DBE126F80AB5003757D1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 78D8DBE026F80AB5003757D1 /* FirebaseDatabase */; };
-		78D8DBE326F81951003757D1 /* CoreMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8DBE226F81951003757D1 /* CoreMotionManager.swift */; };
-		78D8DBE426F81951003757D1 /* CoreMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D8DBE226F81951003757D1 /* CoreMotionManager.swift */; };
+		78E78E8D270A6AD6006FE880 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 78E78E8C270A6AD6006FE880 /* FirebaseAnalytics */; };
+		78E78E8F270A6AD6006FE880 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 78E78E8E270A6AD6006FE880 /* FirebaseAuth */; };
+		78E78E91270A6AD6006FE880 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 78E78E90270A6AD6006FE880 /* FirebaseDatabase */; };
+		78E78E93270A6AD6006FE880 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 78E78E92270A6AD6006FE880 /* FirebaseStorage */; };
+		78E78E96270A72CA006FE880 /* HealthkitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E78E95270A72CA006FE880 /* HealthkitManager.swift */; };
+		78E78E98270CA676006FE880 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E78E97270CA676006FE880 /* Notifications.swift */; };
 		8812A0FD24648153004EDCFE /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8812A0FC24648153004EDCFE /* HealthKit.framework */; };
 		8812A0FF24649D0F004EDCFE /* MainUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8812A0FE24649D0F004EDCFE /* MainUI.swift */; };
 		881604822541FE28008F8609 /* AuthorizePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881604812541FE28008F8609 /* AuthorizePage.swift */; };
 		881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881918E5246E1439002CB92E /* AddNewEntry.swift */; };
 		885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38E92649F81600B6C326 /* E4link.framework */; };
 		885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885A38F22649FD3700B6C326 /* CoreBluetooth.framework */; };
-		885A38F72649FDBE00B6C326 /* E4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A38F62649FDBE00B6C326 /* E4.swift */; };
-		885A3907264A33B100B6C326 /* E4Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885A3906264A33B100B6C326 /* E4Main.swift */; };
 		885A3911264B25D400B6C326 /* lunch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885A390E264B25D400B6C326 /* lunch.mp3 */; };
 		885A3912264B25D400B6C326 /* breakfast.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885A390F264B25D400B6C326 /* breakfast.mp3 */; };
 		885A3913264B25D400B6C326 /* dinner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 885A3910264B25D400B6C326 /* dinner.mp3 */; };
@@ -168,9 +170,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		78A1EBB826F822BA0098C14B /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		78A1EBB826F822BA0098C14B /* CoreMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionManager.swift; sourceTree = "<group>"; };
 		78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		78D8DBE226F81951003757D1 /* CoreMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionManager.swift; sourceTree = "<group>"; };
+		78E78E95270A72CA006FE880 /* HealthkitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthkitManager.swift; sourceTree = "<group>"; };
+		78E78E97270CA676006FE880 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "STMI-CGM WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		8812A0FC24648153004EDCFE /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS6.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		8812A0FE24649D0F004EDCFE /* MainUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUI.swift; sourceTree = "<group>"; };
@@ -179,8 +182,6 @@
 		885A38CC2649F51A00B6C326 /* E4tester-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "E4tester-Bridging-Header.h"; sourceTree = "<group>"; };
 		885A38E92649F81600B6C326 /* E4link.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = E4link.framework; path = Libs/E4link.framework; sourceTree = "<group>"; };
 		885A38F22649FD3700B6C326 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		885A38F62649FDBE00B6C326 /* E4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4.swift; sourceTree = "<group>"; };
-		885A3906264A33B100B6C326 /* E4Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E4Main.swift; sourceTree = "<group>"; };
 		885A390E264B25D400B6C326 /* lunch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lunch.mp3; sourceTree = "<group>"; };
 		885A390F264B25D400B6C326 /* breakfast.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breakfast.mp3; sourceTree = "<group>"; };
 		885A3910264B25D400B6C326 /* dinner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dinner.mp3; sourceTree = "<group>"; };
@@ -247,8 +248,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78E78E91270A6AD6006FE880 /* FirebaseDatabase in Frameworks */,
 				885A38F32649FD3700B6C326 /* CoreBluetooth.framework in Frameworks */,
 				885A38EA2649F81600B6C326 /* E4link.framework in Frameworks */,
+				78E78E8D270A6AD6006FE880 /* FirebaseAnalytics in Frameworks */,
+				78E78E8F270A6AD6006FE880 /* FirebaseAuth in Frameworks */,
+				78E78E93270A6AD6006FE880 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,15 +288,6 @@
 				885B6AE6258BD92500124829 /* fade.swift */,
 			);
 			path = UserInterface;
-			sourceTree = "<group>";
-		};
-		885A390A264B1DE800B6C326 /* E4 */ = {
-			isa = PBXGroup;
-			children = (
-				885A3906264A33B100B6C326 /* E4Main.swift */,
-				885A38F62649FDBE00B6C326 /* E4.swift */,
-			);
-			path = E4;
 			sourceTree = "<group>";
 		};
 		885A390D264B25D400B6C326 /* audio */ = {
@@ -372,7 +368,6 @@
 			isa = PBXGroup;
 			children = (
 				78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */,
-				885A390A264B1DE800B6C326 /* E4 */,
 				88DA417A2538A9EA0007BFF7 /* CoreData */,
 				881918E1246DFBA3002CB92E /* UserInterface */,
 				88FE351F2464781700D954A3 /* WatchConnectivity */,
@@ -383,6 +378,7 @@
 				881604812541FE28008F8609 /* AuthorizePage.swift */,
 				88FE34C42464748500D954A3 /* SceneDelegate.swift */,
 				88FE34C62464748500D954A3 /* ContentView.swift */,
+				78E78E97270CA676006FE880 /* Notifications.swift */,
 				88FE34C82464748800D954A3 /* Assets.xcassets */,
 				88FE34CD2464748800D954A3 /* LaunchScreen.storyboard */,
 				88FE34D02464748800D954A3 /* Info.plist */,
@@ -417,8 +413,8 @@
 			children = (
 				88FE35242464788700D954A3 /* Sensors */,
 				88FE34E72464748900D954A3 /* ContentView.swift */,
-				78D8DBE226F81951003757D1 /* CoreMotionManager.swift */,
-				78A1EBB826F822BA0098C14B /* File.swift */,
+				78A1EBB826F822BA0098C14B /* CoreMotionManager.swift */,
+				78E78E95270A72CA006FE880 /* HealthkitManager.swift */,
 				88FE352C2464791000D954A3 /* mainWatchIFC.swift */,
 				88FE34E92464748900D954A3 /* HostingController.swift */,
 				88FE34EB2464748900D954A3 /* ExtensionDelegate.swift */,
@@ -510,6 +506,12 @@
 				88FE34D62464748800D954A3 /* PBXTargetDependency */,
 			);
 			name = "STMI-CGM";
+			packageProductDependencies = (
+				78E78E8C270A6AD6006FE880 /* FirebaseAnalytics */,
+				78E78E8E270A6AD6006FE880 /* FirebaseAuth */,
+				78E78E90270A6AD6006FE880 /* FirebaseDatabase */,
+				78E78E92270A6AD6006FE880 /* FirebaseStorage */,
+			);
 			productName = "STMI-CGM";
 			productReference = 88FE34BF2464748500D954A3 /* STMI-CGM.app */;
 			productType = "com.apple.product-type.application";
@@ -705,13 +707,12 @@
 			files = (
 				88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */,
 				88DA41732538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld in Sources */,
-				78D8DBE326F81951003757D1 /* CoreMotionManager.swift in Sources */,
 				888EE27E2589BC6C00E66110 /* Meal+CoreDataProperties.swift in Sources */,
 				885B6AE7258BD92500124829 /* fade.swift in Sources */,
 				881604822541FE28008F8609 /* AuthorizePage.swift in Sources */,
-				885A3907264A33B100B6C326 /* E4Main.swift in Sources */,
 				88FE34C32464748500D954A3 /* AppDelegate.swift in Sources */,
 				885B6AE3258BD89200124829 /* DisplayMeal.swift in Sources */,
+				78E78E98270CA676006FE880 /* Notifications.swift in Sources */,
 				881918E6246E1439002CB92E /* AddNewEntry.swift in Sources */,
 				88A888C0255C809E00524028 /* Credentials+CoreDataProperties.swift in Sources */,
 				88DA418D2538ABDE0007BFF7 /* Sensors+CoreDataClass.swift in Sources */,
@@ -725,7 +726,6 @@
 				88FE35132464768400D954A3 /* AddNewMeal.swift in Sources */,
 				88FE3517246476B600D954A3 /* ImagePicker.swift in Sources */,
 				88FE35212464782800D954A3 /* PhonetoWatch.swift in Sources */,
-				885A38F72649FDBE00B6C326 /* E4.swift in Sources */,
 				88FE3519246476CE00D954A3 /* MealList.swift in Sources */,
 				885B6ACE258A8FA000124829 /* Buttons.swift in Sources */,
 				88FE350F2464761F00D954A3 /* activityManager.swift in Sources */,
@@ -742,13 +742,13 @@
 				88FE34EA2464748900D954A3 /* HostingController.swift in Sources */,
 				88FE35302464793E00D954A3 /* MotionManager.swift in Sources */,
 				88FE34E82464748900D954A3 /* ContentView.swift in Sources */,
-				78D8DBE426F81951003757D1 /* CoreMotionManager.swift in Sources */,
 				88FE34EE2464748900D954A3 /* NotificationController.swift in Sources */,
 				88FE3528246478B200D954A3 /* heartRateManager.swift in Sources */,
+				78E78E96270A72CA006FE880 /* HealthkitManager.swift in Sources */,
 				88FE34EC2464748900D954A3 /* ExtensionDelegate.swift in Sources */,
 				88FE3535246479F100D954A3 /* WatchtoPhone.swift in Sources */,
 				88FE352D2464791000D954A3 /* mainWatchIFC.swift in Sources */,
-				78A1EBB926F822BA0098C14B /* File.swift in Sources */,
+				78A1EBB926F822BA0098C14B /* CoreMotionManager.swift in Sources */,
 				88FE34F02464748900D954A3 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1103,6 +1103,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		78E78E8C270A6AD6006FE880 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		78E78E8E270A6AD6006FE880 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		78E78E90270A6AD6006FE880 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		78E78E92270A6AD6006FE880 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78D8DBDF26F80AB5003757D1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 

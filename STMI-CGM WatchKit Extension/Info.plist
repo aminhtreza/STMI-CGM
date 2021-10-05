@@ -46,15 +46,21 @@
 	<string>Allow us to access your Location Data</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow us to access your Location Data</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>location</string>
-	</array>
-	<key>WKBackgroundModes</key>
-	<array/>
 	<key>WKExtensionDelegateClassName</key>
 	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
 	<key>WKRunsIndependentlyOfCompanionApp</key>
 	<true/>
+	<key>CLKComplicationPrincipalClass</key>
+	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+		<string>processing</string>
+		<string>external-accessory</string>
+	</array>
+	<key>WKBackgroundModes</key>
+	<array>
+		<string></string>
+	</array>
 </dict>
 </plist>

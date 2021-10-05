@@ -1,18 +1,19 @@
-
 //
-//  InterfaceController.swift
-//  SensorCollector WatchKit Extension
+//  File.swift
+//  STMI-CGM WatchKit Extension
 //
-//  Created by Sorush Omidvar on 8/18/21.
+//  Created by Amin Reza on 9/19/21.
+//  Copyright © 2021 Amin Hamiditabar. All rights reserved.
 //
+import Firebase
 import Foundation
 import CoreLocation
 import CoreMotion
 import WatchConnectivity
 
-/*
+
 // MARK: - Interface controller
-class CoreMotionManager: NSObject, CLLocationManagerDelegate, WCSessionDelegate, ObservableObject {
+class CoreMotionManager: NSObject, CLLocationManagerDelegate, ObservableObject, WCSessionDelegate {
     
     let motionManager = CMMotionManager()
     var locationManagerBootFlag = true
@@ -23,7 +24,7 @@ class CoreMotionManager: NSObject, CLLocationManagerDelegate, WCSessionDelegate,
     let keepWatchCopy = false
     
     let sensorInterval = 6.0/60.0
-    let timerInterval = 3.0/60.0
+    let timerInterval = 10.0
     let sensorSessionDuration = 60.0
     
     let gravityFlag = false
@@ -46,14 +47,29 @@ class CoreMotionManager: NSObject, CLLocationManagerDelegate, WCSessionDelegate,
     var timeOffset = 0.0
     let session = WCSession.default
     
-    @Published var accelx = 0.0
+    var healthkitManager = HealthkitManager()
+    
+    
+    var accelx = 0.0
+    var accely = 0.0
+    var accelz = 0.0
+    var gyrox = 0.0
+    var gyroy = 0.0
+    var gyroz = 0.0
+    var gravityx = 0.0
+    var gravityy = 0.0
+    var gravityz = 0.0
+    var yaw = 0.0
+    var pitch = 0.0
+    var roll = 0.0
     var ref: DatabaseReference! = Database.database().reference()
     
     // does initial configurations
     func loader(){
-        //self.activateSession()
+        self.activateSession()
         self.motionManagerInitializer()
         self.locationManagerInitializer()
+        self.healthkitManager.start()
     }
 }
 
@@ -76,6 +92,30 @@ extension CoreMotionManager {
         }
     }
     
+    func storeMotionData() {
+        self.ref.child("motion").child("accelX").child("\(self.getDate())").setValue(["value": "\(self.accelx)"])
+        self.ref.child("motion").child("accelY").child("\(self.getDate())").setValue(["value": "\(self.accely)"])
+        self.ref.child("motion").child("accelZ").child("\(self.getDate())").setValue(["value": "\(self.accelz)"])
+        self.ref.child("motion").child("gyroX").child("\(self.getDate())").setValue(["value": "\(self.gyrox)"])
+        self.ref.child("motion").child("gyroY").child("\(self.getDate())").setValue(["value": "\(self.gyroy)"])
+        self.ref.child("motion").child("gyroZ").child("\(self.getDate())").setValue(["value": "\(self.gyroz)"])
+        self.ref.child("motion").child("gravityX").child("\(self.getDate())").setValue(["value": "\(self.gravityx)"])
+        self.ref.child("motion").child("gravityY").child("\(self.getDate())").setValue(["value": "\(self.gravityy)"])
+        self.ref.child("motion").child("gravityZ").child("\(self.getDate())").setValue(["value": "\(self.gravityz)"])
+        self.ref.child("motion").child("yaw").child("\(self.getDate())").setValue(["value": "\(self.yaw)"])
+        self.ref.child("motion").child("pitch").child("\(self.getDate())").setValue(["value": "\(self.pitch)"])
+        self.ref.child("motion").child("roll").child("\(self.getDate())").setValue(["value": "\(self.roll)"])
+    }
+    
+    func getDate() -> String {
+        let myDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-HH:mm:ss"
+        let currentTime = dateFormatter.string(from: myDate)
+        
+        return currentTime
+    }
+    
     func motionFetch(){
         if self.motionManager.isDeviceMotionAvailable{
             let handler:CMDeviceMotionHandler = {data,error in
@@ -90,24 +130,46 @@ extension CoreMotionManager {
                     if self.accelFlag{
                         self.sensorData.append(validData.userAcceleration.x)
                         self.accelx = validData.userAcceleration.x
-                        print("came here: \(self.accelx)")
+                        
                         self.sensorData.append(validData.userAcceleration.y)
+                        self.accely = validData.userAcceleration.y
+                        
                         self.sensorData.append(validData.userAcceleration.z)
+                        self.accelz = validData.userAcceleration.z
+                        
                     }
                     if self.gyroFlag{
                         self.sensorData.append(validData.rotationRate.x)
+                        self.gyrox = validData.rotationRate.x
+                        
                         self.sensorData.append(validData.rotationRate.y)
+                        self.gyroy = validData.rotationRate.y
+                        
                         self.sensorData.append(validData.rotationRate.z)
+                        self.gyroz = validData.rotationRate.z
+                        
                     }
                     if self.gravityFlag{
                         self.sensorData.append(validData.gravity.x)
+                        self.gravityx = validData.gravity.x
+                        
                         self.sensorData.append(validData.gravity.y)
+                        self.gravityy = validData.gravity.y
+                        
                         self.sensorData.append(validData.gravity.z)
+                        self.gravityz = validData.gravity.z
+                        
                     }
                     if self.attitudeFlag{
                         self.sensorData.append(validData.attitude.yaw)
+                        self.yaw = validData.attitude.yaw
+                        
                         self.sensorData.append(validData.attitude.pitch)
+                        self.pitch = validData.attitude.pitch
+                        
                         self.sensorData.append(validData.attitude.roll)
+                        self.roll = validData.attitude.roll
+                        
                     }
                     // print(validData.timestamp+self.timeOffset)
                 }
@@ -147,6 +209,7 @@ extension CoreMotionManager {
                     self.stringWritter()
                 }
             }
+            
         }
     }
 
@@ -169,11 +232,10 @@ extension CoreMotionManager {
         self.statusTB.setTextColor(.red)
         */
         self.errorLog+="E4 \n \(error) "+"-------------------------"
-        self.errorLoger()
+        //self.errorLoger()
 
     }
 }
-
 
 
 
@@ -207,6 +269,8 @@ extension CoreMotionManager {
     func sessionDidDeactivate(_ session: WCSession) {
         
     }
+    
+    
     
     // is called by locationManager(_didUpdateLocations)
     func stringWritter(){
@@ -351,4 +415,5 @@ extension CoreMotionManager {
         }
     }
 }
-*/
+
+

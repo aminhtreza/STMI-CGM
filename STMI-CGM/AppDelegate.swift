@@ -8,16 +8,63 @@
 
 import UIKit
 import CoreData
+import Foundation
+import WatchConnectivity
+import Network
+import Firebase
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+    
+    let session = WCSession.default
+    var fileNumber=0
+    var uID = ""
+    let keepPhoneCopy = false
+    var internetConnectivity=false
+    let monitor = NWPathMonitor()
+    var filesToBeSent = [String: URL]()
     
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        self.loader()
         return true
+    }
+    
+    func loader(){
+        self.uID = UIDevice.current.identifierForVendor!.uuidString // UID of the iPhone for documentation
+        self.setupWatchConnectivity() // Establishes connection with the apple watch
+        self.internetStat() // Determins whether device is connected to the internet
+        FirebaseApp.configure() // Establishes connection with Firebase
+    }
+    
+    // Establish connection with apple watch
+    func setupWatchConnectivity() {
+        print("setupWatchConnectivity func")
+        if WCSession.isSupported() {
+            self.session.delegate = self
+            if self.session.activationState == .activated {
+                print("the session is already activated")
+                return
+            }
+            self.session.activate()
+            print("the session is activated")
+        }
+    }
+    
+    // Determins whether device is connected to the internet
+    func internetStat(){
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { path in
+            if path.status == .satisfied {
+                self.internetConnectivity=true
+            } else {
+                self.internetConnectivity=false
+            }
+        }
+        let queue = DispatchQueue(label: "Monitor")
+        monitor.start(queue: queue)
     }
 
     // MARK: UISceneSession Lifecycle
@@ -34,6 +81,164 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    // MARK: - Watch Session delegate functions
+    // Background functions that are automatically run
+    
+    // Defines actions for whenever iphone receives a message from the watch
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
+        print("successfully recieved a msg",messageData.count)
+        self.msgSaver(messageData: messageData) // saves the incoming message data
+    }
+    
+    // Defines actions for whenever iphone receives a file from the watch
+    func session(_ session: WCSession, didReceive file: WCSessionFile) {
+        print("file has been recieved")
+        self.errorSender(fileURL: file.fileURL) // stores files to firebase
+    }
+   
+    // Defines actions for whenever watch session is deactivated
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        
+    }
+    
+    // MARK: - WatchSession: didReceiveMessageData
+    func msgSaver(messageData:Data){
+        print("msgSaver called ")
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            do {
+                let fileURL = dir.appendingPathComponent("TempFile.stmi")
+                try messageData.write(to: fileURL)
+                let fileContext=self.stringReader(fileURL: fileURL) // calls stringReader function
+                self.stringWriter(fileContext: fileContext) // calls stringWriter function
+            }
+            catch{
+                print("msgSaver error")
+            }
+        }
+    }
+    
+    // reads msg recieved from watch as a string
+    func stringReader(fileURL:URL)->String{
+        do {
+            let fileContext = try String(contentsOf: fileURL, encoding: .utf8)
+            return fileContext
+        }
+        catch {
+            print("stringReader error")
+        }
+        return String("")
+    }
+    
+    // writes string received from watch to firebase
+    func stringWriter(fileContext:String){
+        var index = fileContext.index(fileContext.firstIndex(of: "\n")!,offsetBy: 1)
+        let actualContextTemp = fileContext[index...]
+        let actualContext = String(actualContextTemp)
+        
+        index = fileContext.index(fileContext.firstIndex(of: "\n")!,offsetBy: -1)
+        let fileNameTemp = fileContext[...index]
+        let fileName = String(fileNameTemp)
+        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            do {
+                let fileURL = dir.appendingPathComponent(fileName)
+                try actualContext.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+                print("stringWritter successfully wrote the data at",fileName)
+                self.filesToBeSent[fileName] = fileURL
+                self.fireBaseUploader()
+            }
+            catch{
+                print("stringWritter error")
+            }
+        }
+    }
+    
+    // uploads string received from watch to firebase
+    func fireBaseUploader(){
+        print("fireBaseUploader")
+        if self.internetConnectivity{
+            let storage=Storage.storage()
+            let storageRef = storage.reference()
+            for (fileName, fileURL) in self.filesToBeSent {
+                let fileRef = storageRef.child(self.uID+"/"+fileName)
+                let uploadTask = fileRef.putFile(from: fileURL, metadata: nil) { metadata, error in
+                    guard let metadata = metadata else {
+                        print("firBaseUploader error:",error)
+                        return
+                    }
+                    let size = metadata.size
+                    print("File is uploaded successfully:",fileName,size)
+                    self.filesToBeSent.removeValue(forKey: fileName)
+                    if !self.keepPhoneCopy{
+                        self.dataCleaner(fileURL: fileURL) // cleans the fileURL for future readings
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: - WatchSession: didReceive file
+    func errorSender(fileURL:URL){
+        let fileURL=self.errorFileCopier(fileURL: fileURL)
+        if self.internetConnectivity{
+            let storage=Storage.storage()
+            let storageRef = storage.reference()
+            let fileRef = storageRef.child(self.uID+"/"+"errorLog")
+            fileRef.putFile(from: fileURL, metadata: nil)
+        }
+    }
+    
+    func errorFileCopier(fileURL:URL)->URL{
+        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let fileURLCopy = dir!.appendingPathComponent("errorLog")
+        var fileContext=""
+        do {
+            fileContext = try String(contentsOf: fileURL, encoding: .utf8)
+            try fileContext.write(to: fileURLCopy, atomically: true, encoding: String.Encoding.utf8)
+        }
+        catch {
+            print("stringReader error")
+            return fileURLCopy
+        }
+        return fileURLCopy
+    }
+
+    
+    // MARK: Helper functions
+    func fileListing()->[URL]{
+        var fileURLs: Array<URL> = Array()
+        let fileManager = FileManager.default
+        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        do {
+            fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
+            fileURLs = try fileURLs.sorted{ $0.path < $1.path }
+        } catch {
+            print("fileListing error: \(error.localizedDescription)")
+        }
+        return fileURLs
+    }
+
+    func dataCleaner(fileURL:URL){
+        let fileManager = FileManager.default
+        do {
+            try fileManager.removeItem(at: fileURL)
+        } catch {
+            print("dataCleaner error")
+        }
+    }
+    
+    enum STMIError: Error {
+        case IOError
+        case sortingError
+        case fireBaseError
     }
 
 

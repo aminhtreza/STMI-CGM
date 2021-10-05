@@ -38,15 +38,13 @@ struct MainUI: View {
                 Button("Clear data") {
                     self.clearSensors()
                 }
-                //Button("Authorization Page") {self.showSheet = true}
-                
             }
             AddNewEntry()
         }
         .onAppear {
-            self.phonetoWatch.activateSession()
+            //self.phonetoWatch.activateSession()
             self.updateUI()
-            self.saveToMoc()
+            //self.saveToMoc()
         }
     }
 }
@@ -57,7 +55,7 @@ extension MainUI {
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (Timer) in
             self.phonetoWatch.updateUI()
             //print(self.phonetoWatch.background() ? "Backgrounds":"Foregrounds")
-            self.saveToMoc()
+            //self.saveToMoc()
         }
     }
     
