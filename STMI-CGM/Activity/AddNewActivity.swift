@@ -9,6 +9,27 @@
 import SwiftUI
 
 struct AddNewActivity: View {
+    //Creates a context for our managed object. Basically creating an instance of our core data
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var presentation
+    
+    @State private var activityType = ["Exercise", "Travel", "Sleep", "Work", "Other"]
+    @State private var exercisingType = ["Running", "Weightlifting", "Biking", "Walking", "Yoga", "Other"]
+    @State private var travelingType = ["Walking", "Driving" ,"Ubering", "Biking", "Taking the bus", "Flying"]
+    @State private var travelingLocation = ["Home", "Work", "School", "Grocery store", "Gym", "Friends house", "Restaurant", "Bar", "Out of town"]
+    @State private var sleepType = ["Night sleep", "Nap"]
+    @State private var workingType = ["Actively walking", "Mostly standing", "Some walking some standing", "Sedentary", "Mostly sedentary"]
+
+    @State private var typeSelection = 0
+    @State private var detailSelection = 0
+    @State private var fromSelection = 0
+    @State private var toSelection = 0
+    
+    @State var otherActivity = ""
+    @State var otherExercise = ""
+    @State var otherDetail = ""
+    @State var startTime = Date()
+    @State var finishTime = Date()
     
     var body: some View {
         VStack {
@@ -34,6 +55,7 @@ struct AddNewActivity: View {
                                     }
                                 }
                             }
+                            
                             if self.typeSelection == 4 {
                                 TextField("Description:", text: $otherActivity)
                             } else {
@@ -46,9 +68,9 @@ struct AddNewActivity: View {
                                         ForEach(0..<travelingType.count) {
                                             Text(self.travelingType[$0]).foregroundColor(.blue)
                                         }
-                                    } else if self.typeSelection == 2 { // Eating
-                                        ForEach(0..<eatingType.count) {
-                                            Text(self.eatingType[$0]).foregroundColor(.blue)
+                                    } else if self.typeSelection == 2 { // sleep
+                                        ForEach(0..<sleepType.count) {
+                                            Text(self.sleepType[$0]).foregroundColor(.blue)
                                         }
                                     } else if self.typeSelection == 3 { // Working
                                         ForEach(0..<workingType.count) {
@@ -56,6 +78,10 @@ struct AddNewActivity: View {
                                         }
                                     }
                                 }
+                            }
+                            
+                            if self.typeSelection == 0 && self.detailSelection == 5 {
+                                TextField("Description:", text: $otherExercise)
                             }
                             
                             // End Activity detail
@@ -81,39 +107,24 @@ struct AddNewActivity: View {
             }
         }
     }
-    //Creates a context for our managed object. Basically creating an instance of our core data
-    @Environment(\.managedObjectContext) var moc
-    @Environment(\.presentationMode) var presentation
     
-    @State private var activityType = ["Exercise", "Travel", "Eat", "Work", "Other"]
-    @State private var exercisingType = ["Running", "Weightlifting", "Biking", "Walking", "Yoga"]
-    @State private var travelingType = ["Walking", "Driving" ,"Ubering", "Biking", "Taking the bus", "Flying"]
-    @State private var travelingLocation = ["Home", "Work", "School", "Grocery store", "Gym", "Friends house", "Restaurant", "Bar", "Out of town"]
-    @State private var eatingType = ["Eating breakfast", "Eating lunch" ,"Eating dinner", "Eating snack", "Drinking a smoothie"]
-    @State private var workingType = ["Actively walking", "Mostly standing", "Some walking some standing", "Sedentary", "Mostly sedentary"]
-
-    @State private var typeSelection = 0
-    @State private var detailSelection = 0
-    @State private var fromSelection = 0
-    @State private var toSelection = 0
-    
-    @State var otherActivity = ""
-    @State var otherDetail = ""
-    @State var startTime = Date()
-    @State var finishTime = Date()
     
     func saveToMoc() {
         let activity = Activities(context: self.moc)
         activity.activityType = self.activityType[typeSelection]
         switch self.typeSelection {
         case 0:
-            activity.activityDetail = self.exercisingType[self.detailSelection]
+            if self.detailSelection == 5 {
+                activity.activityDetail = self.otherExercise
+            } else {
+                activity.activityDetail = self.exercisingType[self.detailSelection]
+            }
         case 1:
             activity.activityDetail = self.travelingType[self.detailSelection]
             activity.travelFrom = self.travelingLocation[self.fromSelection]
             activity.travelTo = self.travelingLocation[self.toSelection]
         case 2:
-            activity.activityDetail = self.eatingType[self.detailSelection]
+            activity.activityDetail = self.sleepType[self.detailSelection]
         case 3:
             activity.activityDetail = self.workingType[self.detailSelection]
         case 4:

@@ -13,10 +13,9 @@ import WatchConnectivity
 import Network
 import Firebase
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
-    
+
     let session = WCSession.default
     var fileNumber=0
     var uID = ""
@@ -33,7 +32,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
     
     func loader(){
-        self.uID = UIDevice.current.identifierForVendor!.uuidString // UID of the iPhone for documentation
+        var cred: [NSManagedObject] = []
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Credentials")
+        do {
+            cred = try self.persistentContainer.viewContext.fetch(fetchRequest)
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+          }
+        let participantIds = cred[0].committedValues(forKeys: ["participantId"])
+        let id = participantIds["participantId"]
+        
+        self.uID = id as! String // UID of the iPhone for documentation
         self.setupWatchConnectivity() // Establishes connection with the apple watch
         self.internetStat() // Determins whether device is connected to the internet
         FirebaseApp.configure() // Establishes connection with Firebase

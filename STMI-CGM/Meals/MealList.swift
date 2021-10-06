@@ -22,6 +22,8 @@ struct MealList: View {
     @State var protein = 0.0
     @State var carbs = 0.0
     @State var fat = 0.0
+    @State var ingredients = ""
+    @State var portions = ""
     
     let dateFormatter = DateFormatter()
     
@@ -71,11 +73,13 @@ struct MealList: View {
                                 self.image = Image(uiImage: UIImage(data: Data((meal.picture!)))!)
                                 self.startTime = meal.startTime
                                 self.finishTime = meal.finishTime
-                                self.mealName = meal.mealName ?? "Meal name was not inputted"
+                                self.mealName = meal.mealName ?? "Missing meal name"
                                 self.calories = meal.calories
                                 self.carbs = meal.carbs
                                 self.fat = meal.fat
                                 self.protein = meal.protein
+                                self.ingredients = meal.ingredients ?? "Missing ingredients"
+                                self.portions = meal.portions ?? "Missing portios"
                                 self.activeSheet = .second
                                 self.showSheet = true
                            }
@@ -88,7 +92,7 @@ struct MealList: View {
                     AddNewMeal().navigationBarTitle("STMI", displayMode: .inline)
                         .environment(\.managedObjectContext, self.moc)
                 } else if self.activeSheet == .second {
-                    DisplayMeal(mealName: self.mealName, image: self.image, startTime: self.startTime, finishTime: self.finishTime, calories: self.calories, protein: self.protein, carbs: self.carbs, fat: self.fat)
+                    DisplayMeal(mealName: self.mealName, image: self.image, startTime: self.startTime, finishTime: self.finishTime, calories: self.calories, protein: self.protein, carbs: self.carbs, fat: self.fat, ingredients: self.ingredients, portions: self.portions)
                 }
             }
         }

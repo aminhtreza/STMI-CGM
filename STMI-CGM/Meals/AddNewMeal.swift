@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct AddNewMeal: View {
     @State var mealName:String = ""
@@ -14,6 +15,8 @@ struct AddNewMeal: View {
     @State var protein: String = ""
     @State var carbs: String = ""
     @State var fat: String = ""
+    @State var ingredients: String = ""
+    @State var portions: String = ""
     
     @State var startTime: Date = Date()
     @State var startTimeSelected = false
@@ -35,20 +38,21 @@ struct AddNewMeal: View {
     @State var eatingNow = false
     @State var oldMeal = false
     
+    var ref: DatabaseReference! = Database.database().reference()
+    
     var body: some View {
         GeometryReader { geo in
             VStack {
                 HStack {
-                    Section{
-                        List {
-                            TextField("Name" ,text:  self.$mealName)
-                            TextField("Calories", text: self.$calories)
-                            TextField("Protein", text: self.$protein)
-                            TextField("Carbs", text: self.$carbs)
-                            TextField("Fat", text: self.$fat)
-                        }
-                        .padding()
-                    }
+                    VStack {
+                        TextField("Name" ,text:  self.$mealName)
+                        TextField("Calories", text: self.$calories)
+                        TextField("Protein", text: self.$protein)
+                        TextField("Carbs", text: self.$carbs)
+                        TextField("Fat", text: self.$fat)
+                        TextField("Ingredients", text: self.$ingredients)
+                        TextField("Portion (servings)", text: self.$portions)
+                    }.padding().padding(.top, 30)
                     VStack{
                         if self.image != nil {
                              self.image?
@@ -70,16 +74,19 @@ struct AddNewMeal: View {
                                 .padding()
                         }
                     }.onTapGesture {self.showActionSheet = true}
-                }.frame(width: geo.size.width, height: geo.size.height/2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                }.frame(width: geo.size.width, height: geo.size.height/2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).padding(.bottom)
                 
                 HStack {
                     Button("Start eating") {
+                        withAnimation{self.oldMeal=false}
                         withAnimation{self.eatingNow.toggle()}
                     }.buttonStyle(NotSelectedButtonStyle(selected: self.eatingNow)).padding()
                     Button("Input old meal") {
+                        withAnimation{self.eatingNow=false}
                         withAnimation{self.oldMeal.toggle()}
+                        
                     }.buttonStyle(NotSelectedButtonStyle(selected: self.oldMeal)).padding()
-                }.padding()
+                }
                 
                 if eatingNow {
                     VStack {
@@ -89,7 +96,15 @@ struct AddNewMeal: View {
                                 withAnimation{self.startTimeSelected = true}
                             }.buttonStyle(NotSelectedButtonStyle())
                         } else {
-                            Text(startTime, style: .time).padding(.horizontal)
+                            HStack {
+                                Text(startTime, style: .time).padding(.horizontal)
+                                Button(action: {
+                                    self.startTimeSelected = false
+                                }, label: {
+                                    Text("clear")
+                                })
+                            }.padding()
+                            
                         }
                         
                         if !finishTimeSelected {
@@ -98,7 +113,15 @@ struct AddNewMeal: View {
                                 withAnimation{self.finishTimeSelected = true}
                             }.buttonStyle(NotSelectedButtonStyle())
                         } else {
-                            Text(finishTime, style: .time).padding(.horizontal)
+                            HStack {
+                                Text(finishTime, style: .time).padding(.horizontal)
+                                Button(action: {
+                                    self.finishTimeSelected = false
+                                }, label: {
+                                    Text("clear")
+                                })
+                            }.padding()
+                            
                         }
                     }
                 }
@@ -144,13 +167,14 @@ struct AddNewMeal: View {
                 })
                     // After choosing from camera or gallery this will open
                 
-                    .sheet(isPresented: self.$showImagePicker, onDismiss: self.loadImage) {
+                .sheet(isPresented: self.$showImagePicker, onDismiss: self.loadImage) {
                     ImagePicker(image: self.$inputImage, camera: self.$cameraPic)
                 }
                 .alert(isPresented: self.$showAlert) {
                     Alert(title: Text("Please upload image"), message: Text("We need an image to store this meal. If you don't have an image please find one on Google that best represents what you ate."), dismissButton: .default(Text("Got it!")))
                 }
             }
+            
         }
         
     }
@@ -169,6 +193,8 @@ struct AddNewMeal: View {
         meal.fat = Double(self.fat) ?? 0
         meal.startTime = startTime
         meal.finishTime = finishTime
+        meal.ingredients = self.ingredients
+        meal.portions = portions
         meal.picture = self.inputImage?.jpegData(compressionQuality: 100)
         
         do {try self.moc.save()}
@@ -176,6 +202,26 @@ struct AddNewMeal: View {
     
         self.presentation.wrappedValue.dismiss()
         
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("mealName").setValue(["mealName": "\(self.mealName)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("calories").setValue(["calories": "\(self.calories)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("carbs").setValue(["carbs": "\(self.carbs)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("protein").setValue(["protein": "\(self.protein)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("fat").setValue(["fat": "\(self.fat)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("startTime").setValue(["startTime": "\(self.startTime)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("finishTime").setValue(["finishTime": "\(self.finishTime)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("ingrerdients").setValue(["ingrerdients": "\(self.ingredients)"])
+        self.ref.child("Meal Entry").child("\(self.getDate())").child("portions").setValue(["portions": "\(self.portions)"])
+
+        
+    }
+    
+    func getDate() -> String {
+        let myDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-HH:mm:ss"
+        let currentTime = dateFormatter.string(from: myDate)
+        
+        return currentTime
     }
 }
 

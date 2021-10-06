@@ -7,19 +7,10 @@
 //
 
 import SwiftUI
-var phoneToWatch = PhonetoWatch()
-import UserNotifications
-
 
 struct ContentView: View {
-    @FetchRequest(entity: Credentials.entity(), sortDescriptors: []) var credentials: FetchedResults<Credentials>
-    var notifications = Notifications()
-    
     var body: some View {
         MainUI()
-            .onAppear {
-                notifications.authorizeNotification()
-            }
     }
 }
 

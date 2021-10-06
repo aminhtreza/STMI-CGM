@@ -45,18 +45,19 @@ struct ActivityMainIFC: View {
                                     Text("\(activity.activityType!)")
                                     .font(.title)
                                         .frame(width: 117, height: 60, alignment: .center)
+                                    
                                     Divider()
                                     VStack {
+                                        Text("\(activity.activityDetail!)")
+                                        if activity.activityType == "Travel" {
+                                            Text("From \(activity.travelFrom ?? "")")
+                                            Text("to \(activity.travelTo ?? "")")
+                                        }
                                         Text(activity.startTime!, style: .date)
                                         HStack{
                                             Text(activity.startTime!, style: .time)
                                             Text("-");
                                             Text(activity.finishTime!, style: .time)
-                                        }
-                                        Text("\(activity.activityDetail!)")
-                                        if activity.activityType == "Travel" {
-                                            Text("From \(activity.travelFrom ?? "")")
-                                            Text("to \(activity.travelTo ?? "")")
                                         }
                                     }
                                     .multilineTextAlignment(.leading)

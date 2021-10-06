@@ -16,8 +16,7 @@ extension Credentials {
         return NSFetchRequest<Credentials>(entityName: "Credentials")
     }
 
-    @NSManaged public var username: String?
-    @NSManaged public var password: String?
+    @NSManaged public var participantId: String?
 
 }
 

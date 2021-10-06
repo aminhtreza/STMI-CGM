@@ -17,6 +17,8 @@ struct DisplayMeal: View {
     @State var protein: Double
     @State var carbs: Double
     @State var fat: Double
+    @State var ingredients: String
+    @State var portions: String
     
     var body: some View {
         GeometryReader { geo in
@@ -42,6 +44,8 @@ struct DisplayMeal: View {
                     if self.protein != 0.0 {Text("Protein: \(Int(self.protein.rounded(toPlaces: 2)))")}
                     if self.carbs != 0.0 {Text("Carbohydrates: \(Int(self.carbs.rounded(toPlaces: 2)))")}
                     if self.fat != 0.0 {Text("Fat: \(Int(self.fat.rounded(toPlaces: 2)))")}
+                    Text("Ingredients: \(self.ingredients)")
+                    Text("Portions: \(self.portions)")
                 }
             }
         }

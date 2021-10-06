@@ -18,6 +18,8 @@ extension Meal {
     }
 
     @NSManaged public var mealName: String?
+    @NSManaged public var ingredients: String?
+    @NSManaged public var portions: String?
     @NSManaged public var calories: Double
     @NSManaged public var carbs: Double
     @NSManaged public var protein: Double
