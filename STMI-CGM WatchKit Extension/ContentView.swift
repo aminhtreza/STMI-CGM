@@ -20,20 +20,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            HStack{
-                Text("❤️").font(.system(size: 50))
-                Spacer()
-            }
-            HStack{
-                Text("\(coreMotionManager.accelx)")
-                    .fontWeight(.regular)
-                    .font(.system(size: 70))
-                Text("BPM")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.red)
-                    .padding(.bottom, 28.0)
-                Spacer()
+            Button("Good morning") {
+                self.ref.child("MorningEntry").child("\(coreMotionManager.getDate())").setValue(["Good morning": "participant"])
             }
         }
         .padding()

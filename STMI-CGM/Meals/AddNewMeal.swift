@@ -38,6 +38,8 @@ struct AddNewMeal: View {
     @State var eatingNow = false
     @State var oldMeal = false
     
+    @FetchRequest(entity: Credentials.entity(), sortDescriptors: []) var creds: FetchedResults<Credentials>
+    
     var ref: DatabaseReference! = Database.database().reference()
     
     var body: some View {
@@ -184,6 +186,10 @@ struct AddNewMeal: View {
         image = Image(uiImage: inputImage)
     }
     
+    func getParticipantId()-> String {
+        return self.creds[0].participantId ?? "no id found"
+    }
+    
     func saveToMoc() {
         let meal = Meal(context: self.moc)
         meal.mealName = self.mealName
@@ -197,20 +203,21 @@ struct AddNewMeal: View {
         meal.portions = portions
         meal.picture = self.inputImage?.jpegData(compressionQuality: 100)
         
+        
         do {try self.moc.save()}
         catch {print(error)}
     
         self.presentation.wrappedValue.dismiss()
         
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("mealName").setValue(["mealName": "\(self.mealName)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("calories").setValue(["calories": "\(self.calories)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("carbs").setValue(["carbs": "\(self.carbs)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("protein").setValue(["protein": "\(self.protein)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("fat").setValue(["fat": "\(self.fat)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("startTime").setValue(["startTime": "\(self.startTime)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("finishTime").setValue(["finishTime": "\(self.finishTime)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("ingrerdients").setValue(["ingrerdients": "\(self.ingredients)"])
-        self.ref.child("Meal Entry").child("\(self.getDate())").child("portions").setValue(["portions": "\(self.portions)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("mealName").setValue(["mealName": "\(self.mealName)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("calories").setValue(["calories": "\(self.calories)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("carbs").setValue(["carbs": "\(self.carbs)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("protein").setValue(["protein": "\(self.protein)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("fat").setValue(["fat": "\(self.fat)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("startTime").setValue(["startTime": "\(self.startTime)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("finishTime").setValue(["finishTime": "\(self.finishTime)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("ingrerdients").setValue(["ingrerdients": "\(self.ingredients)"])
+        self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("portions").setValue(["portions": "\(self.portions)"])
 
         
     }
