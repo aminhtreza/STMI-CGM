@@ -20,12 +20,14 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>CLKComplicationPrincipalClass</key>
+	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>WKAppBundleIdentifier</key>
-			<string>com.AminHamiditabar.STMI-CGM.watchkitapp</string>
+			<string>com.stmicgm.STMI-CGM.watchkitapp</string>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
@@ -46,12 +48,6 @@
 	<string>Allow us to access your Location Data</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow us to access your Location Data</string>
-	<key>WKExtensionDelegateClassName</key>
-	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
-	<key>WKRunsIndependentlyOfCompanionApp</key>
-	<true/>
-	<key>CLKComplicationPrincipalClass</key>
-	<string>$(PRODUCT_MODULE_NAME).ComplicationController</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -62,5 +58,9 @@
 	<array>
 		<string></string>
 	</array>
+	<key>WKExtensionDelegateClassName</key>
+	<string>$(PRODUCT_MODULE_NAME).ExtensionDelegate</string>
+	<key>WKRunsIndependentlyOfCompanionApp</key>
+	<true/>
 </dict>
 </plist>

@@ -38,6 +38,8 @@ struct AddNewMeal: View {
     @State var eatingNow = false
     @State var oldMeal = false
     
+    @State var accurate = true
+    
     @FetchRequest(entity: Credentials.entity(), sortDescriptors: []) var creds: FetchedResults<Credentials>
     
     var ref: DatabaseReference! = Database.database().reference()
@@ -77,6 +79,10 @@ struct AddNewMeal: View {
                         }
                     }.onTapGesture {self.showActionSheet = true}
                 }.frame(width: geo.size.width, height: geo.size.height/2, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).padding(.bottom)
+                
+                Button("Estimate") {
+                    self.accurate.toggle()
+                }.buttonStyle(NotSelectedButtonStyle(selected: !self.accurate))
                 
                 HStack {
                     Button("Start eating") {
@@ -135,9 +141,13 @@ struct AddNewMeal: View {
                     }.padding()
                 }
                 
+                
+                
                 Spacer()
+                
+                
                 Button(action: {
-                    if self.image != nil {
+                    if self.allEntriesFilled() {
                         self.saveToMoc()
                     } else {
                         self.showAlert.toggle()
@@ -173,12 +183,22 @@ struct AddNewMeal: View {
                     ImagePicker(image: self.$inputImage, camera: self.$cameraPic)
                 }
                 .alert(isPresented: self.$showAlert) {
-                    Alert(title: Text("Please upload image"), message: Text("We need an image to store this meal. If you don't have an image please find one on Google that best represents what you ate."), dismissButton: .default(Text("Got it!")))
+                    Alert(title: Text("Please fill out all entries"), message: Text("We need all of the entries to train our models. If you are missing any of them please estimate macronutrients on MyFitnessPal and find an image on Google and press the estimate button"), dismissButton: .default(Text("Got it!")))
                 }
             }
             
         }
         
+    }
+    
+    func allEntriesFilled() -> Bool {
+        if self.image != nil && self.mealName != "" && self.calories != "" &&
+            self.protein != "" && self.carbs != "" && self.fat != "" && self.portions != "" {
+            return true
+        } else {
+            return false
+        }
+            
     }
     
     func loadImage() {
@@ -201,6 +221,7 @@ struct AddNewMeal: View {
         meal.finishTime = finishTime
         meal.ingredients = self.ingredients
         meal.portions = portions
+        meal.accurate = self.accurate
         meal.picture = self.inputImage?.jpegData(compressionQuality: 100)
         
         

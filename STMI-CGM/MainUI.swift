@@ -11,19 +11,23 @@ import UserNotifications
 
 struct MainUI: View {
     var notifications = Notifications()
-    @State var showSheet = false
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     @FetchRequest(entity: Credentials.entity(), sortDescriptors: []) var credentials: FetchedResults<Credentials>
+    
     enum ActiveSheet {
        case first, second
     }
+    
     func closeSheet() {
-        self.showSheet = false
+        self.showMeals = false
+        self.showActivities = false
     }
 
-    @State private var activeSheet: ActiveSheet = .first
+    @State var showMeals = false
+    @State var showActivities = false
+    @State var activeSheet: ActiveSheet = .first
     
     @State var participantId = ""
     
@@ -46,8 +50,9 @@ struct MainUI: View {
                         .font(.custom("Anton-Regular", size: 30))
                     HStack{
                         Button(action: {
-                            self.showSheet = true
                             self.activeSheet = .first
+                            self.showActivities = true
+                            
                         }) {
                             VStack{
                                 Image("activity")
@@ -68,8 +73,8 @@ struct MainUI: View {
                         }
                         Divider()
                         Button(action: {
-                            self.showSheet = true
                             self.activeSheet = .second
+                            self.showMeals = true
                         }, label:{
                             VStack {
                                 Image("meal")
@@ -90,15 +95,13 @@ struct MainUI: View {
                             }
                         })
                     }
-                    .sheet(isPresented: $showSheet, onDismiss: closeSheet) {
-                        if self.activeSheet == .first {
-                            ActivityMainIFC().navigationBarTitle("STMI", displayMode: .inline)
-                            .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
-                        } else if self.activeSheet == .second {
-                            MealList().navigationBarTitle("STMI", displayMode: .inline)
-                            .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
-                        }
-                        
+                    .sheet(isPresented: $showActivities, onDismiss: closeSheet) {
+                        ActivityMainIFC().navigationBarTitle("STMI", displayMode: .inline)
+                        .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+                    }
+                    .sheet(isPresented: $showMeals, onDismiss: closeSheet) {
+                        MealList().navigationBarTitle("STMI", displayMode: .inline)
+                        .environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
                     }
                 }
             }

@@ -27,6 +27,7 @@ extension Meal {
     @NSManaged public var startTime: Date
     @NSManaged public var finishTime: Date
     @NSManaged public var picture: Data?
+    @NSManaged public var accurate: Bool
 
 }
 

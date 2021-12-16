@@ -6,6 +6,9 @@
 //  Copyright © 2020 Ryan Ramirez. All rights reserved.
 //
 
+// !!!!!!!!!!!!!!!!!!!!!!! ATTENTION READ BELOW !!!!!!!!!!!!!!!!!!!!!
+// The loader function below needs to be modified the first time you install the app. We need to gather the participant id prior to storing data. Therefore, the portion that calls the participant id needs to be blocked off and then uncommented and redeplyed after the first run
+
 import UIKit
 import CoreData
 import Foundation
@@ -38,11 +41,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
             cred = try self.persistentContainer.viewContext.fetch(fetchRequest)
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
-          }
-        let participantIds = cred[0].committedValues(forKeys: ["participantId"])
-        let id = participantIds["participantId"]
+        }
         
-        self.uID = id as! String // UID of the iPhone for documentation
+        // comment this part when deploying the code for the first time
+        ///*
+        ///
+        if cred.isEmpty {
+            self.uID = "99 didn't work"
+        } else {
+            let participantIds = cred[0].committedValues(forKeys: ["participantId"])
+            let id = participantIds["participantId"]
+            self.uID = id as! String // UID of the iPhone for documentation
+        }
+        
+        //*/
+        
         self.setupWatchConnectivity() // Establishes connection with the apple watch
         self.internetStat() // Determins whether device is connected to the internet
         FirebaseApp.configure() // Establishes connection with Firebase
