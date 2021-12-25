@@ -166,7 +166,7 @@
 
 /* Begin PBXFileReference section */
 		78A1EBB826F822BA0098C14B /* CoreMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotionManager.swift; sourceTree = "<group>"; };
-		78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		78D8DBDB26F80A33003757D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		78E78E95270A72CA006FE880 /* HealthkitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthkitManager.swift; sourceTree = "<group>"; };
 		78E78E97270CA676006FE880 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		8812A0FA24648153004EDCFE /* STMI-CGM WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "STMI-CGM WatchKit Extension.entitlements"; sourceTree = "<group>"; };
