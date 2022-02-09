@@ -20,6 +20,8 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This let the app to run in the background</string>
 	<key>UIBackgroundModes</key>
@@ -34,9 +36,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.stmicgm.STMI-CGM</string>
-	<key>LSApplicationCategoryType</key>
-	<string></string>
+	<string>com.stmicgm.STMI-CGM2</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
