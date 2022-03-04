@@ -9,6 +9,7 @@
 import SwiftUI
 import Firebase
 
+
 struct AddNewMeal: View {
     @State var mealName:String = ""
     @State var calories: String = ""
@@ -210,6 +211,12 @@ struct AddNewMeal: View {
         return self.creds[0].participantId ?? "no id found"
     }
     
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    
     func saveToMoc() {
         let meal = Meal(context: self.moc)
         meal.mealName = self.mealName
@@ -222,8 +229,11 @@ struct AddNewMeal: View {
         meal.ingredients = self.ingredients
         meal.portions = portions
         meal.accurate = self.accurate
-        meal.picture = self.inputImage?.jpegData(compressionQuality: 100)
+        meal.picture = self.inputImage?.jpegData(compressionQuality: 0.2)
         
+        saveMealPicture(mealName: meal.mealName! , startTime: meal.startTime, finishTime: meal.finishTime,mealPicture: UIImage(data: Data((meal.picture!)))!)
+
+//        imageSaver.writeToPhotoAlbum(image: UIImage(data: Data((meal.picture!)))!)
         
         do {try self.moc.save()}
         catch {print(error)}
@@ -251,7 +261,22 @@ struct AddNewMeal: View {
         
         return currentTime
     }
+    
+    func saveMealPicture(mealName:String,startTime:Date,finishTime:Date,mealPicture:UIImage)->Void{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "y,MM,d-HH,mm"
+        
+        let pictureFileName=mealName+"-"+dateFormatter.string(from: startTime)+"-"+dateFormatter.string(from: finishTime)+".jpeg"
+        print(pictureFileName)
+        
+        if let data = mealPicture.jpegData(compressionQuality: 100) {
+            let filename = getDocumentsDirectory().appendingPathComponent(pictureFileName)
+            try? data.write(to: filename)
+        }
+    }
 }
+
+
 
 
 /*
