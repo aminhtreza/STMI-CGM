@@ -71,6 +71,7 @@
 		88FE35302464793E00D954A3 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE352F2464793E00D954A3 /* MotionManager.swift */; };
 		88FE3535246479F100D954A3 /* WatchtoPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE3534246479F100D954A3 /* WatchtoPhone.swift */; };
 		88FE353724647A7D00D954A3 /* AddNewActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FE353624647A7D00D954A3 /* AddNewActivity.swift */; };
+		B2F8403827D2AAF300B425E3 /* EditMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F8403727D2AAF300B425E3 /* EditMeal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,7 @@
 		88FE352F2464793E00D954A3 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		88FE3534246479F100D954A3 /* WatchtoPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchtoPhone.swift; sourceTree = "<group>"; };
 		88FE353624647A7D00D954A3 /* AddNewActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewActivity.swift; sourceTree = "<group>"; };
+		B2F8403727D2AAF300B425E3 /* EditMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMeal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +445,7 @@
 				88FE35122464768400D954A3 /* AddNewMeal.swift */,
 				885B6AE2258BD89200124829 /* DisplayMeal.swift */,
 				88FE3516246476B600D954A3 /* ImagePicker.swift */,
+				B2F8403727D2AAF300B425E3 /* EditMeal.swift */,
 			);
 			path = Meals;
 			sourceTree = "<group>";
@@ -682,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F8403827D2AAF300B425E3 /* EditMeal.swift in Sources */,
 				88FE350D2464760400D954A3 /* ActivityMainIFC.swift in Sources */,
 				88DA41732538A5070007BFF7 /* STMI-CGMcoreData.xcdatamodeld in Sources */,
 				888EE27E2589BC6C00E66110 /* Meal+CoreDataProperties.swift in Sources */,

@@ -20,6 +20,7 @@ struct MealList: View {
     @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
     @State private var showSheet = false
     @State private var activeSheet: ActiveSheet = .first
+    @State private var showAlert:Bool=true
     
     let dateFormatter = DateFormatter()
     let localizedString = NSLocalizedString("LOCALIZED-STRING-KEY", comment: "Describe what is being localized here")
@@ -46,7 +47,15 @@ struct MealList: View {
                     }.padding()
                     Section(header: Text("History")) {
                         ForEach(meals.reversed(), id: \.self) {meal in
-                            NavigationLink(meal.mealName!, destination: DisplayMeal(mealName: meal.mealName!, image: Image(uiImage: UIImage(data: Data((meal.picture!)))!), startTime: meal.startTime, finishTime: meal.finishTime, calories: meal.calories, protein: meal.protein, carbs: meal.carbs, fat: meal.fat, ingredients: meal.ingredients!, portions: meal.portions!))
+                            let calVal=meal.calories
+                            let proVal=meal.protein
+                            let carbVal=meal.carbs
+                            let fatVal=meal.fat
+                            let mealPicAdd=self.mealPictureFileNameGetter(thisMeal:meal)
+                            let mealPicUIImage=MealPictureGetter(mealPicAdd:mealPicAdd)
+                            let mealPicImage=Image(uiImage: mealPicUIImage)
+//                            testSorush(str:mealPicAdd)
+                            NavigationLink(meal.mealName!,destination: EditMeal(meal:meal,mealName:meal.mealName!,calories: String(calVal),protein: String(proVal),carbs: String(carbVal),fat: String(fatVal),ingredients:meal.ingredients!,portions:meal.portions!,startTime: meal.startTime,startTimeSelected:true, finishTime: meal.finishTime,finishTimeSelected:true,image: mealPicImage,inputImage: mealPicUIImage,mealPicAdd: mealPicAdd))
                             HStack {
                                 Image(uiImage: UIImage(data: Data((meal.picture!)))!)
                                     .resizable()
@@ -63,7 +72,6 @@ struct MealList: View {
                                         Text("-")
                                         Text(meal.finishTime, style: .time)
                                     }
-
                                 }
                             }
                         }.onDelete(perform: deleteMeal)
@@ -83,5 +91,37 @@ struct MealList: View {
             moc.delete(meal)
         }
         try! self.moc.save()
+    }
+    func mealPictureFileNameGetter(thisMeal:Meal) -> String {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        
+        var mealPicAdd=String(thisMeal.objectID.debugDescription)
+        var index = mealPicAdd.index(mealPicAdd.lastIndex(of: "/")!, offsetBy: 1)
+        mealPicAdd=String(mealPicAdd[index...])
+        
+        index = mealPicAdd.index(mealPicAdd.lastIndex(of: ">")!, offsetBy: 0)
+        mealPicAdd=String(mealPicAdd[..<index])
+        
+        mealPicAdd = documentsDirectory.appendingPathComponent(mealPicAdd+".jpeg").path
+        print(mealPicAdd)
+        let fileManager = FileManager.default
+        if !fileManager.fileExists(atPath: mealPicAdd) {
+            mealPicAdd=""
+        }
+        return mealPicAdd
+    }
+    func MealPictureGetter(mealPicAdd:String)->UIImage{
+        if mealPicAdd==""{
+            let mealPicUIImage=UIImage(systemName: "heart.fill")
+            return mealPicUIImage!
+        }
+        let mealPicUIImage=UIImage(named: mealPicAdd)
+        return mealPicUIImage!
+    }
+    func testSorush(str:String){
+        print("I am here!!!!!")
+        print(str)
+        print("I am here!!!!!")
     }
 }

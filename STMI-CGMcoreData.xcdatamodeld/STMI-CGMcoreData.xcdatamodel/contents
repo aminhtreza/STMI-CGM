@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activities" representedClassName="Activities" syncable="YES" codeGenerationType="class">
         <attribute name="activityDetail" optional="YES" attributeType="String"/>
         <attribute name="activityType" optional="YES" attributeType="String"/>
@@ -17,6 +17,7 @@
         <attribute name="carbs" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="fat" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="finishTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="imageAdd" optional="YES" attributeType="String"/>
         <attribute name="ingredients" optional="YES" attributeType="String"/>
         <attribute name="mealName" optional="YES" attributeType="String"/>
         <attribute name="picture" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
@@ -27,6 +28,6 @@
     <elements>
         <element name="Activities" positionX="-36" positionY="108" width="128" height="133"/>
         <element name="Credentials" positionX="-54" positionY="54" width="128" height="44"/>
-        <element name="Meal" positionX="-54" positionY="54" width="128" height="194"/>
+        <element name="Meal" positionX="-54" positionY="54" width="128" height="209"/>
     </elements>
 </model>

@@ -1,28 +1,33 @@
 //
-//  AddMeal.swift
-//  CGM-Meals
+//  EditMeal.swift
+//  STMI-CGM
 //
-//  Created by iMac on 4/6/20.
-//  Copyright © 2020 Amin Hamiditabar. All rights reserved.
+//  Created by Sorush Omidvar on 3/4/22.
+//  Copyright © 2022 Amin Hamiditabar. All rights reserved.
 //
 
 import SwiftUI
 import Firebase
 
 
-struct AddNewMeal: View {
-    @State var mealName:String = ""
-    @State var calories: String = ""
-    @State var protein: String = ""
-    @State var carbs: String = ""
-    @State var fat: String = ""
-    @State var ingredients: String = ""
-    @State var portions: String = ""
+struct EditMeal: View {
+    @State var meal:Meal
+    @State var mealName:String
+    @State var calories: String
+    @State var protein: String
+    @State var carbs: String
+    @State var fat: String
+    @State var ingredients: String
+    @State var portions: String
     
-    @State var startTime: Date = Date()
-    @State var startTimeSelected = false
-    @State var finishTime: Date = Date()
-    @State var finishTimeSelected = false
+    @State var startTime: Date
+    @State var startTimeSelected: Bool
+    @State var finishTime: Date
+    @State var finishTimeSelected:Bool
+    
+    @State var image: Image?
+    @State var inputImage: UIImage?
+    @State var mealPicAdd:String=""
     
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Meal.entity(), sortDescriptors: []) var meals: FetchedResults<Meal>
@@ -32,18 +37,13 @@ struct AddNewMeal: View {
     @State var showImagePicker = false
     @State var showAlert = false
     @State var sourceType: UIImagePickerController.SourceType = .camera
-    @State var image: Image?
-    @State var inputImage: UIImage?
-    @State var cameraPic = false
     
+    @State var cameraPic = true
     @State var eatingNow = false
-    @State var oldMeal = false
-    @State var mealPicAdd=""
-    
+    @State var oldMeal = true
     @State var accurate = true
     
     @FetchRequest(entity: Credentials.entity(), sortDescriptors: []) var creds: FetchedResults<Credentials>
-    
     var ref: DatabaseReference! = Database.database().reference()
     
     var body: some View {
@@ -155,7 +155,7 @@ struct AddNewMeal: View {
                         self.showAlert.toggle()
                     }
                 }){
-                    Text("Add meal")
+                    Text("Update meal")
                     .font(.custom("Teko-Medium", size: 25))
                     .foregroundColor(Color.white)
                     .frame(width: 220, height: 60, alignment: .center)
@@ -219,6 +219,8 @@ struct AddNewMeal: View {
     }
     
     func saveToMoc() {
+        self.recordDeleter(thisMeal:self.meal)
+        
         let meal = Meal(context: self.moc)
         meal.mealName = self.mealName
         meal.calories = Double(self.calories) ?? 0
@@ -234,6 +236,7 @@ struct AddNewMeal: View {
         
         do {try self.moc.save()}
         catch {print(error)}
+        self.saveMealPicture(thisMeal: meal, mealPicture: UIImage(data: Data((meal.picture!)))!)
     
         self.presentation.wrappedValue.dismiss()
         
@@ -247,7 +250,15 @@ struct AddNewMeal: View {
         self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("ingrerdients").setValue(["ingrerdients": "\(self.ingredients)"])
         self.ref.child("Meal Entry").child("\(self.getParticipantId())").child("\(self.getDate())").child("portions").setValue(["portions": "\(self.portions)"])
 
-        self.saveMealPicture(thisMeal:meal,mealPicture: UIImage(data: Data((meal.picture!)))!)
+        
+    }
+    func recordDeleter(thisMeal:Meal){
+        let pictureFileName=self.mealPictureFileNameGetter(thisMeal: thisMeal)
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: pictureFileName.path) {
+            try? fileManager.removeItem(atPath: pictureFileName.path)
+        }
+        self.moc.delete(self.meal)
     }
     
     func getDate() -> String {
